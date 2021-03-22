@@ -272,8 +272,8 @@ Equation~(\ref{eq:cylinder}) corresponds to the case of a ``constant strain grad
   \end{subequations}
 
 for which TTE have a simpler form
-
   \begin{subequations}
+    \label{eq:TTEsimple}
     \begin{align}
       \frac{\partial G_0}{\partial s_0} &= i \frac{k}{2}\chi_{\bar{h}} G_h
       \\
@@ -281,7 +281,7 @@ for which TTE have a simpler form
     \end{align}
   \end{subequations}
 
-An incident monochromatic wave of any form can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i \vec k_0 . \vec x)$ defining a continuous distribution of coherent elementary point-sources on the crystal surface, according to the general Huyghens principle in optics. The “influence functions” (or propagators), hereafter refered to as IF, are the TTE solutions corresponding to these point-sources. The IF for a point-source of  oblique coordinates $(\sigma_0,\sigma_h)$, in the case of  a crystal with deformation that verifies equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE  as integral equations in the case of an incident wave of the form. The calculations are presented in appendix~\ref{appendix:TTEintegral},} \inred{result in a diffracted electric field}
+An incident monochromatic wave of any form can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i \vec k_0 . \vec x)$ defining a continuous distribution of coherent elementary point-sources on the crystal surface, according to the general Huyghens principle in optics. The “influence functions” (or propagators), hereafter refered to as IF, are the TTE solutions corresponding to these point-sources. The IF for a point-source of  oblique coordinates $(\sigma_0,\sigma_h)$, in the case of  a crystal with deformation that verifies equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE  as integral equations in the case of an incident wave of the form. The calculations are presented in appendix~\ref{appendix:TTEintegral},} \inred{result in a diffracted electric field}\footnote{the result for the transmitted amplitude $D_0(s_0,s_h)$ is not necessary for our results and is not presented here, but it is easily obtained using equation~(\ref{eq:kummer}) in (\ref{eq:TTEsimple}).}
 % An incident monochromatic wave of any form, can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i\vec k_0. \vec x)$ defining a continuous distribution of coherent point-sources on the crystal surface, according to the general Huyghens principle in optics. The influence functions, or propagators, are the solutions of the TTE corresponding to these point-sources. The IF for a point-source of coordinates $(\sigma_0,\sigma_h)$, in the case of crystals with deformation that verify equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE as integral equations and solving them by iteration, starting from the undiffracted term $D_{inc}(s_0,s_h\inred{;\sigma_0,\sigma_h})=\exp[ik(s_0-\sigma_0)]\delta(s_h-\sigma_h)$, with $\delta$ the Dirac delta. The result for the diffracted field $D_h$ is
 % \begin{multline}
 % \label{eq:preKummer}
@@ -304,6 +304,8 @@ where the \inblue{the first exponential term stands for the effect of refraction
 
 This type of solution of the TTE was already obtained a long time ago, by different methods \cite{Petrashen1974,Katagawa1974,Litzmann1974,Chukhovski1977}.
 
+\inblue{The exponential term $\exp(i \vec k . \vec h(s_0,\sigma_h))$
+ in equation~(\ref{eq:kummer}) can be interpreted as the phase shift acquired at the first scattering even which, indeed, takes place at the point of coordinates $(s_0,\sigma_h)$. It therefore represents the kinematical (single-scattering) approximation of the dynamical theory}
 
 In the case of $A=0$, the Kummer function in equation~(\ref{eq:kummer}) reduces to the Bessel function $J_0(2\sqrt{\Omega s'_0 s'_h})$. 
           
@@ -312,7 +314,9 @@ In the case of $A=0$, the Kummer function in equation~(\ref{eq:kummer}) reduces 
 
 \inred{
 This section introduces the important case of dynamical focusing with flat Laue crystals (without bending), first described in \cite{AfanasevKohn1977} and verified experimentally by \cite{Aristov1978, Aristov1980}
-in the case of symmetrical geometry. The theory was extended to the asymmetric case by \cite{Kohn2000}. The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}}. \todo{CHECK REF Zeilinger}
+in the case of symmetrical geometry. The theory was extended to the asymmetric case by \cite{Kohn2000}. The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}.
+}
+\todo{CHECK REF Zeilinger}
 
 
 \begin{figure}
@@ -322,9 +326,16 @@ in the case of symmetrical geometry. The theory was extended to the asymmetric c
 \includegraphics[width=0.99\textwidth,trim=3cm 10cm 5cm 10cm,clip=true]{fig3.pdf}
 \end{figure}
 
-\inred{The incident wave-amplitude is expressed in a plane perpendicular to the incidence direction at a negligible distance from the entrance surface (axis $\tau$ in Fig.~\ref{fig:laue}).
-Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:laue}).} The dynamical focusing is most easily described by considering a point-source on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface). 
-The reflected amplitude $D_h(\xi)$, perpendicularly to the direction of $\vec k_h$ at negligible distance from the crystal of thickness $t$, is zero outside the interval $-a<\xi<a$, with $a=t \sin2\theta_B/(2 \cos\inred{\theta_1})$, and it is proportional \todo{WHAT IS THE CONSTANT? THE ONE IN EQ \ref{eq:kummer} IN COORDINATES $\eta$ AND $\xi$... } to the zeroth-order Bessel function  $J_0(Z\sqrt{a^2-\xi^2})$ in this interval (Kato, 1961), with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$, and $\gamma=\cos\inred{\theta_1}/\cos\inred{\theta_2}$ (asymmetry ratio). In the case $|Z a| \gg 1$ the asymptotic approximation
+% The incident wave-amplitude is expressed in a plane perpendicular to the incidence direction at a negligible distance from the entrance surface (axis $\tau$ in Fig.~\ref{fig:laue}).
+% Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:laue}). 
+% The dynamical focusing is most easily described by considering a point-source on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface).
+
+\inblue{We consider a point-source of coordinates $\sigma_0=\sigma_h=0$ on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface). This is the most basic case of dynamial focusing. 
+
+To a point in the $\xi-$axis perpendicular to the direction of $\vec k_h$ and at negligible distance from the crystal of thickness $t$ (see Fig.~\ref{fig:laue}), corresponds to a point of oblique coordinates  $(s_\inred{0},s_h)=((a+\xi)/\sin2\theta_B,\gamma(a-\xi)/\sin2\theta_B)$ on the crystal exit surface, with $a=t \sin2\theta_B/(2\cos\inred{\theta_1})$ and $\gamma=\cos\inred{\theta_1}/\cos\inred{\theta_2}$ (asymmetry ratio). 
+}
+
+The reflected amplitude $D_h(\xi)$, is zero outside the interval $-a<\xi<a$, with $a=t \sin2\theta_B/(2 \cos\inred{\theta_1})$, and it is proportional \todo{WHAT IS THE CONSTANT? THE ONE IN EQ \ref{eq:kummer} IN COORDINATES $\eta$ AND $\xi$... } to the zeroth-order Bessel function  $J_0(Z\sqrt{a^2-\xi^2})$ in this interval (Kato, 1961), with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$. In the case $|Z a| \gg 1$ the asymptotic approximation
 \begin{equation}
     J_0(Z\sqrt{a^2-\xi^2})\approx \left(\frac{2}{\pi Z \sqrt{a^2-\xi^2}}\right)^{1/2} \cos(Z\sqrt{a^2-\xi^2}-\pi/4)
 \end{equation}
@@ -417,10 +428,10 @@ The moduli of the two terms in equation~(\ref{eq:approximatedDiffractedField}) a
 For the flat crystal under discussion, the focusing condition for a source at a finite distance $p$ from the crystal, is 
 \begin{equation}
     \label{eq:sumpandq}
-    p+q=\pm q'_{dyn}.
+    p+q=\pm q_{dyn}.
 \end{equation}
 This result is simply obtained by looking at the operators i) the free-space propagation from the source to the diffracting crystal, ii) effect of the crystal diffraction, and iii) the propagation downstream from the crystal to the image position. These operations  are space-invariant. They are expressed as convolutions in direct space, or simply multiplications in reciprocal space. Therefore, they can be commuted. This allows to merge the operations i) and iii) and consequently obtain equation~(\ref{eq:sumpandq}).
-Propagation through a flat crystal is space-invariant, whereas propagation through a bent crystal is not space-invariant. The reason for this difference is that, in a bent crystal case, the IF is not only dependent on the variables $(s'_0,s'_h)$, but also on the variables $(\sigma_0,\sigma_h)$, as seen in equation~(\ref{eq:kummer}).
+Propagation through a flat crystal is space-invariant, whereas propagation through a bent crystal is not space-invariant. The reason for this difference is that, in a bent crystal case, the IF is not only dependent on the variables $(s'_0,s'_h)$, but also on the variables $(\sigma_0,\sigma_h)$, as seen in equations~(\ref{eq:TTEsimple},\ref{eq:kummer}).
 
 
 
@@ -429,7 +440,9 @@ Propagation through a flat crystal is space-invariant, whereas propagation throu
 
 \inred{The equations of dynamical focusing by a bent Laue crystal of arbitrary thickness used by \cite{GuigayFerrero2016} are briefly recalled in this section.}
 
-For the case of symmetrical diffraction, we shall omit  the factor $\exp(i k \hic_0(s'_0+s'_h))$ which is then constant, and $A=0$, and the functions $\varphi_1(s_0)$, $\varphi_2(s_h)$, in equation (\ref{eq:cylinder}) are the same function, \inred{written now without subindices}, $\varphi(s_0)$, $\varphi(s_h)$}. The equation~(\ref{eq:preKummer}) can be written as
+For the case of symmetrical diffraction, the factor $\exp(i \chi_0(s'_0+s'_h))$ \inred{in equation~(\ref{eq:kummer})} is constant and will be omitted.
+%, and $A=0$, and the functions $\varphi_1(s_0)$, $\varphi_2(s_h)$, in equation (\ref{eq:cylinder}) are the same function, \inred{written now without subindices}, $\varphi(s_0)$, $\varphi(s_h)$}. 
+The equation~\inred{(10???)} (\ref{eq:kummer}) can be written as
 \begin{equation}
 \label{eq:DhSymmetricalLaue}
     D_h(s_0,s_h) = \frac{i k}{2} \chi_h e^{i \vec h . \vec u(s_0,\sigma_h)}

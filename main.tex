@@ -133,7 +133,7 @@ With the advent of synchrotron radiation, the concepts of ``geometrical focusing
 The geometrical optics theory is applied for understanding the image formation produced by grazing incidence spherical reflectors \cite{KB1948}. The Gaussian mirror equation (mirror or lens equation), relates the object distance $p$ and the image distance $q$ to the focal length $f$, $p^{-1}+q^{-1}=f^{-1}$, with $f=R_c \sin\theta_B$, where \inred{$R_c$} is the mirror curvature radius and $\theta_B$ the Bragg (grazing incidence) angle. However, this mirror or lens equation has limited applications when using crystals, as it can only be applied for symmetric Bragg reflections.
 
 The conservation of the tangential component of the wavevector on the crystal surface leads to more general equations in Bragg or Laue geometries, resembling the focusing equations for reflection or transmission gratings.
-A ``Crystal Lens Equation" (CLE) was indeed formulated by \cite{CK} for the focusing properties of a cylindrically bent crystal plate diffracting monochromatic x-rays or neutrons, in Laue (transmission) or Bragg (reflection) geometries .The crystal is bent around an axis perpendicular to the diffraction plane (meridional focusing). This CLE is based on a purely geometric approach in which the multiple scattering processes in the crystal (dynamical effects) are not taken into account. 
+A ``Crystal Lens Equation" (CLE) was indeed formulated by \cite{CK} for the focusing properties of a cylindrically bent crystal plate diffracting monochromatic x-rays or neutrons, in Laue (transmission) or Bragg (reflection) geometries. The crystal is bent around an axis perpendicular to the diffraction plane (meridional focusing). Thi0s CLE is based on a purely geometric approach in which the multiple scattering processes in the crystal (dynamical effects) are not taken into account. 
 The derivation of the CLE is presented in Section~\ref{sec:CLE}, which also corrects
 some errors found in \cite{CK} for the Laue geometry.
 
@@ -150,17 +150,16 @@ A lens equation was derived by \cite{CK} for the case of a monochromatic x-ray o
 
 \begin{figure}
 \label{fig:geometries}
-\caption{Representing the real or virtual source of the incident beam in the Bragg or Laue geometries:
-a) real source, Laue case real focus (red) and Bragg case virtual focus (green),
-b) real source, Laue case virtual focus (red) and Bragg case real focus (green),
-c) virtual source, Laue case real focus (red) and Bragg case virtual focus (green),  
-d) virtual source, Laue case virtual focus (red) and Bragg case real focus (green).
+\caption{\inred{Schematic representation of the different diffraction setups with} real or virtual source in Bragg or Laue geometries:
+a) real source, real focus (red) in Laue case virtual focus (blue) in Bragg case,
+b) real source, virtual focus (red) in Laue case and real focus (blue) in Bragg case,
+c) virtual source, real focus (red) in Laue case and virtual focus (blue) in Bragg case,  
+d) virtual source, virtual focus (red) in Laue case real focus (blue) in Bragg case.
 }
-% \includegraphics[width=0.99\textwidth,trim=5cm 2cm 7cm 2cm,clip=true]{fig_geometries.pdf}
 \includegraphics[width=0.99\textwidth,trim=4cm 9cm 6cm 9cm,clip=true]{fig1.pdf}
 \end{figure}
 
-Consider a monochromatic x-ray or neutron beam emitted by a point-source $S$. The origin of coordinates is chosen at the point $O$ of the crystal surface in such a way that the wave-vector  ${\vec k_0}$ of the central incident ray $\vec{SO}$, is in exact Bragg  position. The diffracted ray has a wave-vector $\vec k_h$ given by the Laue equation $\vec k_h = \vec k_0 + \vec h$, where $\vec h$ is the reciprocal lattice vector (see Fig.~\ref{fig:vectors}). This is valid for both transmission geometry (Laue) or reflection geometry (Bragg). 
+Consider a monochromatic x-ray or neutron beam emitted by a point-source $S$. The origin of coordinates is chosen at the point $O$ of the crystal surface in such a way that the wave-vector  ${\vec k_0}$ of the central incident ray $\overline{SO}$, is in exact Bragg  position. The diffracted ray has a wave-vector $\vec k_h$ given by the Laue equation $\vec k_h = \vec k_0 + \vec h$, where $\vec h$ is the reciprocal lattice vector (see Fig.~\ref{fig:vectors}). This is valid for both transmission geometry (Laue) or reflection geometry (Bragg). 
 
 We use oriented angles $\varphi_0 = (\vec n, \vec k_0)$ and $\varphi_h = (\vec n, \vec k_h)$, where $\vec n$ is the inward normal to the crystal surface. $\varphi_0$ is positive, without loss of generality; $\theta_B$ is the modulus of the Bragg angle, equal to $|\varphi_0-\varphi_h|/2$ in Laue case and  $|\varphi_h-\varphi_0|/2$ in Bragg case. The special case of symmetric geometry, with asymmetry angle $\alpha=0$ is such that $\varphi_{0,h}=\pm\theta_B$ in Laue or $\varphi_{0,h}=(\pi/2)\mp\theta_B$ in Bragg. Otherwise, the asymmetry angle $\alpha$ is defined as the angle of rotation of the vectors $(\vec h, \vec k_0, \vec k_h)$ from their directions in the symmetrical case. 
 It follows that $\varphi_0+\varphi_h=2\alpha$ in Laue case and  $\varphi_0+\varphi_h=2\alpha+\pi$ in Bragg case.
@@ -228,8 +227,9 @@ Note that we used in this section the same notation as \cite{CK}\inred{, where $
 
 The applicability of the CLE for the Laue case is very limited. The results predicted by CLE ignore dynamical effects that must be taken into account in a realistic view of the beam evolution after diffraction by a Laue crystal. The dynamical theory of diffraction predicts ``new" focal conditions, even for flat Laue crystals, that are relevant in experiments and are not explained by the simple CLE. We analyze here the focusing of x-rays by Laue crystals in the framework of the dynamical theory of diffraction (see book of \cite{authierbook}), and relate the obtained results to the CLE discussed in section~\ref{sec:CLE}.
 
-The incident wave-amplitude is expressed in a plane perpendicular to the incidence direction at a negligible distance from the entrance surface (axis $\tau$ in Fig.~\ref{fig:vectors}).
-Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:vectors}).
+\todo{MOVED LATER (SECTION 3.2)}\sout{
+The incident wave-amplitude is expressed in a plane perpendicular to the incidence direction at a negligible distance from the entrance surface (axis $\tau$ in Fig.~\ref{fig:laue}).
+Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:laue}).}
 
 \todo{AN OLD PARAGRAPH IS DISTRIBUTED AMONG THE SUBSECTIONS. WHERE TO PUT CITE \cite{kushnir}??? ALSO THIS IS NOT SAID: Wave propagation in free space is based on paraxial wave optics.
 }
@@ -242,19 +242,20 @@ We introduce the Takagi-Taupin equations and the influence function representing
 \begin{equation}
     \Psi(\vec x) = D_0(\vec x) e^{i \vec k_0 . \vec x} + D_h(\vec x) e^{i \vec k_h . \vec x},
 \end{equation}
-with slowly varying amplitudes $D_{0,h}(\vec x)$.
-The spatial position $\vec x$ are expressed in oblique coordinates $(s_0,s_h)$ along the directions of the $\vec k_0$ and $\vec k_h=\vec k_0 + \vec h$ vectors.
-The incident wave is also expressed as a modulated plane wave $D_{inc}(\vec x) \exp(i\vec k_k . \vec x)$. The Takagi-Taupin equations  \cite{Takagi1962, Takagi, Taupin, Taupin1967}, hereafter referred to as TTE, are
-
-\begin{equation}
+% with slowly varying amplitudes $D_{0,h}(\vec x)$.
+% The spatial position $\vec x$ are expressed in oblique coordinates $(s_0,s_h)$ along the directions of the $\vec k_0$ and $\vec k_h=\vec k_0 + \vec h$ vectors.
+% The incident wave is also expressed as a modulated plane wave $D_{inc}(\vec x) \exp(i\vec k_k . \vec x)$. 
+The differential Takagi-Taupin equations  \cite{Takagi1962, Takagi, Taupin, Taupin1967}, hereafter referred to as TTE, are
+\begin{subequations}
 \label{eq:TT}
-\begin{aligned}
+\begin{align}
 \frac{\partial D_0}{\partial s_0} =& \frac{ik}{2} \left[ \chi_0 D_0(\vec x)+c \chi_{\bar h} e^{i \vec h . \vec u (\vec x)} D_h(\vec x) \right]; \\
 \frac{\partial D_h}{\partial s_h} =& \frac{ik}{2} \left[ \chi_0 D_h(\vec x)+c \chi_{h} e^{-i \vec h . \vec u (\vec x)} D_0(\vec x) \right],
-\end{aligned}
-\end{equation}
+\end{align}
+\end{subequations}
 where $k=2\pi/\lambda$; $\chi_0$, $\chi_h$, and $\chi_{\bar h}$ are the Fourier coefficients of order 0, $\vec h$ and $-\vec h$ of the undeformed crystal polarisability. The polarization factor $c$ ($c=1$ for $\sigma$-polarization and $c=\cos2\theta_B$  for $\pi$-polarization) will be omitted afterwards, for simplicity. 
-In the equations~(\ref{eq:TT}), $\vec u (\vec x)$ is the dispacement field of the deformed crystal. The ``influence functions", hereafter called IF, are the solutions of the TT equations corresponding to a point source in the crystal entrance surface.
+In the equations~(\ref{eq:TT}), $\vec u (\vec x)$ is the dispacement field of the deformed crystal.
+% The ``influence functions", hereafter called IF, are the solutions of the TT equations corresponding to a point source in the crystal entrance surface.
 In the case of a cylindrically bent crystal, the deformation phase factor is
 \begin{equation}
 \label{eq:cylinder}
@@ -262,28 +263,46 @@ In the case of a cylindrically bent crystal, the deformation phase factor is
 \end{equation}
 where $A$ and the $\phi_{1,2}$ functions are explicited in Appendix~\ref{appendix:Deformation}.
 Equation~(\ref{eq:cylinder}) corresponds to the case of a ``constant strain gradient" \cite{authierbook} meaning that $\partial^2(\vec h . \vec u)/(\partial s_0 \partial s_h)$ is constant.
+\inblue{It is \inred{useful} to introduce the functions $G_{0,h}(s_0,s_h)$ defined by
+  \begin{subequations}
+    \begin{align}
+      D_0(s_0,s_h) &= G_0(s_0,s_h) \exp[i\frac{k}{2}\chi_0 (s_0+s_h)-i \phi_2(s_h)\\
+      D_h(s_0,s_h) &= G_h(s_0,s_h) \exp[i\frac{k}{2}\chi_0 (s_0+s_h)-i \phi_1(s_0)+iAs_0s_h]
+    \end{align}
+  \end{subequations}
 
-An incident monochromatic wave of any form, can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i\vec k_0. \vec x)$ defining a continuous distribution of coherent point-sources on the crystal surface, according to the general Huyghens principle in optics. The influence functions, or propagators, are the solutions of the TTE corresponding to these point-sources. The IF for a point-source of coordinates $(\sigma_0,\sigma_h)$, in the case of crystals with deformation that verify equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE as integral equations and solving them by iteration, starting from the undiffracted term $D_{inc}(s_0,s_h;\sigma_0,\sigma_h)=\exp[ik(s_0-\sigma_0)]\delta(s_h-\sigma_h)$, with $\delta$ the Dirac delta. The result for the diffracted field $D_h$ is
-\begin{multline}
-\label{eq:preKummer}
-    D_h(s_0,s_h) =  \frac{i k}{2} \chi_h e^{(ik/2) \chi_0 (s'_0 + s'_h)} e^{i A s'_o s'_h - i\vec h.\vec u(s_o,\sigma_h)} \times
-    \\
-    [1 + \sum_{i=1}^\infty \frac{(\Omega + i A )(\Omega+2iA)...(\Omega+niA)}{n!n!}(-s'_0s'_h)^n],
-\end{multline}
-where $s'_{0,h}=s_{0,h}-\sigma_{0,h}$ and $\Omega = k^2 \chi_h \chi_{\bar h}/4$. The first exponential stands for the effects of refraction and normal absorption. For $A\ne0$, the equation~(\ref{eq:preKummer}) can be expressed as
+for which TTE have a simpler form
+
+  \begin{subequations}
+    \begin{align}
+      \frac{\partial G_0}{\partial s_0} &= i \frac{k}{2}\chi_{\bar{h}} G_h
+      \\
+      \frac{\partial G_h}{\partial s_h} &= i \frac{k}{2}\chi_{\bar{h}} G_0 - i A s_0 G_h
+    \end{align}
+  \end{subequations}
+
+An incident monochromatic wave of any form can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i \vec k_0 . \vec x)$ defining a continuous distribution of coherent elementary point-sources on the crystal surface, according to the general Huyghens principle in optics. The “influence functions” (or propagators), hereafter refered to as IF, are the TTE solutions corresponding to these point-sources. The IF for a point-source of  oblique coordinates $(\sigma_0,\sigma_h)$, in the case of  a crystal with deformation that verifies equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE  as integral equations in the case of an incident wave of the form. The calculations are presented in appendix~\ref{appendix:TTEintegral},} \inred{result in a diffracted electric field}
+% An incident monochromatic wave of any form, can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i\vec k_0. \vec x)$ defining a continuous distribution of coherent point-sources on the crystal surface, according to the general Huyghens principle in optics. The influence functions, or propagators, are the solutions of the TTE corresponding to these point-sources. The IF for a point-source of coordinates $(\sigma_0,\sigma_h)$, in the case of crystals with deformation that verify equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE as integral equations and solving them by iteration, starting from the undiffracted term $D_{inc}(s_0,s_h\inred{;\sigma_0,\sigma_h})=\exp[ik(s_0-\sigma_0)]\delta(s_h-\sigma_h)$, with $\delta$ the Dirac delta. The result for the diffracted field $D_h$ is
+% \begin{multline}
+% \label{eq:preKummer}
+%     D_h(s_0,s_h) =  \frac{i k}{2} \chi_h e^{(ik/2) \chi_0 (s'_0 + s'_h)} e^{i A s'_o s'_h - i\vec h.\vec u(s_o,\sigma_h)} \times
+%     \\
+%     [1 + \sum_{i=1}^\infty \frac{(\Omega + i A )(\Omega+2iA)...(\Omega+niA)}{n!n!}(-s'_0s'_h)^n],
+% \end{multline}
+% where $s'_{0,h}=s_{0,h}-\sigma_{0,h}$ and $\Omega = k^2 \chi_h \chi_{\bar h}/4$. The first exponential stands for the effects of refraction and normal absorption. For $A\ne0$, the equation~(\ref{eq:preKummer}) can be expressed as
   
 \begin{equation}
 \label{eq:kummer}
     D_h(s_0,s_h) = \frac{i k }{2} \chi_h e^{(ik/2) \chi_0 (s'_0 + s'_h)} e^{i \vec h . \vec u (s_0,\sigma_h)} M(\frac{i\Omega}{A},1,iA s'_0 s'_h)
 \end{equation}
-where the $M$ function is the Kummer function (a confluent hypergeometric function) defined by the series
+where the \inblue{the first exponential term stands for the effect of refraction and normal absorption, $s'_{0,h}=s_{0,h}-\sigma_{0,h}$, $\Omega=k^2\chi_h\chi_{\bar{h}}/2$ and the $M$ function is known as } the Kummer function (a confluent hypergeometric function) defined by the convergent infinite series
 \begin{equation}
 \label{eq:kummerSeries}
     M(a,b,z) = 1 + \frac{a}{b} z + 
-    ... + \frac{a(a+1)...(a+n-1)}{n! b (b+1)+...(b+n-1)}z^n+...
+    ... + \frac{a(a+1)...(a+n-1)}{n! b (b+1)...(b+n-1)}z^n+...
 \end{equation}
 
-This type of solution of the TTE was already obtained a long time ago, by different methods \cite{Petrashen1974}, \cite{Katagawa1974}, \cite{Litzmann1974} and \cite{Chukhovski1977}.
+This type of solution of the TTE was already obtained a long time ago, by different methods \cite{Petrashen1974,Katagawa1974,Litzmann1974,Chukhovski1977}.
 
 
 In the case of $A=0$, the Kummer function in equation~(\ref{eq:kummer}) reduces to the Bessel function $J_0(2\sqrt{\Omega s'_0 s'_h})$. 
@@ -293,18 +312,19 @@ In the case of $A=0$, the Kummer function in equation~(\ref{eq:kummer}) reduces 
 
 \inred{
 This section introduces the important case of dynamical focusing with flat Laue crystals (without bending), first described in \cite{AfanasevKohn1977} and verified experimentally by \cite{Aristov1978, Aristov1980}
-in the case of symmetrical geometry. The theory was extended to the asymmetric case by \cite{Kohn2000}. The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}} \todo{CHECK REF Zeilinger}
-%It will be extended in the next section to the bent crystal with a point source upstream from the crystal.
+in the case of symmetrical geometry. The theory was extended to the asymmetric case by \cite{Kohn2000}. The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}}. \todo{CHECK REF Zeilinger}
+
 
 \begin{figure}
 \label{fig:laue}
-\caption{Schematic of the relevant parameters in Laue asymmetrical diffraction.
+\caption{Schematic representation of the relevant parameters in Laue asymmetrical diffraction. \todo{ADD $t$ THICKNESS?}
 }
 \includegraphics[width=0.99\textwidth,trim=3cm 10cm 5cm 10cm,clip=true]{fig3.pdf}
 \end{figure}
 
-The dynamical focusing is most easily described by considering a point-source on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface). 
-The reflected amplitude $D_h(\xi)$, perpendicularly to the direction of $\vec k_h$ at negligible distance from the crystal of thickness $t$, is zero outside the interval $-a<\xi<a$, with $a=t \sin2\theta_B/(2 \cos\inred{\theta_1})$, and it is proportional \todo{WHAT IS THE CONSTANT? WE THEN WRITE BEFORE EQ \ref{eq:Fresnel} $D_h=J_0(...)$} to the zeroth-order Bessel function  $J_0(Z\sqrt{a^2-\xi^2})$ in this interval (Kato, 1961), with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$, and $\gamma=\cos\inred{\theta_1}/\cos\inred{\theta_2}$ (asymmetry ratio). In the case $|Z a| \gg 1$ the asymptotic approximation
+\inred{The incident wave-amplitude is expressed in a plane perpendicular to the incidence direction at a negligible distance from the entrance surface (axis $\tau$ in Fig.~\ref{fig:laue}).
+Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:laue}).} The dynamical focusing is most easily described by considering a point-source on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface). 
+The reflected amplitude $D_h(\xi)$, perpendicularly to the direction of $\vec k_h$ at negligible distance from the crystal of thickness $t$, is zero outside the interval $-a<\xi<a$, with $a=t \sin2\theta_B/(2 \cos\inred{\theta_1})$, and it is proportional \todo{WHAT IS THE CONSTANT? THE ONE IN EQ \ref{eq:kummer} IN COORDINATES $\eta$ AND $\xi$... } to the zeroth-order Bessel function  $J_0(Z\sqrt{a^2-\xi^2})$ in this interval (Kato, 1961), with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$, and $\gamma=\cos\inred{\theta_1}/\cos\inred{\theta_2}$ (asymmetry ratio). In the case $|Z a| \gg 1$ the asymptotic approximation
 \begin{equation}
     J_0(Z\sqrt{a^2-\xi^2})\approx \left(\frac{2}{\pi Z \sqrt{a^2-\xi^2}}\right)^{1/2} \cos(Z\sqrt{a^2-\xi^2}-\pi/4)
 \end{equation}
@@ -328,7 +348,8 @@ represents a converging wave (divergent if  ($\operatorname{Re}(Z)<0$). A double
 
 The parameter $q_0$, which may be referred to as the ``dynamical approximated focal length", depends on the asymmetry angle through the half-width a of the Bragg-diffracted beam $a$. It gives the position of the beam waist only approximately, as several approximations have been used.
 
-The reflected amplitude at any distance $q$ from the crystal can be calculated numerically, without the approximations used above, by propagating the wavefield at the crystal exit $D_h(\xi,0)=J_0(Z\sqrt{a^2-\xi^2})$ via convolution with the Fresnel propagator:
+The reflected amplitude at any distance $q$ from the crystal can be calculated numerically, without the approximations used above, by propagating the wavefield at the crystal exit $D_h(\xi,0)=J_0(Z\sqrt{a^2-\xi^2})$ \todo{WE MISSED HERE THE PROPORTIONALITY COEFF}
+via convolution with the Fresnel propagator:
 \begin{equation}
 \label{eq:Fresnel}
     D_h(\xi; q) = (\lambda q)^{-1/2} \int_{-a}^a d\xi'  \, e^{i k 
@@ -373,8 +394,8 @@ The resulting ``axial intensity profile" $|D_h(0,q)|^2$ shows in general two str
 \begin{tabular}{lcccccc}
  Photon \\energy  [keV]  & $\theta_B$ [deg]       & $\chi_0$ & $\chi_h$ & $a$ [\SI{}{\micro\meter}]& $q_0$ [mm] & $q_{dyn}$  [mm] \\
 \hline
- 8.3  &  13.78 & -1.42e-5+3.17e-7i & -5.55e-6-5.23e-6i  & 59  & 3615  & 2862   \\
- 17   &  6.68 & -3.36e-6+1.82e-8i & -1.27e-6-1.26e-6i  & 29  & 3753  & 2559 
+ 8.3  &  13.78 & -1.42e-5+3.17e-7i & -5.55e-6-5.23e-6i  & 59  & 3615  & \inred{-2617,}2862   \\
+ 17   &  6.68 & -3.36e-6+1.82e-8i & -1.27e-6-1.26e-6i  & 29  & 3753  & \inred{-2521,}2559 
 \end{tabular}
 \label{table:example}
 \end{table}
@@ -491,22 +512,32 @@ The highest peak is for $q_1<q_2$ at the x-ray energy of 17 keV. At the energy o
 \label{fig:8keV}
 \caption{Numerical evaluation of diffracted intensity by a \SI{250}{\micro\meter} thick Si 111 symmetric Laue crystal calculated using equation~\ref{eq:Dhpropagated} for a bent (R~= \SI{1}{\meter}) crystal and $p$~= \SI{30}{\meter}. 
 a) on-axis intensity for a at photon energy of 8.3 keV. 
-b) transverse profile at the focal distances (maximum values in plot a)) 
+Inset: transverse profile at the focal distances (maximum values):  
 $q_1$~= \SI{651}{\mili\meter} (blue), and
 $q_2$~= \SI{1330}{\mili\meter} (green).
-c) on-axis intensity for a at photon energy of 17 keV.
-d) transverse profile at the focal distances (maximum values in plot c))
+b) on-axis intensity for a at photon energy of 17 keV.
+Inset: transverse profile at the focal distances (maximum values):
 $q_1$~= \SI{625}{\mili\meter} (blue), and 
 $q_2$~= \SI{1372}{\mili\meter} (green).
-\todo{change abscissa label to $(\xi-\xi_c$ in b) and d). Bigger labels, Inset?}
+
 }
-\includegraphics[width=0.6\textwidth]{bent1m8keV.eps}
-\includegraphics[width=0.39\textwidth]{bent1m8keV_profile.eps}
-\includegraphics[width=0.6\textwidth]{bent1m17keV.eps}
-\includegraphics[width=0.39\textwidth]{bent1m17keV_profile.eps}
+\includegraphics[width=0.96\textwidth]{bent1m8keV.eps}
+
+\begin{picture}(0,0)
+\setlength{\unitlength}{1cm}
+\put(-1.5,3){\includegraphics[width=0.46\textwidth]{bent1m8keV_profile.eps}}
+\end{picture}
+
+\includegraphics[width=0.96\textwidth]{bent1m17keV.eps}
+
+\begin{picture}(0,0)
+\setlength{\unitlength}{1cm}
+\put(-1.1,3){\includegraphics[width=0.46\textwidth]{bent1m17keV_profile.eps}}
+\end{picture}
+
 \end{figure}
 
-It can be seen from equation~(\ref{eq:Dhpropagated}) that the intensity function $|D_h(s_0,s_h)|^2$ as a function of $\xi$ is symmetric around $\vi_c=-a q L_e / (2 q_e R \cos\theta_B)$. This denotes the lateral shift of the intensity profiles (the axial intensity profiles of Fig.\ref{fig:8keV}c and \ref{fig:8keV}d are actually calculated as a function of $(\xi-\xi_c)$. \todo{ Make a plot vs $\xi$ to see how it changes}
+It can be seen from equation~(\ref{eq:Dhpropagated}) that the intensity function $|D_h(s_0,s_h)|^2$ as a function of $\xi$ is symmetric around $\xi_c=-a q L_e / (2 q_e R \cos\theta_B)$. This denotes the lateral shift of the intensity profiles (the axial intensity profiles of Fig.\ref{fig:8keV}c and \ref{fig:8keV}d are actually calculated as a function of $(\xi-\xi_c)$. \todo{ Make a plot vs $\xi$ to see how it changes}
 
 \subsection{Semianalytical approach in asymmetric Laue geometry to obtain the CLE}
 \label{sec:LaueCompatibilityCLE}
@@ -656,6 +687,69 @@ Comparing equations~(\ref{eq:A4}) and (\ref{eq:A5}), we finally obtain
     \frac{\cos^2\varphi_0}{L_0}=\frac{|\cos\phi_h|\cos\varphi_h}{L_h},
 \end{equation}
 which is equivalent to the lens equation (\ref{eq:CLE}).
+
+\section{Derivation of the influence functions from the integral form of the Takagi-Taupin equations}
+\label{appendix:TTEintegral}
+
+\inblue{
+
+
+The IF for a point-source of oblique coordinates $(\sigma_0,\sigma_h)$ is related to the incident wave $\exp(i\vec k_0 . \vec x) \delta(s_h-\sigma_h)$, corresponding to $D_{inc}=\delta(s_h-\sigma_h)$. The refracted amplitude in the crystal is $D_{ref}(\sigma'_0,\sigma'_h)=\exp(i k \chi+0 s'_0/2)\delta(s'_h)$ by using the variables $s'_{0,h}=s_{0,h}-\sigma_{0,h}$. When using the form (9a,9b) of the TTE, the refracted amplitude takes the form
+\begin{equation}
+    G_{ref}=\exp[-i\frac{k}{2}\chi_0(s_0+s_h)+i \phi_2(s_h)] D_{ref}(s'_0,s'_h) = E\delta(s'_h)
+\end{equation}
+where  is a constant phase term. Considering the   as functions    of   and  , the TTE (9) are expressed as
+                        
+                                     (A9)
+It is then convenient to rewrite them in terms of the functions   such that 
+                      :                
+                               (A10)
+Consequently, equations (A9) are rewritten as
+                          ;                       (A11)
+where  . The refracted amplitude is . Equations (A10) can be put in the form of integral equations:
+                                (.A12.)
+                            ( A12 )
+
+The following solution is based on the process of multiple Bragg scattering. Starting from ( ), we obtain the first-order term, or kinematical expression, ( ,  . Succesive terms are obtained by iteration. The transmitted and reflected amplitudes are made up by terms of  even and odd order, respectively. Alternatively, we can combine equations (  ) and (  ) into a single integral equation for the reflected amplitude
+                     (  13)
+By iteration starting from  , we obtain easily:
+      ( 14 )
+The above bracketted serie can be expressed as:
+        (15  )
+where we used the definition (12) of the kummer function and its known property
+                              
+The corresponding expression for  is then easily obtained by using formula (  ).
+
+Taking into account  formulas (9), we obtain…
+     
+
+in which we use  the relation      
+
+
+
+
+}
+
+
+
+
+
+
+
+
+An incident monochromatic wave of any form, can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i\vec k_0. \vec x)$ defining a continuous distribution of coherent point-sources on the crystal surface, according to the general Huyghens principle in optics. The influence functions, or propagators, are the solutions of the TTE corresponding to these point-sources. The IF for a point-source of coordinates $(\sigma_0,\sigma_h)$, in the case of crystals with deformation that verify equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE as integral equations and solving them by iteration, starting from the undiffracted term $D_{inc}(s_0,s_h\inred{;\sigma_0,\sigma_h})=\exp[ik(s_0-\sigma_0)]\delta(s_h-\sigma_h)$, with $\delta$ the Dirac delta. The result for the diffracted field $D_h$ is
+\begin{multline}
+\label{eq:preKummer}
+    D_h(s_0,s_h) =  \frac{i k}{2} \chi_h e^{(ik/2) \chi_0 (s'_0 + s'_h)} e^{i A s'_o s'_h - i\vec h.\vec u(s_o,\sigma_h)} \times
+    \\
+    [1 + \sum_{i=1}^\infty \frac{(\Omega + i A )(\Omega+2iA)...(\Omega+niA)}{n!n!}(-s'_0s'_h)^n],
+\end{multline}
+where $s'_{0,h}=s_{0,h}-\sigma_{0,h}$ and $\Omega = k^2 \chi_h \chi_{\bar h}/4$. The first exponential stands for the effects of refraction and normal absorption. For $A\ne0$, the equation~(\ref{eq:preKummer}) can be expressed as
+  
+
+
+
+
 
 
 \section{General expression of the phase factor and derivation of equation~(\ref{eq:14reduced})}

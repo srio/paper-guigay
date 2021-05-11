@@ -281,7 +281,7 @@ for which TTE have a simpler form
     \end{align}
   \end{subequations}
 
-An incident monochromatic wave of any form can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i \vec k_0 . \vec x)$ defining a continuous distribution of coherent elementary point-sources on the crystal surface, according to the general Huyghens principle in optics. The “influence functions” (or propagators), hereafter refered to as IF, are the TTE solutions corresponding to these point-sources. The IF for a point-source of  oblique coordinates $(\sigma_0,\sigma_h)$, in the case of  a crystal with deformation that verifies equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE  as integral equations in the case of an incident wave of the form. The calculations are presented in appendix~\ref{appendix:TTEintegral}, result in a diffracted amplitude\footnote{the result for the transmitted amplitude $D_0(s_0,s_h)$ is not necessary for our results and is not presented here, but it is easily obtained using equation~(\ref{eq:kummer}) in (\ref{eq:TTEsimple}).}
+An incident monochromatic wave of any form can also be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i \vec k_0 . \vec x)$ defining a continuous distribution of coherent elementary point-sources on the crystal surface, according to the general Huyghens principle in optics. The “influence functions” (or propagators), hereafter refered to as IF, are the TTE solutions corresponding to these point-sources. The IF for a point-source of  oblique coordinates $(\sigma_0,\sigma_h)$, in the case of  a crystal with deformation that verifies equation~(\ref{eq:cylinder}), are derived in \cite{GuigayFerrero2016} by formulating the TTE  as integral equations in the case of an incident wave of the form \inred{$\exp(i \vec k_0 . \vec x)$ (Appendix \ref{appendix:TTEintegral})}. The calculations are presented in appendix~\ref{appendix:TTEintegral}, result in a diffracted amplitude\footnote{the result for the transmitted amplitude $D_0(s_0,s_h)$ is not necessary for our results and is not presented here, but it is easily obtained using equation~(\ref{eq:kummer}) in (\ref{eq:TTEsimple}).}
 
   
 \begin{equation}
@@ -644,7 +644,7 @@ In a crystal under a deformation field $\vec u(\vec r)$, the polarizability of a
 
 In the case of a very thin crystal, multiple scattering can be neglected. The incident ray at the point of coordinate x on the crystal surface is simply afected by a phase factor 
 \begin{equation}
-    e^{-i k \vec h . \vec u(x)} = e^{i k (\cos\varphi_h-\cos\varphi_0) \frac{x^2}{2 R_c} },
+    e^{-i \vec h . \vec u(x)} = e^{i k (\cos\varphi_h-\cos\varphi_0) \frac{x^2}{2 R_c} },
 \end{equation}
 which is easily obtained by using $\vec u(x) = -(x^2/(2R))\vec n$ and $\vec n . \vec h = \vec n.(\vec k_h - \vec k_0) = k(\cos\varphi_h-\cos\varphi_0)$. 
 
@@ -684,7 +684,7 @@ where $E=\exp[-i (k/2) \chi_0 (s_0 + s_h) + i \phi_2(\sigma_h)]$ is a constant p
 \label{eq:TTEappendix}
 \begin{align}
     \frac{\partial G_0(s'_0,s'_h)}{\partial s'_0}=&i\frac{k}{2}\chi_{\bar h} G_h(s'_0,s'_h) \\
-    \frac{\partial G_h(s'_0,s'_h)}{\partial s'_h}=&i\frac{k}{2}\chi_{h} G_0(s'_0,s'_h) -i A (s'_0+\sigma_0)G(s'_0,s'_h).
+    \frac{\partial G_h(s'_0,s'_h)}{\partial s'_h}=&i\frac{k}{2}\chi_{h} G_0(s'_0,s'_h) -i A (s'_0+\sigma_0)G\inred{_h}(s'_0,s'_h).
 \end{align}
 \end{subequations}
 

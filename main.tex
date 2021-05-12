@@ -5,7 +5,7 @@
 % Version 1.6 (28 March 2013)
 %------------------------------------------------------------------------------
 
-\documentclass[preprint]{iucr}              % DO NOT DELETE THIS LINE
+\documentclass[]{iucr}              % DO NOT DELETE THIS LINE
 \usepackage{bm}
 % \usepackage{graphicx}
 % \usepackage{tabularx}
@@ -32,6 +32,7 @@
 %\usepackage{cprotect}
 \usepackage{textgreek}
 \usepackage[normalem]{ulem}
+\usepackage{makecell}
 
 \newcommand{\todo}[1]{{\color{red}[TODO: "#1'']}}
 \newcommand{\inblue}[1]{{\color{blue}#1}}
@@ -112,12 +113,17 @@ A crystal lens equation is deduced to address the location of the focus when mon
 \end{synopsis}
 
 %\today
+% \begin{flushright}
+% {Dedicated to the memory of Claudio Ferrero}
+% \end{flushright}
+
+\begin{abstract}
+The location of the beam focus produced when monochromatic x-ray radiation is diffracted by a bent crystals is predicted by the crystal lens equation. We derive this equation on the basis of geometrical concepts. This equation has little utility for diffraction in Laue geometry. The formation of focii for the Laue symmetrical case is discussed using concepts of dynamical theory and an extension of the lens equation is proposed. The existence of additional polychromatic focus is analyzed and the feasibility of matching focal positions by polychromatic and monochromatic focusing is discussed.   \\
+
 \begin{flushright}
 {Dedicated to the memory of Claudio Ferrero}
 \end{flushright}
 
-\begin{abstract}
-The location of the beam focus produced when monochromatic x-ray radiation is diffracted by a bent crystals is predicted by the crystal lens equation. We derive this equation on the basis of geometrical concepts. This equation has little utility for diffraction in Laue geometry. The formation of focii for the Laue symmetrical case is discussed using concepts of dynamical theory and an extension of the lens equation is proposed. The existence of additional polychromatic focus is analyzed and the feasibility of matching focal positions by polychromatic and monochromatic focusing is discussed.   
 \end{abstract}
 
 
@@ -363,11 +369,11 @@ The resulting ``axial intensity profile" $|D_h(0,q)|^2$ shows in general two str
 
 \begin{table}
 \caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. Note that $\chi_{\bar h}=-i\chi_h$.}
-\begin{tabular}{lcccccc}
- Photon \\energy  [keV]  & $\theta_B$ [deg]       & $\chi_0$ & $\chi_h$ & $a$ [\SI{}{\micro\meter}]& $q_0$ [mm] & $q_{dyn}$  [mm] \\
+\begin{tabular}{llccccc}
+ \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_0$ & $\chi_h$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
 \hline
- 8.3  &  13.78 & -1.42e-5+3.17e-7i & -5.55e-6-5.23e-6i  & 59  & 3615  & -2617,2862   \\
- 17   &  6.68 & -3.36e-6+1.82e-8i & -1.27e-6-1.26e-6i  & 29  & 3753  & -2521,2559 
+ 8.3  &  13.78 & \makecell{-1.42e-5+ \\ 3.17e-7i} & \makecell{-5.55e-6- \\ 5.23e-6i}  & 59  & 3615  & -2617,2862   \\
+ 17   &  6.68 & \makecell{-3.36e- 6+ \\ 1.82e-8i} & \makecell{-1.27e-6- \\ 1.26e-6i}  & 29  & 3753  & -2521,2559 
 \end{tabular}
 \label{table:example}
 \end{table}
@@ -576,6 +582,7 @@ which is the CLE (equation~(\ref{eq:CLE})) for the Laue case, with the correspon
 
 \section{Relevance of the lens equation in the symmetric Bragg case}
 \label{sec:BraggGeometry}
+
 Let us consider the case of a flat non-absorbing crystal plate (without bending), in symmetrical Bragg geometry. The fact that experimental results and also numerical calculations \cite{Honkanen2018} of Bragg diffraction with plane crystals do not show any focusing effect (contrary to Laue case), can be loosely explained by the following intuitive approach. Consider that any geometrical ray emitted from a real distant point-source produces a reflected ray at the point of incidence on the crystal surface, with a reflectivity coefficient equal to the complex reflectivity of the incident plane wave having the same glancing angle of incidence $\theta=\theta_B+\Delta\theta$ as the geometrical ray under consideration
 \begin{equation}
 \label{eq:braggDiffProfile}
@@ -621,6 +628,7 @@ This means a real focus at the focal distance $|L_h|=q_{dyn}/4$ with beam incide
 
 \section{Summary and conclusions}
 \label{sec:summary}
+
 A crystal lens equation (CLE) based on the conservation of the parallel component of the wavevector in the diffraction process is obtained (equation~\ref{eq:CLE}). It includes all cases of symmetric and asymmetric Laue and Bragg geometries. It differs from the previous formulation \cite{CK} in the Laue case. However, the lens equation is actually of little practical interest in the Laue case, because it can be applied only if the crystal is very thin, and it neglects important effects resulting from the dynamical theory of diffraction, like the focusing of the Borrmann triangle. We derived a modified lens equation (\ref{eq:newCLE}) in the case of symmetric geometry which overcomes this restriction. Consistently, it converges to the CLE in the case of a crystal with zero thickness, a case that has little utility. The generic case of arbitrary asymmetry is left for a future investigation.
 
 The application of the CLE (equation~\ref{eq:CLE}) is restricted to monochromatic focusing. Polychromatic focusing, as used in the polychromators of dispersive EXAFS beamlines, happens when the wavelength of the reflected rays changes to exactly match the Bragg angle. This condition is given by a different lens equation (\ref{eq:polychromaticfocusing}). This implies a specular reflection of the rays on the Bragg planes that is, in general, incompatible with the CLE or the results of dynamical theory, except for the Bragg symmetric case, or for rays matching exactly the Bragg condition thus verifying Laue equation. Therefore, polychromatic and monochromatic focusing must be treated separately. It has been demonstrated that focii predicted by monochromatic and polychromatic focusing conditions coincide if the source is situated on the Rowland circle. Moreover, such coincidence is also true for any source position (off-Rowland) in symmetric Bragg geometry, but not in symmetric Laue geometry. Here, for the Laue symmetric case, both polychromatic and monochromatic focii can match if the modified lens equation~(\ref{eq:newCLE}) is used instead, but requires a particular choice of the crystal thickness.

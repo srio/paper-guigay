@@ -371,12 +371,13 @@ and the full multiple scattering is $D_h=D_{h,kin} M$.
 
 
 
-This section introduces the important case of dynamical focusing with flat Laue crystals (without bending), first described in \cite{AfanasevKohn1977} and verified experimentally by \cite{Aristov1978, Aristov1980}
-in the case of symmetrical geometry. The theory was extended to the asymmetric case by \cite{Kohn2000}. The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}.
+Dynamical focusing \inred{by} flat Laue crystals (without bending) \inred{was predicted by} \citeasnoun{AfanasevKohn1977} and verified experimentally by \citeasnoun{}{Aristov1978, Aristov1980}
+in the case of symmetrical geometry. The theory was extended to the asymmetric case by \citeasnoun{Kohn2000}.
+% The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}.
 
 \begin{figure}
 \label{fig:laue}
-\caption{Schematic representation of the relevant parameters in Laue asymmetrical diffraction.
+\caption{Schematic representation of the relevant parameters in Laue asymmetrical diffraction. \todo{add $O'$, make labels closer to axes}
 }
 \includegraphics[width=0.99\textwidth,trim=3cm 10cm 5cm 10cm,clip=true]{fig3.pdf}
 \end{figure}
@@ -385,9 +386,23 @@ in the case of symmetrical geometry. The theory was extended to the asymmetric c
 % Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:laue}). 
 % The dynamical focusing is most easily described by considering a point-source on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface).
 
-We consider a point-source of coordinates $\sigma_0=\sigma_h=0$ on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface). This is the most basic case of dynamical focusing. 
+\inred{The most basic case of dynamical focusing is that of a point-source in $O$ ($\sigma_0=\sigma_h=0$)} on the crystal entrance surface.
+% (in practice, a slit of negligible width placed near the crystal surface).
+\inred{$O'$ is the middle of the basis of the influence region (Borrmann fan) on the exit surface (see Fig.~\ref{fig:laue}).}
 
-A point in the $\xi-$axis perpendicular to the direction of $\vec k_h$ and at negligible distance from the crystal of thickness $t$ (see Fig.~\ref{fig:laue}), corresponds to a point of oblique coordinates  $(s_0,s_h)=((a+\xi)/\sin2\theta_B,\gamma(a-\xi)/\sin2\theta_B)$ on the crystal exit surface, with $a=t \sin2\theta_B/(2\cos\theta_1)$ and $\gamma=\cos\theta_1/\cos\theta_2$ (asymmetry ratio). 
+A point in the $\xi-$axis perpendicular to the direction of $\vec k_h$ and at negligible distance from the crystal of thickness $t$ (see Fig.~\ref{fig:laue}), corresponds to a point of oblique coordinates 
+\inred{
+The amplitude $D_h(\xi)$ of the diffracted wave along the axis $O'\xi \perp \vec k_h$ is the value $D_h(s_0,s_h)$ at the point of coordinates 
+
+\begin{equation}
+    \label{eq:s0andsh}
+    s_0 = \frac{a+\xi}{\sin2\theta_B }  ;  
+    s_h = \frac{\gamma(a-\xi)}{\sin2\theta_B}
+\end{equation}
+}
+on the exit surface, with $a=t \sin2\theta_B/(2\cos\theta_1)$ and $\gamma=\cos\theta_1/\cos\theta_2$ (asymmetry ratio). 
+
+
 
 The reflected amplitude $D_h(\xi)$, is zero outside the interval $-a<\xi<a$, with $a=t \sin2\theta_B/(2 \cos\theta_1)$, and it is proportional to the zeroth-order Bessel function  $J_0(Z\sqrt{a^2-\xi^2})$ in this interval \cite{kato1961}, with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$. In the case $|Z a| \gg 1$ the asymptotic approximation
 \begin{equation}
@@ -408,35 +423,62 @@ If $\operatorname{Re}(Z)>0$ the function $\exp(- i Z \xi^2 / (2 a))$
 represents a converging wave (divergent if  ($\operatorname{Re}(Z)<0$). A double, real and virtual, focusing effect is thus expected at opposite distances $\pm q_0$ from the crystal, with
 \begin{equation}
 \label{eq:q0}
-    q_0 = \frac{k a}{|\operatorname{Re}(Z)|}= \frac{a \sin2\theta_B}{|\operatorname{Re}(\sqrt{\chi_h\chi_{\bar h}})|}
+    q_0 = \frac{k a}{|\operatorname{Re}(Z)|}= \frac{a \sin2\theta_B}{|\operatorname{Re}(\sqrt{\gamma\chi_h\chi_{\bar h}})|}
 \end{equation}
 
-The parameter $q_0$, which may be referred to as the ``dynamical approximated focal length", depends on the asymmetry angle through the half-width a of the Bragg-diffracted beam $a$. It gives the position of the beam waist only approximately, as several approximations have been used.
+\inred{The moduli of the two terms in equation~(\ref{eq:approximatedDiffractedField}) are proportional to $\exp(\pm a \text{Im}~Z)$. This is the expression of anomalous absorption (Borrmann effect). Two focal positions will be observed if absorption is small, but only one if absorption is strong, as shown in Fig.~\ref{fig:flatLaue}
+}
 
-The reflected amplitude at any distance $q$ from the crystal can be calculated numerically, without the approximations used above, by propagating the wavefield at the crystal exit
-\begin{equation}
-    D_h(\xi,0)=i \frac{k}{2}\chi_h J_0(Z\sqrt{a^2-\xi^2})
-\end{equation}
-via convolution with the Fresnel propagator:
+% The parameter $q_0$, which may be referred to as the ``dynamical approximated focal length", depends on the asymmetry angle through the half-width a of the Bragg-diffracted beam $a$. It gives the position of the beam waist only approximately, as several approximations have been used.
+
+The reflected amplitude at any distance $q$ from the crystal can be calculated numerically, without the approximations used above, by the Fresnel diffraction integral
+% propagating the wavefield at the crystal exit
+% \begin{equation}
+%     D_h(\xi,0)=i \frac{k}{2}\chi_h J_0(Z\sqrt{a^2-\xi^2})
+% \end{equation}
+% via convolution with the Fresnel propagator:
+% \begin{equation}
+% \label{eq:Fresnel}
+%     D_h(\xi; q) = (\lambda q)^{-1/2} \int_{-a}^a d\xi'  \, e^{i k 
+%     \frac{(\xi-\xi')^2}{2 q}} 
+%     D_h(\xi',0).
+% \end{equation}
 \begin{equation}
 \label{eq:Fresnel}
     D_h(\xi; q) = (\lambda q)^{-1/2} \int_{-a}^a d\xi'  \, e^{i k 
     \frac{(\xi-\xi')^2}{2 q}} 
-    D_h(\xi',0).
+    J_0(Z\sqrt{a^2-\xi^2}).
 \end{equation}
-The resulting ``axial intensity profile" $|D_h(0,q)|^2$ shows in general two strong maxima at distances $q_{1,2}=\pm q_{dyn} < q_0$. This difference is a cylindrical aberration effect related to the approximations used to obtain equation (\ref{eq:q0}). The parameter $q_{dyn}$ is the ``dynamical focal length" obtained numerically, thus non-approximated (contrary to $q_0$). Note that $q_0$ is exactly proportional to the crystal thickness but this is not true for $q_{dyn}$. As an example, some numerical values are given in Table~\ref{table:example}.It can be appreciated a difference in the absolute value of $q_{dyn}$ for the negative and positive values. This is due to absorption. Without absorption, $D_h$ in equation~(\ref{eq:Fresnel}) would be real, giving the same absolute value. Because $D_h$ is complex, the $q_{dyn}$ values are slightly different for the positive and negative directions, as shown in Fig.~\ref{fig:flatLaue}.
+
+
+The resulting ``axial intensity profile" $|D_h(0,q)|^2$ shows in general two strong maxima at distances $q_{1,2}=\pm q_{dyn} < q_0$. This difference is a cylindrical aberration effect related to the approximations used to obtain equation (\ref{eq:q0}). The parameter $q_{dyn}$\inred{, which depends on the crystal thickness,} is the ``dynamical focal length" obtained numerically, thus non-approximated (contrary to $q_0$).
+% Note that $q_0$ is exactly proportional to the crystal thickness but this is not true for $q_{dyn}$.
+As an example, some numerical values are given in Table~\ref{table:example}. 
+% It can be appreciated a difference in the absolute value of $q_{dyn}$ for the negative and positive values. This is due to absorption. Without absorption, $D_h$ in equation~(\ref{eq:Fresnel}) would be real, giving the same absolute value. Because $D_h$ is complex, the $q_{dyn}$ values are slightly different for the positive and negative directions, as shown in Fig.~\ref{fig:flatLaue}.
 
 \begin{table}
-\caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. Note that $\chi_{\bar h}=-i\chi_h$.}
+\caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. Note that $\chi_{\bar h}=-i\chi_h$. \todo{DELETE THIS TABLE AFTER CHECKING NEW TABLE}}
 \begin{tabular}{llccccc}
  \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_0$ & $\chi_h$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
 \hline
- 8.3  &  13.78 & \makecell{-1.42e-5+ \\ 3.17e-7i} & \makecell{-5.55e-6- \\ 5.23e-6i}  & 59  & 3615  & -2617,2862   \\
- 17   &  6.68 & \makecell{-3.36e- 6+ \\ 1.82e-8i} & \makecell{-1.27e-6- \\ 1.26e-6i}  & 29  & 3753  & -2521,2559 
+ 8.3  &  13.78 & \makecell{-1.42 10$^{-5}$+ 3.17 10$^{-7}$i} & \makecell{-5.55 10$^{-6}$- 5.23 10$^{-6}$i}  & 59  & 3615  & -2617,2862   \\
+ 17   &  6.68 & \makecell{-3.36 10$^{-6}$+ 1.82 10$^{-8}$i} & \makecell{-1.27  10$^{-6}$- 1.26 10$^{-6}$i}  & 29  & 3753  & -2521,2559 
+\end{tabular}
+\label{table:exampleOLD}
+\end{table}
+
+\inred{
+\begin{table}
+\caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. \todo{add $\chi_0$}}
+\begin{tabular}{llcccc}
+ \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_h \chi_{\bar{h}}$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
+\hline
+ 8.3  &  13.78 & (57.8 - 1.87 i) 10$^{-12}$  & 59  & 3615  & 2862   \\
+ 17   &  6.68 & (3.2 - 0.025 i) 10$^{-12}$  & 29  & 3753  & -2559 
 \end{tabular}
 \label{table:example}
 \end{table}
-
+}
 
 \begin{figure}
 \label{fig:flatLaue}
@@ -451,53 +493,68 @@ Numerical values of these simulations are in Table~\ref{table:example}.
 \includegraphics[width=1\textwidth]{fig4.pdf}
 \end{figure}
 
-The moduli of the two terms in equation~(\ref{eq:approximatedDiffractedField}) are in general different: they are proportional to $\exp(\mp a \operatorname{Im}(Z))$. This is the expression of anomalous absorption (Borrmann effect). Two focusing positions are to be observed in the case of small absorption; but only one focusing position is to be observed in the case of strong absorption (see Fig.~\ref{fig:flatLaue}). It turns out that this property is also valid if the crystal plate is not flat, but cylindrically bent around an axis normal to the diffraction plane. 
+% The moduli of the two terms in equation~(\ref{eq:approximatedDiffractedField}) are in general different: they are proportional to $\exp(\mp a \operatorname{Im}(Z))$. This is the expression of anomalous absorption (Borrmann effect). Two focusing positions are to be observed in the case of small absorption; but only one focusing position is to be observed in the case of strong absorption (see Fig.~\ref{fig:flatLaue}). It turns out that this property is also valid if the crystal plate is not flat, but cylindrically bent around an axis normal to the diffraction plane. 
 
-For the flat crystal under discussion, the focusing condition for a source at a finite distance $p$ from the crystal, is 
+% For the flat crystal under discussion, the focusing condition for a source at a finite distance $p$ from the crystal, is 
+% \begin{equation}
+%     \label{eq:sumpandq}
+%     p+q=\pm q_{dyn}.
+% \end{equation}
+% This result is simply obtained by looking at the operators i) the free-space propagation from the source to the diffracting crystal, ii) effect of the crystal diffraction, and iii) the propagation downstream from the crystal to the image position. These operations  are space-invariant. They are expressed as convolutions in direct space, or simply multiplications in reciprocal space. Therefore, they can be commuted. This allows to merge the operations i) and iii) and consequently obtain equation~(\ref{eq:sumpandq}).
+% Propagation through a flat crystal is space-invariant, whereas propagation through a bent crystal is not space-invariant. The reason for this difference is that, in a bent crystal case, the IF is not only dependent on the variables $(s'_0,s'_h)$, but also on the variables $(\sigma_0,\sigma_h)$, as seen in equations~(\ref{eq:TTEsimple},\ref{eq:kummer}).
+
+\inred{
+The focusing condition for a source at a finite distance $p$ from the crystal can be obtained by considering that propagation in free-space and propagation in the flat crystal are space-invariant, therefore expressed as convolutions in direct space or simple multiplications in reciprocal space. Therefore, they can be commuted. This allows to merge the free-space propagation before and after the crystal. The focusing condition is therefore
 \begin{equation}
-    \label{eq:sumpandq}
-    p+q=\pm q_{dyn}.
+    p + q = q_{dyn}.
 \end{equation}
-This result is simply obtained by looking at the operators i) the free-space propagation from the source to the diffracting crystal, ii) effect of the crystal diffraction, and iii) the propagation downstream from the crystal to the image position. These operations  are space-invariant. They are expressed as convolutions in direct space, or simply multiplications in reciprocal space. Therefore, they can be commuted. This allows to merge the operations i) and iii) and consequently obtain equation~(\ref{eq:sumpandq}).
-Propagation through a flat crystal is space-invariant, whereas propagation through a bent crystal is not space-invariant. The reason for this difference is that, in a bent crystal case, the IF is not only dependent on the variables $(s'_0,s'_h)$, but also on the variables $(\sigma_0,\sigma_h)$, as seen in equations~(\ref{eq:TTEsimple},\ref{eq:kummer}).
+On the contrary, propagation through a bent crystal is not space-invariant. The reason for this important difference is that, in a bent crystal case, the IF is not only dependent on the variables $(s'_0, s'_h)$, but also on $(\sigma_0, \sigma_h)$ because of the factor  
+$\exp[-i \vec h . \vec u (s_0, \sigma_h)]$ in 
+equation~(\ref{eq:kummer}). 
+}
 
 
-
-\subsection{Lens equation for a bent crystal of finite thickness in symmetrical Laue geometry}
+\subsection{\inred{A new} lens equation for a bent crystal of finite thickness in symmetrical Laue geometry}
 \label{sec:LaueNewCLE}
 
-The equations of dynamical focusing by a bent Laue crystal in symmetrical geometry used by \cite{GuigayFerrero2016} are briefly recalled in this section.
+% The equations of dynamical focusing by a bent Laue crystal in symmetrical geometry used by \cite{GuigayFerrero2016} are briefly recalled in this section.
 
-For the case of symmetrical diffraction, the factor $\exp(i \chi_0(s'_0+s'_h))$ in equation~(\ref{eq:kummer}) is constant and will be omitted.
-The equation~(\ref{eq:kummer}) can be written as
+For symmetrical Laue geometry, the factor $\exp(i \chi_0 (s'_0+s'_h))$ in equation~(\ref{eq:kummer}) is constant\inred{, as well as $i(k/2)\chi_h$ and they will be omitted. The IF in equation~(\ref{eq:kummer}) is (see Appendix~\ref{appendix:TTEintegral})}
+% The equation~(\ref{eq:kummer}) can be written as
 \begin{equation}
 \label{eq:DhSymmetricalLaue}
     D_h(s_0,s_h) = \frac{i k}{2} \chi_h e^{i \vec h . \vec u(s_0,\sigma_h)}
     J_0(2\sqrt{\Omega s'_0 s'_h}),
 \end{equation}
-with 
-\begin{equation}
-\vec h . \vec u (s_0,\sigma_h) = \phi(\sigma_h)-\phi(s_0) =
-k \frac{\tau(\tau+a)-\xi(\xi+a)}{2 R \cos\theta_B}, 
-\end{equation}
-$s_0=(\xi+  a)/\sin2\theta_B$,
-$\sigma_h=-\tau/\sin2\theta_B$, and
-\begin{equation}
-\phi(s_0)=\frac{k \sin\theta_B}{R}(s_0^2 \sin2\theta_B - a s_0)=k \frac{\xi(a+\xi)}{2R\cos\theta_B}. 
-\end{equation}
+where $\vec h . \vec u(s_0,\sigma_h)$ is given in Appendix~\ref{appendix:TTEintegral}.
+% with 
+% \begin{equation}
+% \vec h . \vec u (s_0,\sigma_h) = \phi(\sigma_h)-\phi(s_0) =
+% k \frac{\tau(\tau+a)-\xi(\xi+a)}{2 R \cos\theta_B}, 
+% \end{equation}
+% $s_0=(\xi+  a)/\sin2\theta_B$,
+% $\sigma_h=-\tau/\sin2\theta_B$, and
+% \begin{equation}
+% \phi(s_0)=\frac{k \sin\theta_B}{R}(s_0^2 \sin2\theta_B - a s_0)=k \frac{\xi(a+\xi)}{2R\cos\theta_B}. 
+% \end{equation}
+Let us consider the incident wave amplitude $D_{inc}(\tau)=\exp(i k \tau^2/(2p))$, where $\tau$ is a coordinate along the axis $O\tau$ normal to $\vec k_0$ (see Fig.~\ref{fig:laue}). \inred{On the exit surface, using $s_0=(\xi+a)/\sin2\theta$ and $\sigma_h=-\tau/\sin2\theta_B$, and the notation $R'=R\cos\theta_B$ we obtain
 
-Let us consider the incident wave amplitude $D_{inc}(\tau)=\exp(i k \tau^2/(2p))$, where $\tau$ is a coordinate along the axis $O\tau$ normal to $\vec k_0$ (see Fig.~\ref{fig:laue}). The diffracted wave on the axis $O\xi$
-($q=0$) is
-
 \begin{equation}
-    D_h(\xi,0)=\int_{\xi-a}^{\xi+a}\frac{d\tau}{\sqrt{\lambda p}}
-    e^{ik\left[\frac{\tau^2}{2p}+\frac{\tau(\tau+a)-\xi(\xi+a)}{2R \cos\theta_B}\right]}
-    J_0(Z\sqrt{a^2-(\xi-\tau)^2}),
+    \vec h . \vec u(s_0,\sigma_h) = k \frac{\tau(\tau+a)-\xi(\xi+a)}{ 2R'}.
 \end{equation}
-or making the change of variables $\eta=\xi-\tau$,
-\begin{equation}
+Using the integration variable $\eta=\xi-\tau$, the wave amplitude along the \xi$-axis is
+} 
+% The diffracted wave on the axis $O\xi$
+% ($q=0$) is
+% \begin{equation}
+%     D_h(\xi,0)=\int_{\xi-a}^{\xi+a}\frac{d\tau}{\sqrt{\lambda p}}
+%     e^{ik\left[\frac{\tau^2}{2p}+\frac{\tau(\tau+a)-\xi(\xi+a)}{2R \cos\theta_B}\right]}
+%     J_0(Z\sqrt{a^2-(\xi-\tau)^2}),
+% \end{equation}
+% or making the change of variables $\eta=\xi-\tau$,
+\begin{equation}\label{eq:blabla}
     D_h(\xi,0)=\int_{-a}^{+a}\frac{d\eta}{\sqrt{\lambda p}}
-    e^{\frac{ik}{2}\left[\frac{(\xi-\eta)^2}{p}+\frac{\eta^2-2\eta\xi-a\eta}{R \cos\theta_B}\right]}
+    e^{\frac{ik}{2}\left[\frac{(\xi-\eta)^2}{p}+\frac{\eta^2-2\eta\xi-a\eta}{R'}\right]}
     J_0(Z\sqrt{a^2-\eta^2}).
 \end{equation}
 The wave amplitude at a distance $q$ downstream from the crystal is obtained using equation~(\ref{eq:Fresnel}). We thus have a double integral over $\eta$ and $\xi'$. The $\xi'$ integration can be performed analytically \cite{GuigayFerrero2013}, and it turns out that
@@ -509,11 +566,13 @@ The wave amplitude at a distance $q$ downstream from the crystal is obtained usi
     e^{\frac{ik}{2}
     [\frac{\eta^2}{L_e}-\eta(
     \frac{2\xi q_e}{q L_e}+
-    \frac{a}{R \cos\theta_B}
+    \frac{a}{R'}
     )]}
     J_0(Z\sqrt{a^2-\eta^2}),
 \end{equation}
-where $L=p+q$, $p_e^{-1}=p^{-1}+(R\cos\theta_B)^{-1}$, $q_e^{-1}=q^{-1}-(R\cos\theta_B)^{-1}$ and $L_e=p_e+q_e=\pm q_{dyn}$. The focal positions are given by $L_{e}=\pm q_{dyn}$. Using the notation $R'=R\cos\theta_B$, this can be written as
+where $L=p+q$, $p_e^{-1}=p^{-1}+R'^{-1}$, $q_e^{-1}=q^{-1}-R'^{-1}$ and $L_e=p_e+q_e=\pm q_{dyn}$. The focal positions are given by $L_{e}=\pm q_{dyn}$.
+% Using the notation $R'=R\cos\theta_B$, 
+This can be written as
 \begin{equation}
 \label{eq:preLaueCLE}
     \frac{R'}{R'-q} - \frac{R'}{R' + p} = \pm \frac{q_{dyn}}{R'}.
@@ -527,37 +586,38 @@ Translating equation~(\ref{eq:preLaueCLE}) in the notation of section~\ref{sec:C
 \end{equation}
 If $q_{dyn}$ is set to zero, we obtain $L_h=L_0$, the same result as the ``lens equation"~(\ref{eq:CLE}).
 Equation~(\ref{eq:preLaueCLE}) or (\ref{eq:newCLE}) can be considered as a ``modified lens equation" which takes dynamical diffraction effects into account in symmetric Laue geometry.
+We \inred{did} not find a close expression like equation~(\ref{eq:newCLE}) for the general case of asymmetrical Laue diffraction. However, numerical simulations can be done to obtain the focal positions \cite{GuigayFerrero2016, Nesterets}.
 
-We have not found a closed expression like equation~(\ref{eq:newCLE}) for the general case of asymmetrical Laue diffraction. However, numerical simulations can be done to obtain the focal positions \cite{GuigayFerrero2016, Nesterets}.
+Examples of numerical calculations \inred{using equation~(\ref{eq:Dhpropagated})} are shown in Fig.~\ref{fig:8keV}, for the case of the 111 reflection of a \SI{250}{\micro\meter} thick cylindrically bent symmetric Laue silicon crystal, with a curvature radius of $R$~= \SI{1}{\meter}, at a source distance $p$~= \SI{30}{\meter} and for x-ray photon energies of 8.3~keV and 17~keV. 
 
-We are often interested in real focusing ($q>0$) of an incident beam from a very distant real source ($p\approx \infty$), for instance in EXAFS beamlines. $q_1$ and $q_2$ are both decreasing functions of $p$. Suppose $0<R'\le q_{dyn}$. When $p$ increases from zero to infinity, $q_1$ decreases from $q_1=R'q_{dyn}/(q_{dyn}+R')$ to 
+\inred{Alternatively, provided that the parameter $q_{dyn}$ has been previously determined numerically, as explained in section 3.2??, it can be verified that the focal positions obtained directly by using the new CLE (equation~\ref{eq:newCLE}) are in very good agreement with the focal positions obtained obtained numerically in Fig.~\ref{fig:8keV}. An important advantage uin using the new CLE is that the same value of $q_{dyn}$ can be used for any value of the radius of curvature and for any value of source distance. 
+}
+%For both photon energy values, the effective value of $q_{dyn}$ is determined by plotting the axial intensity profile as function of $q$ for the unbent crystal of the same thickness and $p=0$ (Fig.~\ref{fig:flatLaue}). This allows to calculate $q_1$ and $q_2$ as
+% \begin{subequations}
+% \label{eq:q1andq2}
+% \begin{align}
+%     q_1 &= R' \frac{p(q_{dyn}-R')+q_{dyn}R'}{p q_{dyn}+(q_{dyn}+R')R'} \\
+%     q_2 &= R' \frac{p(q_{dyn}+R')+q_{dyn}R'}{p q_{dyn}+(q_{dyn}-R')R'}.
+% \end{align}
+% \end{subequations}
+% It can be verified that the results are in perfect agreement with the values shown by the numerical plot of the axial intensity profile. Applying the equations (\ref{eq:q1andq2})  to the cases analyzed in Fig.~\ref{fig:8keV} we get (with $q_{dyn}$=~\SI{2862}{\milli\meter} from Table~\ref{fig:flatLaue})
+% $q_1$=~\SI{644}{\milli\meter},
+% $q_2$=~\SI{1303}{\milli\meter}. Relative errors are -1.2\% and -2.1\%, respectively with respect to numerical values in Fig.~\ref{fig:8keV}a. For 17 keV (Fig.~\ref{fig:8keV}b)
+% $q_1$=~\SI{611}{\milli\meter},
+% $q_2$=~\SI{1382}{\milli\meter}, therefore the relative errors are -2.24\% and 0.7\%, respectively.
+% In these cases,
+% $\operatorname{Im}(Za)$ is negative. It means that the focus position with lowest absorption (therefore with largest intensity) is $q_1$. This is in agreement with the numerical plots. 
+% The highest peak is for $q_1<q_2$ at the x-ray energy of 17 keV. At the energy of 8 keV, only the  peak $q_1$ is present and the $q_2$ peak is damped out because the anomalous absorption effect.
+
+We are often interested in real focusing ($q>0$) of an incident beam from a very distant real source ($p\approx \infty$), for instance in EXAFS beamlines. 
+% $q_1$ and $q_2$ are both decreasing functions of $p$. 
+Suppose $0<R'\le q_{dyn}$. When $p$ increases from zero to infinity, $q_1$ decreases from $q_1=R'q_{dyn}/(q_{dyn}+R')$ to 
 % $q_1=R'(1-R'/q_{dyn})$.
 $q_1=R' q_{dyn}(q_{dyn}-R')$.
 Simultaneously, $q_2$ decreases from $q_2=R'q_{dyn}/(q_{dyn}-R')$ to 
 % $q_2=R'(1+R'/q_{dyn})$.
 $q_2=R'q_{dyn}(q_{dyn}+R')$.
 For very large $p$-values, we have the simple relation $q_1+q_2\approx 2R'$.
-
-Examples of numerical calculations are shown in Fig.~\ref{fig:8keV}, for the case of the 111 reflection of a \SI{250}{\micro\meter} thick cylindrically bent symmetric Laue silicon crystal, with a curvature radius of $R$~= \SI{1}{\meter}, at a source distance $p$~= \SI{30}{\meter} and for x-ray photon energies of 8.3~keV and 17~keV. 
-For both photon energy values, the effective value of $q_{dyn}$ is determined by plotting the axial intensity profile as function of $q$ for the unbent crystal of the same thickness and $p=0$ (Fig.~\ref{fig:flatLaue}). This allows to calculate $q_1$ and $q_2$ as
-
-\begin{subequations}
-\label{eq:q1andq2}
-\begin{align}
-    q_1 &= R' \frac{p(q_{dyn}-R')+q_{dyn}R'}{p q_{dyn}+(q_{dyn}+R')R'} \\
-    q_2 &= R' \frac{p(q_{dyn}+R')+q_{dyn}R'}{p q_{dyn}+(q_{dyn}-R')R'}.
-\end{align}
-\end{subequations}
-
-It can be verified that the results are in perfect agreement with the values shown by the numerical plot of the axial intensity profile. Applying the equations (\ref{eq:q1andq2})  to the cases analyzed in Fig.~\ref{fig:8keV} we get (with $q_{dyn}$=~\SI{2862}{\milli\meter} from Table~\ref{fig:flatLaue})
-$q_1$=~\SI{644}{\milli\meter},
-$q_2$=~\SI{1303}{\milli\meter}. Relative errors are -1.2\% and -2.1\%, respectively with respect to numerical values in Fig.~\ref{fig:8keV}a. For 17 keV (Fig.~\ref{fig:8keV}b)
-$q_1$=~\SI{611}{\milli\meter},
-$q_2$=~\SI{1382}{\milli\meter}, therefore the relative errors are -2.24\% and 0.7\%, respectively.
-
-In these cases,
-$\operatorname{Im}(Za)$ is negative. It means that the focus position with lowest absorption (therefore with largest intensity) is $q_1$. This is in agreement with the numerical plots. 
-The highest peak is for $q_1<q_2$ at the x-ray energy of 17 keV. At the energy of 8 keV, only the  peak $q_1$ is present and the $q_2$ peak is damped out because the anomalous absorption effect.
 
 \begin{figure}
 \label{fig:8keV}
@@ -593,12 +653,16 @@ $q_2$~= \SI{1372}{\milli\meter} (green).
 It can be seen from equation~(\ref{eq:Dhpropagated}) that the intensity function $|D_h(s_0,s_h)|^2$ as a function of $\xi$ is symmetric around $\xi_c=-a q L_e / (2 q_e R \cos\theta_B)$. This denotes a lateral shift of the intensity profile \inred{from its position for the unbent crystal} (the axial intensity profiles of Fig.\ref{fig:8keV}a and \ref{fig:8keV}b are actually calculated as a function of $(\xi-\xi_c)$.
 %\todo{ Discuss how it changes... Make a plot vs $\xi$: IT CHANGES  $\approx -a/2$... TOO MUCH??}
 
-\subsection{Semianalytical approach in asymmetric Laue geometry to obtain the CLE}
+\subsection{Semianalytical approach in asymmetric Laue geometry \inred{its CLE limit}}
 \label{sec:LaueCompatibilityCLE}
 
-In this section we demonstrate, for the general case of asymmetric Laue, how the CLE can be obtained from the dynamical theory in the limit of zero thickness. To obtain this result we first summarize the results of \cite{GuigayFerrero2016} that give the expression of the diffracted field at the exit face of the crystal, which is then propagated to the image at a distance $q$. This expression has to be evaluated numerically (semi-analytically). It is shown that in the limit of zero thickness, this expression corresponds to a cylindrical wave focused in a position dictated by an expression that coincides with the CLE.
+% In this section we demonstrate, for the general case of asymmetric Laue, how the CLE can be obtained from the dynamical theory in the limit of zero thickness. 
 
-The same procedure used in section~\ref{sec:LaueNewCLE} is applied here, but it is more complicated for asymmetric reflection because of the larger number of parameters and the mathematical complexity of the Kummer function. The reflected amplitude versus the $\xi$ coordinate at negligible distance from the exit crystal surface is expressed by the following integral over the variable $\eta=\xi-\tau/\gamma$
+\inred{Here we follow the analytic process used in the preceding section to obtain equation~(\ref{eq:blabla}). The formulation is however more complicated, because of the much larger number of involved parameters and the mathematical complexity of the Kummer function. 
+}
+% To obtain this result we first summarize the results of \cite{GuigayFerrero2016} that give the expression of the diffracted field at the exit face of the crystal, which is then propagated to the image at a distance $q$. This expression has to be evaluated numerically (semi-analytically). It is shown that in the limit of zero thickness, this expression corresponds to a cylindrical wave focused in a position dictated by an expression that coincides with the CLE.
+% The same procedure used in section~\ref{sec:LaueNewCLE} is applied here, but it is more complicated for asymmetric reflection because of the larger number of parameters and the mathematical complexity of the Kummer function. 
+The reflected amplitude versus the $\xi$ coordinate at negligible distance from the exit crystal surface is expressed by the following integral over the variable $\eta=\xi-\tau/\gamma$
 
 \begin{equation}
 \label{eq:unpropagatedkummer}
@@ -609,22 +673,27 @@ The same procedure used in section~\ref{sec:LaueNewCLE} is applied here, but it 
     }
      M(\frac{i\Omega}{A},1,i g k \frac{a^2-\eta^2}{R}),
 \end{equation}
-where $\gamma=\cos\theta_1/\cos\theta_2$, $a=t \sin\theta_B/(2\cos\theta_1)$,
-
-
+where 
+%$\gamma=\cos\theta_1/\cos\theta_2$, $a=t \sin\theta_B/(2\cos\theta_1)$,
 \begin{multline}
     \phi(\xi,\eta) =\frac{k}{2R}[-\mu_2\gamma^2(\xi-\eta)^2
     +a_2\gamma(\xi-\eta) \\
     -\mu_1(a+\xi)^2 
     +a_1(a+\xi)
-    -2g(a+\xi)(\xi-\eta)],
+    -2g(a+\xi)(\xi-\eta)].
 \end{multline}
-the parameters $\mu_{1,2}$, $a_{1,2}$ and $A$ are given in the Appendix~\ref{appendix:Deformation},
-$g=A\gamma R/ k \sin^22\theta_B$,
-and $\rho=\nu/(1-\nu)$ with $\nu$ the Poisson ratio.   
+The parameters $\mu_{1,2}$, $a_{1,2}$ \inred{and $g$} are given in the Appendix~\ref{appendix:Deformation},
+% $g=A\gamma R/ k \sin^22\theta_B$,
+% and $\rho=\nu/(1-\nu)$ with $\nu$ the Poisson ratio.   
 The reflected amplitude $D_h(\xi,q)$ at distance $q$ downstream the crystal is again obtained using equation~(\ref{eq:Fresnel}), therefore by double integration over $\eta$ and $\xi'$. The $\xi'$-integration can be again performed analytically. The remaining $\eta$-integration involving the Kummer function is carried out numerically \cite{GuigayFerrero2016}. We consider this approach as semi-analytical, in contrast to the approach used by \cite{Nesterets} which is based on a numerical solution of the TTE.
 
-We are now interested in the limit this semi-analytical formulation in the case of vanishing crystal thickness ($a\rightarrow0{}$), for comparison with the CLE. In this limit, the Kummer function is equal to unity in equation~(\ref{eq:unpropagatedkummer}), and the integral can be replaced by $2a$ times the integrand evaluated at $\eta=a=0$, therefore
+\inred{It is interesting to study analytically the limit of this semi-analytical formulation in the case of}
+% We are now interested in the limit this semi-analytical formulation in the case of 
+vanishing crystal thickness ($a\rightarrow0{}$) \inred{because the comparison with lens equation~(\ref{eq:CLE}) represents a validity test of the semi-analytical formulation. 
+In the limit ($a\rightarrow0{}$),}
+the Kummer function is equal to unity in equation~(\ref{eq:unpropagatedkummer}), and the integral can be replaced by $2a$ times the integrand evaluated at $\eta=a=0$, therefore
+
+
 \begin{equation}
 \label{eq:14reduced}
     D_h(\xi,0) = \frac{2 a \gamma}{\sqrt{\lambda p}} e^{\frac{i k \xi^2}{2}(\frac{\gamma^2}{p}-\frac{\mu_2\gamma^2+\mu_1+2g}{R})}.
@@ -739,7 +808,7 @@ The application of the CLE (equation~\ref{eq:CLE}) is restricted to monochromati
 %\referencelist{library}
 
 \appendix
-\section{The Crystal Lens Equation deduced from the phase-factor of the Takagi-Taupin equations}
+\section{\inred{Derivation of} Lens Equation from the phase-factor of the Takagi-Taupin equations}
 \label{appendix:CLE}.
 
 In a crystal under a deformation field $\vec u(\vec r)$, the polarizability of a crystal can be taken as $\chi(\vec r-\vec u(\vec r))$, where $\chi(\vec r)$ is the polarizability of the non-deformed crystal. The Fourier components of the electric susceptibility $\chi_h$ and $\chi_{\bar h}$ are multiplied by the phase factors $\exp(-i k \vec h . \vec u (\vec r))$ and $\exp(+i k \vec h . \vec u (\vec r))$, respectively, in the Takagi-Taupin equations which describe  the propagation inside the deformed crystal.
@@ -775,12 +844,15 @@ which is equivalent to the lens equation (\ref{eq:CLE}).
 \section{Derivation of the influence functions from the integral form of the Takagi-Taupin equations}
 \label{appendix:TTEintegral}
 
-The IF for a point-source of oblique coordinates $(\sigma_0,\sigma_h)$ is related to the incident wave $\exp(i\vec k_0 . \vec x) \delta(s_h-\sigma_h)$, corresponding to $D_{inc}=\delta(s_h-\sigma_h)$. The refracted amplitude in the crystal is $D_{ref}(\sigma'_0,\sigma'_h)=\exp(i k \chi_0 s'_0/2)\delta(s'_h)$ by using the variables $s'_{0,h}=s_{0,h}-\sigma_{0,h}$.
-According to equation~(\ref{eq:functionsG}b), the refracted amplitude takes the form
+\inred{We consider a point source at the position $(\sigma_0,\sigma_h)$. The incident wave has the form $\exp(i\vec k_0 . \vec x) \delta(s_h-\sigma_h)$.}
+% , corresponding to $D_{inc}=\delta(s_h-\sigma_h)$.
+The refracted amplitude is $D_{ref}(\sigma'_0,\sigma'_h)=\exp(i k \chi_0 s'_0/2)\delta(s'_h)$ \inred{where} the variables $s'_{0,h}=s_{0,h}-\sigma_{0,h}$ \inred{are used}.
+According to equation~(\ref{eq:functionsG}\inred{a}), the refracted amplitude takes the form \inred{$G_{ref}=E \delta(s'_h)$, with}
 \begin{equation}
-    G_{ref}=\exp[-i\frac{k}{2}\chi_0(s_0+s_h)+i \phi_2(s_h)] D_{ref}(s'_0,s'_h) = E\delta(s'_h)
+\label{eq:appE}
+    E =\exp[-i\frac{k}{2}\chi_0(\sigma_0+\sigma_h)+i \phi_2(\sigma_h)] D_{ref}(s'_0,s'_h).
 \end{equation}
-where $E=\exp[-i (k/2) \chi_0 (s_0 + s_h) + i \phi_2(\sigma_h)]$ is a constant phase term. Considering the $G(s_o,s_h)$  as functions $G_h(s'_0,s'_h)$ of $s'_0$ and $s'_h$, the TTE (\ref{eq:TTEsimple}) are expressed as
+Considering $G_{0,h}(s_0,s_h)$  as functions $G_{0,h}(s'_0,s'_h)$ of $s'_0$ and $s'_h$, the TTE (\ref{eq:TTEsimple}) are expressed as
 
 \begin{subequations}
 \label{eq:TTEappendix}
@@ -789,44 +861,41 @@ where $E=\exp[-i (k/2) \chi_0 (s_0 + s_h) + i \phi_2(\sigma_h)]$ is a constant p
     \frac{\partial G_h(s'_0,s'_h)}{\partial s'_h}=&i\frac{k}{2}\chi_{h} G_0(s'_0,s'_h) -i A (s'_0+\sigma_0)G\inred{_h}(s'_0,s'_h).
 \end{align}
 \end{subequations}
-
-It is then convenient to rewrite them in terms of the functions $F_{0,h}(s'_0,s'_h)$ such that
-\begin{subequations}
+\inred{We define} the functions $F_{0,h}(s'_0,s'_h)$ such that
+\begin{equation}
 \label{eq:TTEappendix2}
-\begin{align}
-    G_0(s'_0,s'_h) =& e^{-iA\sigma_0s'_h} F_0(s'_0,s'_h),\\
-    G_h(s'_0,s'_h)=&i\frac{k}{2}\chi_{h} e^{-iA\sigma_0s'_h} F_h(s'_0,s'_h).
-\end{align}
-\end{subequations}
-
-Consequently, equations (\ref{eq:TTEappendix}) are rewritten as
+    G_{0,h}(s'_0,s'_h) = e^{-iA\sigma_0s'_h} F_{0,h}(s'_0,s'_h).
+\end{equation}
+\inred{The} equations (\ref{eq:TTEappendix}) are rewritten as
 \begin{subequations}
 \label{eq:TTEappendix3}
 \begin{align}
-    \frac{\partial F_0}{\partial s'_0}=&-\Omega F_h \\
-    \frac{\partial F_h}{\partial s'_h}=&F_0-i A s'_0 F_h,
+    \frac{\partial F_0}{\partial s'_0}=&\inred{i\frac{k}{2} \chi_{\bar h}} F_h \\
+    \frac{\partial F_h}{\partial s'_h}=& \inred{i\frac{k}{2}\chi_{h}}F_0-i A s'_0 F_h,
 \end{align}
 \end{subequations}
-where $\Omega=k^2\chi_h\chi_{\bar h}/4$. The refracted amplitude is $F_{ref}=E\delta(s'_h)$. Equations (\ref{eq:TTEappendix3}) can be put in the form of integral equations:
+% where $\Omega=k^2\chi_h\chi_{\bar h}/4$. 
+The refracted amplitude is $F_{ref}=E\delta(s'_h)$. 
+Equations (\ref{eq:TTEappendix3}) can be written in the form of integral equations:
 \begin{subequations}
 \label{eq:TTEappendixIntegral}
 \begin{align}
-    F_0(s'_0,s'_h) =& E \delta(s'_h) -\Omega\int_0^{s'_0} d\xi_0F_h(\xi_0,s'_h),\\
-    F_h(s'_0,s'_h)=& \int_0^{s'_h} d\xi_h F_0(s'_0,\xi_h) - i A s'_0 \int_0^{s'_h} d\xi_h F_h(s'_0,\xi_h).
+    F_0(s'_0,s'_h) =& E \delta(s'_h) +i\frac{k}{2}\chi_{\bar h}\int_0^{s'_0} d\xi_0F_h(\xi_0,s'_h),\\
+    F_h(s'_0,s'_h)=& i\frac{k}{2}\chi_{h}\int_0^{s'_h} d\xi_h F_0(s'_0,\xi_h) - i A s'_0 \int_0^{s'_h} d\xi_h F_h(s'_0,\xi_h).
 \end{align}
 \end{subequations}
 
 The following solution is based on the process of multiple Bragg scattering. Starting from 
-$(F_0,F_h)=(E\delta(s'_h),0)$, we obtain the first-order term, or kinematical expression, $(F_0,F_h)=(E\delta(s'_h), E)$. Successive terms are obtained by iteration. The transmitted and reflected amplitudes are made up by terms of  even and odd order, respectively. Alternatively, we can combine equations (\ref{eq:TTEappendixIntegral}) into a single integral equation for the reflected amplitude
+$(F_0,F_h)=(E\delta(s'_h),0)$, we obtain the first-order term  $(F_0,F_h)=(E\delta(s'_h), i\frac{k}{2}\chi_{h}E)$. Successive terms are obtained by iteration. \inref{$F_0$ and $F_h$} are made up by terms of  even and odd order, respectively. Alternatively, we can combine equations (\ref{eq:TTEappendixIntegral}) into a single integral equation \inred{for $F_h$}
 \begin{equation}
     \label{eq:TTEappendixSingleIntegral}
-    F_h(s'_0,s'_h) = E - \Omega \int_0^{s'_h} d \xi_h \int_0^{s'_0} d\xi_0 F_h(\xi_0,\xi_h) - i A s'_0 \int_0^{s'_h} d\xi_h F_h(s'_0,\xi_h).
+    F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E - \Omega \int_0^{s'_h} d \xi_h \int_0^{s'_0} d\xi_0 F_h(\xi_0,\xi_h) - i A s'_0 \int_0^{s'_h} d\xi_h F_h(s'_0,\xi_h),
 \end{equation}
-By iteration starting from $F_h=E$, we obtain
+\inred{where $\Omega=k^2\chi_h\chi_{\bar h}/4$ is used.} By iteration starting from $F_h=i\frac{k}{2}\chi_hE$, we obtain
 
 \begin{align}
     \label{eq:TTEappendixSeries}
-    F_h(s'_0,s'_h) = E [ 1 - 
+    F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E [ 1 - 
     (\Omega+i A) s'_0s'_h + ...+
     \nonumber \\
     (\Omega+iA)(\Omega+2iA)...(\Omega+niA)
@@ -834,40 +903,65 @@ By iteration starting from $F_h=E$, we obtain
     +...]
 \end{align}
 
-The above bracketed series can be expressed as:
-\begin{align}
-    \label{eq:Series}
-    \sum_{n=0}^{\infty} (1-i\frac{\Omega}{A})
-    (2-i\frac{\Omega}{A})...
-    (n-i\frac{\Omega}{A})
-    \frac{(\inred{-iA} s'_0 s'_h)^n}{n!n!}=&\\
-    M(\inred{i}\frac{\Omega}{A},1,-iAs'_0 s'_h) = & \\
-    e^{-iAs'_0 s'_h}M(i\frac{\Omega}{A},1,iAs'_0s'_h),
-\end{align}
-where we used the definition (equation~(\ref{eq:kummerSeries})) of the Kummer function and its known property $M(a,b,z)=\exp(z)M(b-a,b,-z)$.
-The corresponding expression for $F_0(s'_0,s'_h)$ is then easily obtained by using formula (\ref{eq:TTEappendix3}b).
+\inred{According to the definition of the Kummer function (equation (\ref{eq:kummerSeries})), the bracketted series is equal to $M(\frac{\Omega}{iA}+1, 1, -iA s'_0 s'_h)$. Using the known relation
+$M((a,b,z)=e^z M(b-a,b,z)$, together with equations (\ref{eq:appE}) and (\ref{eq:TTEappendix2}) we obtain
 
-Taking into account  formulas (9), we obtain
-\begin{align}
-\label{eq:appendixFinal}
-  &D_h= \nonumber \\
-  &i\frac{k}{2}\chi_h E
-  e^{i(\frac{k}{2}\chi_0(s_0+s_h)-
-  \phi_1(s_0) + A s_0 s_h -A \sigma_0 s'_h - As'_0 s'_h)}
-  M(i\frac{\Omega}{A},1,iA,s'_0 s'_h)
-  = \nonumber \\
-  &i\frac{k}{2}\chi_h 
-  e^{i(\frac{k}{2}\chi_0(s'_0+s'_h)+
-  \phi_2(s_h) - \phi_1(s_0) + A s_0 s_h )}
-  M(i\frac{\Omega}{A},1,iA,s'_0 s'_h)
-  = \nonumber \\
-  &i\frac{k}{2}\chi_h 
-  e^{i\frac{k}{2}\chi_0(s'_0+s'_h)
-  -i \vec h . \vec u(s_0,\sigma_h)}
-  M(i\frac{\Omega}{A},1,iA,s'_0 s'_h)
-\end{align}
+\begin{equation}
+    G_h = i\frac{k}{2}\chi_h \exp\left[-i \frac{k}{2} \chi_0 (\sigma_0+\sigma_h)+ i \phi_2(\sigma_h)-i A \sigma_0 s'_h - i A '_0 s'_h\right] M(1\frac{\Omega}{A},1,i A s'_0 s'_h)
+\end{equation}
 
-in which we use  the relation $s_0s_h-\sigma_0 s'_h - s'_0 s'_h=s_0 s_h - s_0 s'_h = s_0 \sigma_h$.
+Using equation (9b) and $s_0s_h-\sigma_0 s'_h - s'_0 s'_h=s_0 s_h - s_0 s'_h = s_0 \sigma_h$, we get
+\begin{equation}
+    D_h = i \frac{k}{2} \chi_h \exp\left[  i \frac{k}{2} \chi_0 (s'_0+s'_h) - i\phi_1(s_0) + i \phi_2(\sigma_h) - iA s'_0 s'_h \right], 
+\end{equation}
+which, including equation (\ref{eq:cylinder}), is equation (\ref{eq:kummer}).
+
+In the symmetric Laue case, for which $A=0$, we obtain from equation~(\ref{eq:TTEappendixSeries})
+
+\begin{equation}
+    F_h = i \frac{k}{2} \chi_h E J_0(2 \sqrt{\Omega s'_0 s'_h}),
+\end{equation}
+and therefore
+\begin{equation}
+    D_h = i \frac{k}{2} \chi_h \exp\left[  i \frac{k}{2} \chi_0 (s'_0+s'_h) - i \vec k . \vec u(s_0,s_h) \right] J_0(2\sqrt{\Omegas s_0 s_h}).
+\end{equation}
+
+}
+
+% The above bracketed series can be expressed as:
+% \begin{align}
+%     \label{eq:Series}
+%     \sum_{n=0}^{\infty} (1-i\frac{\Omega}{A})
+%     (2-i\frac{\Omega}{A})...
+%     (n-i\frac{\Omega}{A})
+%     \frac{(\inred{-iA} s'_0 s'_h)^n}{n!n!}=&\\
+%     M(\inred{i}\frac{\Omega}{A},1,-iAs'_0 s'_h) = & \\
+%     e^{-iAs'_0 s'_h}M(i\frac{\Omega}{A},1,iAs'_0s'_h),
+% \end{align}
+% where we used the definition (equation~(\ref{eq:kummerSeries})) of the Kummer function and its known property $M(a,b,z)=\exp(z)M(b-a,b,-z)$.
+% The corresponding expression for $F_0(s'_0,s'_h)$ is then easily obtained by using formula (\ref{eq:TTEappendix3}b).
+
+% Taking into account  formulas (9), we obtain
+% \begin{align}
+% \label{eq:appendixFinal}
+%   &D_h= \nonumber \\
+%   &i\frac{k}{2}\chi_h E
+%   e^{i(\frac{k}{2}\chi_0(s_0+s_h)-
+%   \phi_1(s_0) + A s_0 s_h -A \sigma_0 s'_h - As'_0 s'_h)}
+%   M(i\frac{\Omega}{A},1,iA,s'_0 s'_h)
+%   = \nonumber \\
+%   &i\frac{k}{2}\chi_h 
+%   e^{i(\frac{k}{2}\chi_0(s'_0+s'_h)+
+%   \phi_2(s_h) - \phi_1(s_0) + A s_0 s_h )}
+%   M(i\frac{\Omega}{A},1,iA,s'_0 s'_h)
+%   = \nonumber \\
+%   &i\frac{k}{2}\chi_h 
+%   e^{i\frac{k}{2}\chi_0(s'_0+s'_h)
+%   -i \vec h . \vec u(s_0,\sigma_h)}
+%   M(i\frac{\Omega}{A},1,iA,s'_0 s'_h)
+% \end{align}
+
+% in which we use  the relation $s_0s_h-\sigma_0 s'_h - s'_0 s'_h=s_0 s_h - s_0 s'_h = s_0 \sigma_h$.
 
 \section{General expression of the phase factor and derivation of equation~(\ref{eq:14reduced})}
 \label{appendix:Deformation}.

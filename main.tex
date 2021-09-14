@@ -711,7 +711,12 @@ This is the expression of the amplitude of a cylindrical wave focused at the dis
 \begin{equation}
     \frac{1}{q}+\frac{\gamma^2}{p}-\frac{\mu_2\gamma^2+\mu_1+2g}{R}=0. 
 \end{equation}
-Using the identity $\mu_1+\gamma^2\mu_2+2g=(\cos\theta_2-\cos\theta_1)/\cos^2\theta_2$, which is demonstrated in Appendix~\ref{appendix:Deformation}, the focusing condition is 
+Using the identity
+\begin{equation}
+\label{eq:appendixIdentity}
+    \mu_1+\gamma^2\mu_2+2g=(\cos\theta_2-\cos\theta_1)/\cos^2\theta_2,
+\end{equation}
+which is demonstrated in Appendix~\ref{appendix:Deformation}, the focusing condition is 
 \begin{equation}
     \frac{1}{q}+\frac{\gamma^2}{p}+\frac{\cos\theta_1-\cos\theta_2}{R\cos^2\theta_2}=0,
 \end{equation}
@@ -984,7 +989,7 @@ with solutions $F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E \exp[-i A s'_0 s'_h]$. We 
 
 % in which we use  the relation $s_0s_h-\sigma_0 s'_h - s'_0 s'_h=s_0 s_h - s_0 s'_h = s_0 \sigma_h$.
 
-\section{General expression of the phase factor and derivation of equation~(\ref{eq:14reduced})}
+\section{General expression of the phase factor and derivation of equation~(\ref{eq:appendixIdentity})}
 \label{appendix:Deformation}.
 
 The components of the displacement field, in the case of meridional bending of radius $R$ are \cite{Nesterets}:
@@ -1004,15 +1009,14 @@ with the following definitions
     \phi_2(s_h) &= -\frac{k}{2R}[\mu_2(s_h\sin2\theta_B)^2-a_2 s_h\sin2\theta_B],
 \end{align}
 where $\gamma=\cos\theta_1/\cos\theta_2$, $\theta_{1,2}=\alpha\pm \theta_B$,
-% $a_{\inred{1,2}}=t \sin2\theta_B / (2\cos\theta_{1\inred{,2}})$,
 \begin{align}
-   g &= -\sin\alpha\frac{\gamma +(1+\rho)\cos^2\theta_1}{(\sin2\theta_B\cos\theta_B)}, \nonumber \\
+   g &= \frac{A \gamma R}{k \sin^2 2\theta_B} = -\sin\alpha\frac{\gamma +(1+\rho)\cos^2\theta_1}{\sin2\theta_B\cos\theta_B}, \nonumber \\
    \mu_{1,2} &=\frac{\sin\alpha(\sin^2\theta_{1,2}+\rho\cos^2\theta_{1,2})+\cos\alpha\sin2\theta_{1,2}}{\sin2\theta_B\cos\theta_B}, \nonumber \\
    a_{1,2} &=t\frac{\cos\alpha\sin\theta_{1,2}+\rho\sin\alpha\cos\theta_{1,2}}{\cos\theta_B}. \nonumber
 \end{align}
 
-These formulas are simplified for a symmetric reflection ($\alpha=0$):
-$A=0$, $\cos\theta_{1,2}=\cos\theta_B$, $\mu_{1,2}=\pm1/\cos\theta_B$, $a_{1,2}=\pm t\tan\theta_B$, $\phi_1$ and  $\phi_2$ have the same form $\phi(s)=[(s\sin2\theta_B)^2-s t \sin2\theta_B\sin\theta_B] / (2 R \cos\theta_B)$. 
+% These formulas are simplified for a symmetric reflection ($\alpha=0$):
+% $A=0$, $\cos\theta_{1,2}=\cos\theta_B$, $\mu_{1,2}=\pm1/\cos\theta_B$, $a_{1,2}=\pm t\tan\theta_B$, $\phi_1$ and  $\phi_2$ have the same form $\phi(s)=[(s\sin2\theta_B)^2-s t \sin2\theta_B\sin\theta_B] / (2 R \cos\theta_B)$. 
 
 The parameter $\rho$ is eliminated in the following expressions 
 \begin{align}
@@ -1022,45 +1026,16 @@ The parameter $\rho$ is eliminated in the following expressions
 \end{align}
 
 Using
-\begin{align}
-    &\sin2\theta_1+\gamma^2\sin2\theta_2 = \nonumber \\
-    &2(\gamma\sin\theta_1\cos\theta_2+\sin\theta_2\cos\theta_1) =2\gamma\sin2\alpha,
-\end{align}
-and
-\begin{align}
-    &\cos2\theta_1+\gamma^2\cos2\theta_2=\nonumber \\
-    &2\cos^2\theta_1-1+\gamma^2(2\cos^2\theta_2-1)=
-    4\cos^2\theta_1-1-\gamma^2; 
-\end{align}
-we obtain
-\begin{align}
-    \mu_1+\gamma^2\mu_2+2g =& \nonumber \\
-    \sin\alpha
-    \frac{2\gamma\cos2\alpha-4\cos^2\theta_1+1+\gamma^2}{\sin2\theta_B\cos\theta_B}, \nonumber 
-\end{align}  
-    
-    
-Furthermore, 
-\begin{align}
-    &\cos2\alpha+\cos2\theta_B = 
-    2\cos\theta_1\cos\theta_2, \nonumber \\
-    & \cos^2\theta_1+\cos^2\theta_2 = \nonumber \\
-    & \frac{1+\cos(2\alpha+2\theta_B)}{2} + 
-    \frac{1+\cos(2\alpha-2\theta_B)}{2} = \nonumber \\
-    & 1+\cos2\alpha\cos2\theta_B, \nonumber \\
-    &\frac{\mu_1+\gamma^2\mu_2+2g}{\sin\alpha} = \nonumber \\
-    & \frac{2\cos\theta_1\cos\theta_2(\cos2\alpha-2\cos\theta_1\cos\theta_2)+\cos^2\theta_2+\cos^2\theta_1}{\cos\theta_B\sin2\theta_B\cos^2\theta_2} = \nonumber \\
-    & \frac{\sin2\theta_B}{\cos\theta_B\cos^2\theta_2}. \nonumber 
-\end{align}
-
-Therefore:
-\begin{align}
-    \mu_1+\gamma^2\mu_2+2g = & \nonumber \\
-    \frac{2\sin\alpha\sin\theta_B}{\cos^2\theta_B} = &
-    \frac{\cos(\alpha-\theta_B)-\cos(\alpha+\theta_B)}{\cos^2\theta_2}=
-    \frac{\cos\theta_2-\cos\theta_1}{\cos^2\theta_2}
-\end{align}
-
+\inred{
+\begin{equation}
+    \mu_1 + \gamma^2 \mu_2 + 2 g = \frac{
+    \sin(\alpha+2 \theta_B)\cos^2\theta_2 + \sin(\alpha-2\theta_B) \cos^2\theta_1 - 2 \sin\alpha \cos\theta_1 \cos\theta_2
+    }{
+    \sin2\theta_B \cos\theta_B \cos^2\theta_2
+    },
+\end{equation}
+by some cumbersome algebraic manipulations the numerator of this expression is reduced to $\sin\alpha \sin^22\theta_B$ from where is easy to get equation (\ref{eq:appendixIdentity}).
+}
 
 \section{Relevance of the lens equation in the symmetric Bragg case}
 \label{sec:BraggGeometry}

@@ -199,7 +199,7 @@ This implies that $(\sin \varphi_h - \sin \varphi_0)$ is invariant, therefore
 
 \begin{figure}
 \label{fig:vectors}
-\caption{Schematic view of the relevant parameters in focusing by a bent crystal in Bragg geometry. \todo{$\varphi_0$ closer...}
+\caption{Schematic view of the relevant parameters in focusing by a bent crystal in Bragg geometry.
 }
 \includegraphics[width=0.99\textwidth,trim=4cm 6cm 5cm 10cm,clip=true]{fig2.pdf}
 \end{figure}
@@ -355,13 +355,13 @@ and the full multiple scattering is $D_h=D_{h,kin} M$.
 
 
 
-Dynamical focusing \inred{by} flat Laue crystals (without bending) \inred{was predicted by} \citeasnoun{AfanasevKohn1977} and verified experimentally by \citeasnoun{}{Aristov1978, Aristov1980}
+Dynamical focusing \inred{by} flat Laue crystals (without bending) \inred{was predicted by} \citeasnoun{AfanasevKohn1977} and verified experimentally by \cite{Aristov1978,Aristov1980PhysStatSol,Aristov1980}
 in the case of symmetrical geometry. The theory was extended to the asymmetric case by \citeasnoun{Kohn2000}. \inred{The applications of dynamical focusing to high-resolution spectrometry was proposed by \citeasnoun{KohnGorobtsov2013}.}
 % The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}.
 
 \begin{figure}
 \label{fig:laue}
-\caption{Schematic representation of the relevant parameters in Laue asymmetrical diffraction.
+\caption{Schematic representation of the relevant parameters in Laue asymmetrical diffraction. \todo{add axis x (horizontal) and z (vertical down)}
 }
 \includegraphics[width=0.99\textwidth,trim=3cm 10cm 5cm 10cm,clip=true]{fig3.pdf}
 \end{figure}
@@ -370,7 +370,7 @@ in the case of symmetrical geometry. The theory was extended to the asymmetric c
 % Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:laue}). 
 % The dynamical focusing is most easily described by considering a point-source on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface).
 
-\inred{The most basic case of dynamical focusing is that of a point-source in $O$ ($\sigma_0=\sigma_h=0$)} on the crystal entrance surface \inred{of the crystal of thickness $t$}.
+\inred{The basic case of dynamical focusing is that of a point-source in $O$ ($\sigma_0=\sigma_h=0$)} on the crystal entrance surface \inred{of the crystal of thickness $t$}.
 % (in practice, a slit of negligible width placed near the crystal surface).
 \inred{$O'$ is the middle of the basis of the influence region (Borrmann fan) on the exit surface (see Fig.~\ref{fig:laue}).}
 % A point in the $\xi-$axis perpendicular to the direction of $\vec k_h$ and at negligible distance from the crystal of thickness $t$ (see Fig.~\ref{fig:laue}), corresponds to a point of oblique coordinates 
@@ -383,13 +383,13 @@ The amplitude of the diffracted wave along the axis $O'\xi \perp \vec k_h$ is th
     s_h = \gamma\frac{a-\xi}{\sin2\theta_B},
 \end{equation}
 }
-with $a=t \sin2\theta_B/(2\cos\theta_1)$ and $\gamma=\cos\theta_1/\cos\theta_2$ (asymmetry ratio). 
+with $a=t \sin2\theta_B/(2\cos\theta_1)$ and $\gamma=\cos\theta_1/\cos\theta_2$. 
 
 
 
 The amplitude $D_h(\xi)$ is zero outside the interval $-a<\xi<a$,
 % , with $a=t \sin2\theta_B/(2 \cos\theta_1)$, 
-and is proportional to the Bessel function \inred{$J_0(2\sqrt{\Omega s_0 s_h})=$} $J_0(Z\sqrt{a^2-\xi^2})$ in this interval \cite{kato1961}, with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$. In the case $|Z a| \gg 1$ the asymptotic approximation
+and is proportional to the Bessel function \inred{$J_0(k \sqrt{\chi_h \chi_{\bar h} s_0 s_h})=$} $J_0(Z\sqrt{a^2-\xi^2})$ in this interval \cite{kato1961}, with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$. In the case $|Z a| \gg 1$ the asymptotic approximation
 \begin{equation}
     J_0(Z\sqrt{a^2-\xi^2})\approx \left(\frac{2}{\pi Z \sqrt{a^2-\xi^2}}\right)^{1/2} \cos(Z\sqrt{a^2-\xi^2}-\pi/4)
 \end{equation}
@@ -444,29 +444,28 @@ The ``axial intensity profile" $|D_h(0,q)|^2$ shows in general two strong maxima
 As an example, some numerical values are given in Table~\ref{table:example}. 
 % It can be appreciated a difference in the absolute value of $q_{dyn}$ for the negative and positive values. This is due to absorption. Without absorption, $D_h$ in equation~(\ref{eq:Fresnel}) would be real, giving the same absolute value. Because $D_h$ is complex, the $q_{dyn}$ values are slightly different for the positive and negative directions, as shown in Fig.~\ref{fig:flatLaue}.
 
-\begin{table}
-\caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. Note that $\chi_{\bar h}=-i\chi_h$. \todo{DELETE THIS TABLE AFTER CHECKING NEW TABLE}}
-\begin{tabular}{llccccc}
- \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_0$ & $\chi_h$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
-\hline
- 8.3  &  13.78 & \makecell{-1.42 10$^{-5}$+ 3.17 10$^{-7}$i} & \makecell{-5.55 10$^{-6}$- 5.23 10$^{-6}$i}  & 59  & 3615  & -2617,2862   \\
- 17   &  6.68 & \makecell{-3.36 10$^{-6}$+ 1.82 10$^{-8}$i} & \makecell{-1.27  10$^{-6}$- 1.26 10$^{-6}$i}  & 29  & 3753  & -2521,2559 
-\end{tabular}
-\label{table:exampleOLD}
-\end{table}
+% \begin{table}
+% \caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. Note that $\chi_{\bar h}=-i\chi_h$. \todo{DELETE THIS TABLE AFTER CHECKING NEW TABLE}}
+% \begin{tabular}{llccccc}
+%  \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_0$ & $\chi_h$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
+% \hline
+%  8.3  &  13.78 & \makecell{-1.42 10$^{-5}$+ 3.17 10$^{-7}$i} & \makecell{-5.55 10$^{-6}$- 5.23 10$^{-6}$i}  & 59  & 3615  & -2617,2862   \\
+%  17   &  6.68 & \makecell{-3.36 10$^{-6}$+ 1.82 10$^{-8}$i} & \makecell{-1.27  10$^{-6}$- 1.26 10$^{-6}$i}  & 29  & 3753  & -2521,2559 
+% \end{tabular}
+% \label{table:exampleOLD}
+% \end{table}
 
-\inred{
 \begin{table}
-\caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. \todo{add $\chi_0$}}
-\begin{tabular}{llcccc}
- \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_h \chi_{\bar{h}}$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
+\caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}.}
+\begin{tabular}{llccccc}
+ \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_0$ & $\chi_h\chi_{\bar h}$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
 \hline
- 8.3  &  13.78 & (57.8 - 1.87 i) 10$^{-12}$  & 59  & 3615  & 2862   \\
- 17   &  6.68 & (3.2 - 0.025 i) 10$^{-12}$  & 29  & 3753  & -2559 
+ 8.3  &  13.78 & \makecell{(-14.24 + 0.317 i) 10$^{-6}$} & \makecell{(58.06 - 3.416 i) 10^{-12}}  & 59  & 3615  & -2617;~2862   \\
+ 17   &  6.68 & \makecell{(-3.36 + 0.018 i) 10$^{-6}$} & \makecell{(3.20 - 0.046 i) 10$^{-12}$}  & 29  & 3753  & -2521;~2559 
 \end{tabular}
 \label{table:example}
 \end{table}
-}
+
 
 \begin{figure}
 \label{fig:flatLaue}
@@ -496,7 +495,7 @@ The focusing condition for a source at a finite distance $p$ from the crystal ca
 \begin{equation}
     p + q = q_{dyn}.
 \end{equation}
-On the contrary, propagation through a bent crystal is not space-invariant, for the following reason: the IF in a bent crystal case, the IF is not only dependent on the variables $(s'_0, s'_h)$, but also on $(\sigma_0, \sigma_h)$ because of the factor  
+On the contrary, propagation through a bent crystal is not space-invariant, for the following reason: the IF is not only dependent on the variables $(s'_0, s'_h)$, but also on $(\sigma_0, \sigma_h)$ because of the factor  
 $\exp[-i \vec h . \vec u (s_0, \sigma_h)]$ in 
 equation~(\ref{eq:kummer}). 
 }
@@ -507,7 +506,7 @@ equation~(\ref{eq:kummer}).
 
 % The equations of dynamical focusing by a bent Laue crystal in symmetrical geometry used by \cite{GuigayFerrero2016} are briefly recalled in this section.
 
-\inred{In} symmetrical Laue geometry, the factor $\exp(i \chi_0 (s'_0+s'_h))$ in equation~(\ref{eq:kummer}) is constant \inred{ and will be omitted. Equation~(\ref{eq:kummer}) is (see Appendix~\ref{appendix:TTEintegral})}
+\inred{In} symmetrical Laue geometry, the factor $\exp(i \chi_0 (s'_0+s'_h))$ in equation~(\ref{eq:kummer}) is constant \inred{ on the crystal exit surface and will be omitted. Equation~(\ref{eq:kummer}) is (see Appendix~\ref{appendix:TTEintegral})}
 % The equation~(\ref{eq:kummer}) can be written as
 \begin{equation}
 \label{eq:DhSymmetricalLaue}
@@ -579,7 +578,7 @@ We \inred{did} not find a close expression like equation~(\ref{eq:newCLE}) for t
 
 Examples of numerical calculations \inred{using equation~(\ref{eq:Dhpropagated})} are shown in Fig.~\ref{fig:8keV}, for the case of the 111 reflection of a \SI{250}{\micro\meter} thick cylindrically bent symmetric Laue silicon crystal, with a curvature radius of $R$~= \SI{1}{\meter}, at a source distance $p$~= \SI{30}{\meter} and for x-ray photon energies of 8.3~keV and 17~keV. 
 
-\inred{Alternatively, provided that the parameter $q_{dyn}$ has been previously determined numerically,  by a plot similar to Fig.~\ref{fig:flatLaue}, the focal positions can be given directly by (equation~(\ref{eq:newCLE})). The results are in very good agreement with the focal positions obtained obtained numerically in Fig.~\ref{fig:8keV}. An important advantage in using the new CLE is that the same value of $q_{dyn}$ can be used for any value of the radius of curvature and for any value of source distance. 
+\inred{Alternatively, provided that the parameter $q_{dyn}$ has been previously determined numerically,  by a plot similar to Fig.~\ref{fig:flatLaue}, the focal positions can be given directly by equation~(\ref{eq:newCLE}). The results are in very good agreement with the focal positions obtained obtained numerically in Fig.~\ref{fig:8keV}. An important advantage in using the new CLE is that the same value of $q_{dyn}$ can be used for any value of the radius of curvature and for any value of source distance. 
 }
 %For both photon energy values, the effective value of $q_{dyn}$ is determined by plotting the axial intensity profile as function of $q$ for the unbent crystal of the same thickness and $p=0$ (Fig.~\ref{fig:flatLaue}). This allows to calculate $q_1$ and $q_2$ as
 % \begin{subequations}
@@ -642,7 +641,7 @@ $q_2$~= \SI{1372}{\milli\meter} (green).
 It can be seen from equation~(\ref{eq:Dhpropagated}) that the intensity function $|D_h(s_0,s_h)|^2$ as a function of $\xi$ is symmetric around $\xi_c=-a q L_e / (2 q_e R')$. This denotes a lateral shift of the intensity profile \inred{from its position for the unbent crystal} (the axial intensity profiles of Fig.\ref{fig:8keV}a and \ref{fig:8keV}b are actually calculated as a function of $(\xi-\xi_c))$.
 %\todo{ Discuss how it changes... Make a plot vs $\xi$: IT CHANGES  $\approx -a/2$... TOO MUCH??}
 
-\subsection{Semianalytical approach in asymmetric Laue geometry \inred{its CLE limit}}
+\subsection{Semianalytical approach in asymmetric Laue geometry \inred{and its CLE limit}}
 \label{sec:LaueCompatibilityCLE}
 
 % % In this section we demonstrate, for the general case of asymmetric Laue, how the CLE can be obtained from the dynamical theory in the limit of zero thickness. 
@@ -749,7 +748,7 @@ The equation $\varphi_0+\varphi_h=2\alpha$ in Laue case\inred{, or $\varphi_0+\v
 \frac{{\cos {\varphi _o}}}{{{L_0}}} + \frac{{\left| {\cos {\varphi _h}} \right|}}{{{L_h}}} = \frac{2}{R_c}.
 \end{equation}
 % or, in the notation of section~\ref{sec:dynamlicalLaue}, $-\cos\theta_1/p + |\cos\theta_2|/q=2/R$.
-Equation~(\ref{eq:polychromaticfocusing}) is usually referred to as the "geometric focusing" condition for bent crystals. It is also applied in the case of flat crystals \cite{sanchezdelrio1994}. \inred{Like in equation~(\ref{eq:CLE}), the crysal thickness is not taken into account.}
+Equation~(\ref{eq:polychromaticfocusing}) is usually referred to as the "geometric focusing" condition for bent crystals. It is also applied in the case of flat crystals \cite{sanchezdelrio1994}. \inred{Like in equation~(\ref{eq:CLE}), the crystal thickness is not taken into account.}
 
 
 % . This polychromatic focusing effect was also discussed for flat Laue crystals \cite{sanchezdelrio1994}. Equation~(\ref{eq:polychromaticfocusing}) is applied for focusing a polychromatic beam by a thin crystal instead of the CLE. 
@@ -763,17 +762,17 @@ Equation~(\ref{eq:polychromaticfocusing}) is usually referred to as the "geometr
 \inred{Conditions} (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) coincide in the symmetric Bragg case for which $\cos\varphi_o=-\cos\varphi_h=\sin\theta_B$. 
 In the symmetric Laue case, for which $\cos\varphi_o=\cos\varphi_h=\cos\theta_B$,  condition (\ref{eq:CLE}) is reduced to $L_0=L_h$ and equation~(\ref{eq:polychromaticfocusing}) is then $L_0=L_h=R_c\cos\theta_B$, which corresponds to Rowland geometry. Therefore \inred{conditions} (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) coincide \inred{in} symmetric Laue case only if the Rowland condition is satisfied.\footnote{\cite{CK} stated that they coincide if a symmetrical reflection is used {\it or} the Rowland condition is fulfilled, which is false in the symmetric Laue off-Rowland}
 
-The conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) \inred{always} coincide, in both asymmetric Laue and Bragg cases, \inred{in} the Rowland condition $L_0=R_c\cos\varphi_0$, as they both give $L_h=R_c|\cos\varphi_h|$. 
+The conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) \inred{always} coincide \inred{in} the Rowland condition $L_0=R_c\cos\varphi_0$, as they both give $L_h=R_c|\cos\varphi_h|$. 
 A narrow energy band \inred{is then reflected}, because the angle of incidence on the local reflecting plane does not change along the bent crystal surface.
 \inred{
-On synchrotron dispersive EXAFS beamlines the use of a Bragg symmetric reflection by a bent ``polychromator" at a large distance from the source garantees that a broad bandwidth (up to $~1$ keV) is focused onto a small spot \cite{Tolentino:ms0206} at a focal distance close to $L_h=R_c\cos\theta_B/2$. 
+On synchrotron dispersive EXAFS beamlines, the use of a Bragg symmetric reflection by a bent ``polychromator" at a large distance from the source guarantees the focusing of a broad bandwidth (up to $~1$ keV) on a small spot \cite{Tolentino:ms0206} at a distance close to $L_h=(R_c\sin\theta_B)/2$. 
 }
 
 % \inblue{Synchrotron dispersive EXAFS beamlines, \inred{because} the objective is to reflect \inred{and focus} a large energy bandwidth (polychromator), \inred{work} therefore in off-Rowland condition with a large source distance. The use of symmetric Bragg reflection  guarantees that the polychromator focuses a broad-bandwidth (up to ~1 keV) beam onto a small spot \cite{Tolentino:ms0206} at a focal distance \inred{close to} $L_h=R_c\cos\theta_B/2$.}
 
 Laue polychromators are also used in synchrotron beamlines.
-As discussed \inred{above},
-conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) coincide only in Rowland configuration, \inred{meaning that it would be} impossible to work \inred{ in off-Rowland condition} to obtain a large energy bandwidth. 
+As discussed \inred{above}, \inred{the coincidence of
+conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) is impossible in off-Rowland configuration, which would provide} a large energy bandwidth. 
 However, \inred{in symmetric Laue geometry condition (\ref{eq:CLE}), should be replaced by equation~(\ref{eq:newCLE}), which is $L_h \approx R_c \cos\theta_B + (R_c \cos\theta_B) ^2 / q_{dyn}$ if the source distance is very large.} 
 The coincidence \inred{with (\ref{eq:polychromaticfocusing}) is then obtained} if
 % $R_c \cos\theta_B /2 = R_c \cos\theta_B+ (R_c \cos\theta_B) ^2 / q_{dyn}$ which implies 
@@ -812,10 +811,12 @@ The application of the CLE (equation~\ref{eq:CLE}) is restricted to monochromati
 
 \appendix
 \section{\inred{Derivation of the} Lens Equation from the phase-factor of the Takagi-Taupin equations}
-\label{appendix:CLE}.
+\label{appendix:CLE}
 
-\unred{Under} a deformation field $\vec u(\vec r)$, the crystal polarizability \inred{is} taken as $\chi(\vec r-\vec u(\vec r))$, where $\chi(\vec r)$ is the polarizability of the non-deformed crystal. The Fourier components of the electric susceptibility $\chi_{h,\bar h}$ are multiplied by the phase factors $\exp(-  \vec h . \vec u (\vec r))$ and $\exp(\mp i \vec h . \vec u (\vec r))$, respectively, in the TTE.
-In the case of a very thin crystal, the incident ray at the \inred{position} $x$ on the \inred{bent} crystal surface is simply affected by the phase factor 
+\inred{Under} a deformation field $\vec u(\vec r)$, the crystal polarizability \inred{is} taken as 
+$\chi(\vec r-\vec u(\vec r))$, where $\chi(\vec r)$ is the
+polarizability of the non-deformed crystal. The Fourier components of the electric susceptibility $\chi_{h,\bar h}$ are multiplied by the phase factors $\exp(-  \vec h . \vec u (\vec r))$ and $\exp(\mp i \vec h . \vec u (\vec r))$, respectively, in the TTE.
+In the case of a very thin crystal, the ray \inred{reflected at position} $x$ on the \inred{bent} crystal surface is simply affected by the phase factor 
 \begin{equation}
     \label{eq:phasefactor11}
     e^{-i \vec h . \vec u(x)} = e^{i k (\cos\varphi_h-\cos\varphi_0) \frac{x^2}{2 R_c} },
@@ -838,8 +839,6 @@ This is combined with equation (\ref{eq:phasefactor11}) to obtain} the amplitude
 \end{equation}
 corresponding to a real or virtual focus if the phase of this function is negative or positive respectively. 
 
-\inblue{Using the notations defined in section~\ref{sec:CLE}, a real focus corresponds to $L_h<0$ in Laue case and to $L_h>0$ in Bragg case; similarly, a virtual focus corresponds to $L_h>0$ in Laue case and to $L_h<0$ in Bragg case. This means that a cylindrical wave collapsing to the focus has the form $D_h(\xi) = \exp(\pm i k \xi^2 / (2L_h))$ with positive sign in Laue and negative sign in Bragg. This expression can be rewritten for both Bragg and Laue cases as}
-
 \inred{Using the convention defined in section~\ref{sec:CLE} (see Fig.~\ref{fig:geometries}), a real focus requires $L_h<0$ in Laue case and $L_h>0$ in Bragg. A cylindrical converging wave has then the form $\exp(i k \xi^2 / (2L_h))$ in Laue and $\exp(-i k \xi^2 / (2L_h))$ in Bragg (we arrive to the same result considering a virtual focus). For both Bragg and Laue cases we can write}
 
 \begin{equation}
@@ -856,7 +855,7 @@ which is equivalent to the lens equation (\ref{eq:CLE}).
 \section{Derivation of the influence functions \inred{equation (\ref{eq:kummer})} from the integral form of the Takagi-Taupin equations}
 \label{appendix:TTEintegral}
 
-\inred{For a point source in position $(\sigma_0,\sigma_h)$, the incident wave has the form $\exp(i\vec k_0 . \vec x) \delta(s_h-\sigma_h)$.}
+\inred{For a point source in position $(\sigma_0,\sigma_h)$ on the crystal surface, the incident amplitude has the form $D_{inc}= \delta(s_h-\sigma_h)$.}
 % , corresponding to $D_{inc}=\delta(s_h-\sigma_h)$.
 The refracted amplitude is $D_{ref}(s_0,s_h)=\exp(i k \chi_0 s'_0/2)\delta(s'_h)$ \inred{using} $s'_{0,h}=s_{0,h}-\sigma_{0,h}$.
 According to equation~(\ref{eq:functionsG}\inred{a}), \inred{this is transformed in $G_{ref}=E \delta(s'_h)$, with}
@@ -896,9 +895,9 @@ Equations (\ref{eq:TTEappendix3}) can be written in the form of integral equatio
     F_h(s'_0,s'_h)=& i\frac{k}{2}\chi_{h}\int_0^{s'_h} d\xi_h F_0(s'_0,\xi_h) - i A s'_0 \int_0^{s'_h} d\xi_h F_h(s'_0,\xi_h).
 \end{align}
 \end{subequations}
-
-The following solution is based on the process of multiple Bragg scattering. Starting from 
-$(F_0,F_h)=(E\delta(s'_h),0)$, we obtain the first-order term  $(F_0,F_h)=(E\delta(s'_h), i\frac{k}{2}\chi_{h}E)$. Successive terms are obtained by iteration. \inref{$F_0$ and $F_h$} are made up by terms of  even and odd order, respectively. Alternatively, we can combine equations (\ref{eq:TTEappendixIntegral}) into a single integral equation \inred{for $F_h$ only}
+% The following solution is based on the process of multiple Bragg scattering. Starting from 
+% $(F_0,F_h)=(E\delta(s'_h),0)$, we obtain the first-order term  $(F_0,F_h)=(E\delta(s'_h), i\frac{k}{2}\chi_{h}E)$. Successive terms are obtained by iteration. \inref{$F_0$ and $F_h$} are made up by terms of  even and odd order, respectively. Alternatively, 
+We can combine equations (\ref{eq:TTEappendixIntegral}) into a single integral equation \inred{for $F_h$ only}
 \begin{equation}
     \label{eq:TTEappendixSingleIntegral}
     F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E - \Omega \int_0^{s'_h} d \xi_h \int_0^{s'_0} d\xi_0 F_h(\xi_0,\xi_h) - i A s'_0 \int_0^{s'_h} d\xi_h F_h(s'_0,\xi_h),
@@ -943,7 +942,7 @@ In the opposite case when $A >> \Omega$, an approximated solution could be obtai
 \begin{equation}
         F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E - i A s'_0 \int_0^{s'_h} d\xi_h F_h(s'_0,\xi_h),
 \end{equation}
-with solution $F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E \exp[-i A s'_0 s'_h]$. We obtain equation (\ref{eq:kummerapprox}) of section \ref{sec:dynamlicalLaue}.
+with solution $F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E \exp[-i A s'_0 s'_h]$ from which equation (\ref{eq:kummerapprox}) of section \ref{sec:dynamlicalLaue} is obtained.
 }
 
 % The above bracketed series can be expressed as:
@@ -981,7 +980,7 @@ with solution $F_h(s'_0,s'_h) = i\frac{k}{2}\chi_h E \exp[-i A s'_0 s'_h]$. We o
 
 % in which we use  the relation $s_0s_h-\sigma_0 s'_h - s'_0 s'_h=s_0 s_h - s_0 s'_h = s_0 \sigma_h$.
 
-\section{General expression of the phase factor and derivation of equation~(\ref{eq:appendixIdentity})}
+\section{Expression of the phase factor in Laue geomety and derivation of equation~(\ref{eq:appendixIdentity})}
 \label{appendix:Deformation}.
 
 The components of the displacement field, in the case of meridional bending of radius $R$ are \cite{Nesterets}:
@@ -1026,7 +1025,7 @@ Using
     \sin2\theta_B \cos\theta_B \cos^2\theta_2
     },
 \end{equation}
-by some cumbersome algebraic manipulations, the numerator of this expression is reduced to $(\sin\alpha \sin^22\theta_B)$ from where is easy to get equation (\ref{eq:appendixIdentity}).
+by some cumbersome algebraic manipulations, the numerator of this last expression is reduced to $(\sin\alpha \sin^22\theta_B)$ from where it is easy to get equation (\ref{eq:appendixIdentity}).
 }
 
 \section{Relevance of the lens equation in the symmetric Bragg case}

@@ -361,7 +361,7 @@ in the case of symmetrical geometry. The theory was extended to the asymmetric c
 
 \begin{figure}
 \label{fig:laue}
-\caption{Schematic representation of the relevant parameters in Laue asymmetrical diffraction. \todo{add axis x (horizontal) and z (vertical down)}
+\caption{Schematic representation of the relevant parameters in Laue asymmetrical diffraction.
 }
 \includegraphics[width=0.99\textwidth,trim=3cm 10cm 5cm 10cm,clip=true]{fig3.pdf}
 \end{figure}
@@ -748,55 +748,56 @@ The equation $\varphi_0+\varphi_h=2\alpha$ in Laue case\inred{, or $\varphi_0+\v
 \frac{{\cos {\varphi _o}}}{{{L_0}}} + \frac{{\left| {\cos {\varphi _h}} \right|}}{{{L_h}}} = \frac{2}{R_c}.
 \end{equation}
 % or, in the notation of section~\ref{sec:dynamlicalLaue}, $-\cos\theta_1/p + |\cos\theta_2|/q=2/R$.
-Equation~(\ref{eq:polychromaticfocusing}) is usually referred to as the "geometric focusing" condition for bent crystals. It is also applied in the case of flat crystals \cite{sanchezdelrio1994}. \inred{Like in equation~(\ref{eq:CLE}), the crystal thickness is not taken into account.}
+Equation~(\ref{eq:polychromaticfocusing}) is usually referred to as the "geometric focusing" condition for bent crystals. It is also applied in the case of flat crystals \cite{sanchezdelrio1994}. \inred{Like in equation~(\ref{eq:CLE}), the crystal thickness does not appear in equation~(\ref{eq:polychromaticfocusing}).}
+\inred{The combination of equations (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) gives
+
+\begin{equation}
+\label{eq:coincidence}
+\frac{\cos\varphi_0}{L_0}(\cos\varphi_h+\cos\varphi_0) = \frac{|\cos\varphi_h|}{L_h}(\cos\varphi_h+\cos\varphi_0),
+\end{equation}
+which is verified either in the symmetric Bragg case ($\cos\varphi_h+\cos\varphi_0=0$), or if $\cos\varphi_0/L_0=|\cos\varphi_h|/L_h=1/R$, which is the Rowland condition. The Rowland condition is therefore necessary for the coincidence of equations (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) in Laue geometry.
+\footnote{This is different from the statement of \cite{CK} that the coincidence is always realised under symmetrical reflection or the Rowland condition.}
+}
 
 
-% . This polychromatic focusing effect was also discussed for flat Laue crystals \cite{sanchezdelrio1994}. Equation~(\ref{eq:polychromaticfocusing}) is applied for focusing a polychromatic beam by a thin crystal instead of the CLE. 
 
 
+% coincide in the symmetric Bragg case for which $\cos\varphi_o=-\cos\varphi_h=\sin\theta_B$. 
+% In the symmetric Laue case, for which $\cos\varphi_o=\cos\varphi_h=\cos\theta_B$,  condition (\ref{eq:CLE}) is reduced to $L_0=L_h$ and equation~(\ref{eq:polychromaticfocusing}) is then $L_0=L_h=R_c\cos\theta_B$, which corresponds to Rowland geometry. Therefore \inred{conditions} (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) coincide \inred{in} symmetric Laue case only if the Rowland condition is satisfied.\footnote{\cite{CK} stated that they coincide if a symmetrical reflection is used {\it or} the Rowland condition is fulfilled, which is false in the symmetric Laue off-Rowland}
 
-
-% A ``single-ray focusing" condition is obtained by considering different wavelengths in an individual geometrical incident ray. Each wavelength fulfils the Bragg law in a given point along the ray path along traversing the crystal. This give rise to different reflected rays which propagate with different directions and may come together in a "single-ray focal point". This effect is not considered here, and we restrict our discussion to thin bent crystals. }.
-
-
-\inred{Conditions} (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) coincide in the symmetric Bragg case for which $\cos\varphi_o=-\cos\varphi_h=\sin\theta_B$. 
-In the symmetric Laue case, for which $\cos\varphi_o=\cos\varphi_h=\cos\theta_B$,  condition (\ref{eq:CLE}) is reduced to $L_0=L_h$ and equation~(\ref{eq:polychromaticfocusing}) is then $L_0=L_h=R_c\cos\theta_B$, which corresponds to Rowland geometry. Therefore \inred{conditions} (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) coincide \inred{in} symmetric Laue case only if the Rowland condition is satisfied.\footnote{\cite{CK} stated that they coincide if a symmetrical reflection is used {\it or} the Rowland condition is fulfilled, which is false in the symmetric Laue off-Rowland}
-
-The conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) \inred{always} coincide \inred{in} the Rowland condition $L_0=R_c\cos\varphi_0$, as they both give $L_h=R_c|\cos\varphi_h|$. 
-A narrow energy band \inred{is then reflected}, because the angle of incidence on the local reflecting plane does not change along the bent crystal surface.
+% The conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) \inred{always} coincide \inred{in} the Rowland condition $L_0=R_c\cos\varphi_0$, as they both give $L_h=R_c|\cos\varphi_h|$. 
+A narrow energy band \inred{is reflected in Rowland condition}, because the angle of incidence on the local reflecting plane does not change along the bent crystal surface.
 \inred{
 On synchrotron dispersive EXAFS beamlines, the use of a Bragg symmetric reflection by a bent ``polychromator" at a large distance from the source guarantees the focusing of a broad bandwidth (up to $~1$ keV) on a small spot \cite{Tolentino:ms0206} at a distance close to $L_h=(R_c\sin\theta_B)/2$. 
 }
-
-% \inblue{Synchrotron dispersive EXAFS beamlines, \inred{because} the objective is to reflect \inred{and focus} a large energy bandwidth (polychromator), \inred{work} therefore in off-Rowland condition with a large source distance. The use of symmetric Bragg reflection  guarantees that the polychromator focuses a broad-bandwidth (up to ~1 keV) beam onto a small spot \cite{Tolentino:ms0206} at a focal distance \inred{close to} $L_h=R_c\cos\theta_B/2$.}
-
 Laue polychromators are also used in synchrotron beamlines.
-As discussed \inred{above}, \inred{the coincidence of
-conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) is impossible in off-Rowland configuration, which would provide} a large energy bandwidth. 
-However, \inred{in symmetric Laue geometry condition (\ref{eq:CLE}), should be replaced by equation~(\ref{eq:newCLE}), which is $L_h \approx R_c \cos\theta_B + (R_c \cos\theta_B) ^2 / q_{dyn}$ if the source distance is very large.} 
-The coincidence \inred{with (\ref{eq:polychromaticfocusing}) is then obtained} if
+% As discussed \inred{above}, \inred{the coincidence of
+% conditions (\ref{eq:CLE}) and (\ref{eq:polychromaticfocusing}) is impossible in off-Rowland configuration, which would provide} a large energy bandwidth. 
+% However, 
+\inred{In symmetric Laue geometry, condition (\ref{eq:CLE}) should be replaced by equation~(\ref{eq:newCLE}), which is $L_h \approx R_c \cos\theta_B + (R_c \cos\theta_B) ^2 / q_{dyn}$ if the source distance is very large.} 
+\inred{Coincidence with (\ref{eq:polychromaticfocusing}) is then obtained} if
 % $R_c \cos\theta_B /2 = R_c \cos\theta_B+ (R_c \cos\theta_B) ^2 / q_{dyn}$ which implies 
 $R_c=-q_{dyn}/(2\cos\theta_B)$,
-\inred{which means} real focusing \inred{is obtained} at the distance $|L_h|=q_{dyn}/4$ with beam incidence in the \inted{crystal} convex side ($R_c<0$). 
-\inred{If the distance $|L_h|$ is fixed, the required conditions are $|R_c| = 2 |L_h| / \cos\theta_B$ and $q_{dyn}=4|L_h|$. The last condition should be fulfilled by the adequate choice of} the crystal thickness, as in  \cite{Mocella2004,Mocella2008}.
+\inred{which means} real focusing at the distance $|L_h|=q_{dyn}/4$ with beam incidence in the \inted{crystal} convex side ($R_c<0$). 
+\inred{If $|L_h|$ is fixed, the required conditions are $|R_c| = 2 |L_h| / \cos\theta_B$ and $q_{dyn}=4|L_h|$. The last condition should be fulfilled by choosing} the crystal thickness, as in  \cite{Mocella2004,Mocella2008}.
 
-% The Laue crystal can then be optimized to verify this condition by choosing the right $q_{dyn}$. This is done by selecting an adequate crystal thickness to obtain the required $q_{dyn}$ value \cite{Mocella2004} \cite{Mocella2008}. 
+\inred{Another polychromatic condition for Laue geometry has been introduced more recently \cite{Martinson, PengQi, PengQi2021}.
+The energy components of a polychromatic ray traversing a bent Laue crystal with finite thickness meet the Bragg condition at different positions along the ray path. They are diffracted with different Bragg angles, therefore they exit in different directions, giving raise to a polychromatic focus from a single ray. The ``magic contition" under which single ray focusing and geometric focusing (equation (\ref{eq:polychromaticfocusing})) would coincide is to be achieved by the adequate choice of the asymmetry. The magic condition is independent of the crystal thickness. We observe that the magic condition (equation (19) in \cite{PengQi2021}) and the modified lens equation (\ref{eq:newCLE}) are both satisfied for the particular case of symmetric Laue in Rowland configuration.   
 
-% 
-% FOR LATER!!!!!!!!!!!!!!!!!!!!!
-\todo{ TO BE EXTENDED... Another equation has been introduced in order to deal with the effects of a finite crystal thickness \cite{Martinson, PengQi, PengQi2021} found another polychromatic condition in Laue geometry. }
-
+}
 
 \section{Conclusions \inred{and future perspectives}}
 \label{sec:summary}
 
-\todo{include text to refer to Bragg plane case in Appendix D}
 
 A crystal lens equation (CLE) based on the conservation of the parallel component of the wavevector in the diffraction process is obtained (equation~\ref{eq:CLE}). It includes all cases of symmetric and asymmetric Laue and Bragg geometries. It differs from the previous formulation \cite{CK} in the Laue case. However, the lens equation 
 % is actually of little practical interest in the Laue case, because it 
 can be only applied if the crystal is very thin, and it neglects important effects resulting from the dynamical theory of diffraction, like the focusing of the Borrmann triangle. We derived the modified lens equation (\ref{eq:newCLE}) which overcomes this restriction \inred{in the case of symmetric geometry}. Consistently, it converges to the CLE if the crystal thickness \inred{tends to zero}, a case that has little utility. The generic case of arbitrary asymmetry is left for a future investigation.
+\inred{The fact that dynamic focusing cannot be achieved in Bragg case (see Appendix D) justifies in some way the larger applicability of the CLE in Bragg case. }
 
-The application of the CLE (equation~\ref{eq:CLE}) is restricted to monochromatic focusing. Polychromatic focusing, as used in the polychromators of dispersive EXAFS beamlines, happens when the wavelength of the reflected rays changes to exactly match the Bragg angle. This condition is given by a different lens equation (\ref{eq:polychromaticfocusing}). This implies a specular reflection of the rays on the Bragg planes that is, in general, incompatible with the CLE or the results of dynamical theory, except for the Bragg symmetric case. Therefore, polychromatic and monochromatic focusing must be treated separately. It has been demonstrated that focii predicted by monochromatic and polychromatic focusing conditions coincide if the source is situated on the Rowland circle. Moreover, such coincidence is also true for any source position (off-Rowland) in symmetric Bragg geometry, but not in symmetric Laue geometry. Here, for the Laue symmetric case, both polychromatic and monochromatic focii can match if the modified lens equation~(\ref{eq:newCLE}) is used instead, but requires a particular choice of the crystal thickness.
+
+The application of the CLE (equation~\ref{eq:CLE}) is restricted to monochromatic focusing. Polychromatic focusing, as used in the polychromators of dispersive EXAFS beamlines, happens when the wavelength of the reflected rays changes to exactly match the Bragg angle. This condition is given by a different lens equation (\ref{eq:polychromaticfocusing}). This implies a specular reflection of the rays on the Bragg planes that is, in general, incompatible with the CLE or the results of dynamical theory, except for the Bragg symmetric case. It has been demonstrated that focii predicted by monochromatic and polychromatic focusing conditions coincide if the source is situated on the Rowland circle. Moreover, such coincidence is also true for any source position (off-Rowland) in symmetric Bragg geometry, but not in symmetric Laue geometry. Here, for the Laue symmetric case, both polychromatic and monochromatic focii can match if the modified lens equation~(\ref{eq:newCLE}) is used instead, but requires a particular choice of the crystal thickness.
+\inred{The additional effect of focusing a polychromatic ray \cite{PengQi2021} gives the ``magic condition"  for Laue focusing, which implies geometric and single scattering. Further studies would be required to match the magic condition (which does not depend on the crystal thickness) with monochromatic focusing. This could be done by optimizing numerically the crystal thickness using the formulation in section~\ref{sec:LaueCompatibilityCLE}. }
 
 % The case of symmetric Bragg geometry seems to be of particular practical interest, because of simultaneous polychromatic and monochromatic focusing. Moreover, the CLE can then be used to predict the focus position with good accuracy. Therefore, the CLE appears to be more relevant in the Bragg case rather than in the Laue case.
 

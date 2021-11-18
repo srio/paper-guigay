@@ -118,7 +118,7 @@ A crystal lens equation is deduced to address the location of the focus when mon
 % \end{flushright}
 
 \begin{abstract}
-The location of the beam focus  when monochromatic x-ray radiation is diffracted by a \inred{thin} bent crystal is predicted by \inred{a ``}crystal lens equation". We derive this equation \inred{in a general form valid for Bragg and Laue geometries}. This equation has little utility for diffraction in Laue geometry. The \inred{focusing effect in} the Laue symmetrical case is discussed using concepts of dynamical theory and an extension of the lens equation is proposed. The existence of polychromatic \inred{focusing is considered} and the feasibility of matching \inred{the } polychromatic and monochromatic \inred{focal positions} is discussed.   \\
+The location of the beam focus  when monochromatic x-ray radiation is diffracted by a thin bent crystal is predicted by ``crystal lens equation". We derive this equation in a general form valid for Bragg and Laue geometries. This equation has little utility for diffraction in Laue geometry. The focusing effect in the Laue symmetrical case is discussed using concepts of dynamical theory and an extension of the lens equation is proposed. The existence of polychromatic focusing is considered and the feasibility of matching the polychromatic and monochromatic focal positions is discussed.   \\
 
 \begin{flushright}
 {Dedicated to the memory of Claudio Ferrero}
@@ -135,62 +135,53 @@ The location of the beam focus  when monochromatic x-ray radiation is diffracted
 
 \section{Introduction}
 
-The use of curved crystals to diffract and focus x-rays \inred{comes as} a natural extension of the mirror and grating technology for radiation of longer wavelength. Some fundamental concepts, like the Rowland circle, date back to the 19$^\text{th}$ century \cite{rowland1882}.
+The use of curved crystals to diffract and focus x-rays comes as a natural extension of the mirror and grating technology for radiation of longer wavelength. Some fundamental concepts, like the Rowland circle, date back to the 19$^\text{th}$ century \cite{rowland1882}.
 
-The fundamental setups using bent crystals to focus X-rays were proposed in the early 1930’s. Some systems use meridional focusing (in the diffraction plane), like i) Johann spectrometer \cite{Johann1931}, \inred{using} a cylindrically bent crystal,  ii) Johansson spectrometer \cite{Johansson1933} \inred{using} a ground and cylindrically bent crystal and iii) the Cauchois spectrometer \cite{cauchois1933} in transmission (Laue) geometry. The von Hamos spectrometer \cite{V.Hamos1933} applies sagittal focusing in the plane perpendicular to the diffraction plane.
+The fundamental setups using bent crystals to focus X-rays were proposed in the early 1930’s. Some systems use meridional focusing (in the diffraction plane), like i) Johann spectrometer \cite{Johann1931}, using a cylindrically bent crystal,  ii) Johansson spectrometer \cite{Johansson1933} using a ground and cylindrically bent crystal and iii) the Cauchois spectrometer \cite{cauchois1933} in transmission (Laue) geometry. The von Hamos spectrometer \cite{V.Hamos1933} applies sagittal focusing in the plane perpendicular to the diffraction plane.
 
-With the advent of synchrotron radiation, the concepts of ``geometrical focusing" were applied to design instruments such as polychromators for energy-dispersive extended x-ray absorption fine structure (EXAFS) \cite{Tolentino:ms0206}, monochromators with sagittal focusing for bending magnet beamlines \cite{Sparks1980}, or several types of crystal analyzers \inred{used} at inelastic x-ray scattering beamlines. Bent crystals in transmission or Laue geometry are often employed in beamlines operating at high photon energies. The crystal curvature is used for focusing or collimating the beam in the meridional \cite{Suortti1988,SuorttiShulze} or sagittal \cite{Zhong2001} plane, or just to enlarge the energy bandwidth and improve the luminosity. The crystal bandwidth was optimized and aberrations reduced thanks to \inred{the high collimation and small source size} of synchrotron beams. Curved crystal monochromators work \inred{in} off-Rowland condition, whereas crystal analysers for inelastic scattering studies \inred{work in} the Rowland setting.
+With the advent of synchrotron radiation, the concepts of ``geometrical focusing" were applied to design instruments such as polychromators for energy-dispersive extended x-ray absorption fine structure (EXAFS) \cite{Tolentino:ms0206}, monochromators with sagittal focusing for bending magnet beamlines \cite{Sparks1980}, or several types of crystal analyzers used at inelastic x-ray scattering beamlines. Bent crystals in transmission or Laue geometry are often employed in beamlines operating at high photon energies. The crystal curvature is used for focusing or collimating the beam in the meridional \cite{Suortti1988,SuorttiShulze} or sagittal \cite{Zhong2001} plane, or just to enlarge the energy bandwidth and improve the luminosity. The crystal bandwidth was optimized and aberrations reduced thanks to the high collimation and small source size of synchrotron beams. Curved crystal monochromators work in off-Rowland condition, whereas crystal analysers for inelastic scattering studies work in the Rowland setting.
 
-% \todo{ REMOVE: The geometrical optics theory is applied for understanding the image formation produced by grazing incidence spherical reflectors \cite{KB1948}. The Gaussian mirror equation (mirror or lens equation), relates the object distance $p$ and the image distance $q$ to the focal length $f$, $p^{-1}+q^{-1}=f^{-1}$, with $f=R_c \sin\theta_B / 2$, where $R_c$ is the mirror curvature radius and $\theta_B$ the Bragg (grazing incidence) angle. However, this mirror or lens equation has limited applications when using crystals, as it can only be applied for symmetric Bragg reflections.}
+A ``Crystal Lens Equation" (CLE) was indeed formulated by \cite{CK} for the focusing properties of a cylindrically bent crystal plate diffracting monochromatic x-rays or neutrons, in Laue (transmission) or Bragg (reflection) geometries. The crystal is bent around an axis perpendicular to the diffraction plane (meridional focusing). This CLE is based on a purely geometric approach in which multiple Bragg scattering (dynamical effects) is neglected. 
+The CLE is revisited in Section~\ref{sec:CLE}, in order to correct errors found in \cite{CK} for the Laue geometry. A new formula valid in Bragg and Laue geometry is obtained, using the same geometrical approach as in \cite{CK}.
 
-% The conservation of the tangential component of the wavevector on the crystal surface leads to more general equations in Bragg or Laue geometries, resembling the focusing equations for reflection or transmission gratings.
-
-A ``Crystal Lens Equation" (CLE) was indeed formulated by \cite{CK} for the focusing properties of a cylindrically bent crystal plate diffracting monochromatic x-rays or neutrons, in Laue (transmission) or Bragg (reflection) geometries. The crystal is bent around an axis perpendicular to the diffraction plane (meridional focusing). This CLE is based on a purely geometric approach in which multiple \inred{Bragg} scattering (dynamical effects) \inred{is neglected}. 
-The CLE is \inred{revisited} in Section~\ref{sec:CLE}, \inred{in order to correct errors} found in \cite{CK} for the Laue geometry. \inred{A new formula valid in Bragg and Laue geometry is obtained, using the same geometrical approach as in \cite{CK}}.
-
-The CLE has wide applicability in Bragg geometry. However, \inred{its use for Laue geometry} is \inred{limited to very thin crystals, because
-it ignores} a \inred{basic} dynamical focusing effect \inred{also found in flat crystals},
+The CLE has wide applicability in Bragg geometry. However, its use for Laue geometry is limited to very thin crystals, because
+it ignores a basic dynamical focusing effect also found in flat crystals,
 as described in section~\ref{sec:dynamlicalLaue}. 
-The \inred{applicability} of the lens equation in symmetrical Bragg geometry is discussed in \inred{appendix}~\ref{sec:BraggGeometry}. %with comparison to recent numerical simulations \cite{Honkanen2018}) which are based on a finite element method to take the propagation in the crystal into account.
+The applicability of the lens equation in symmetrical Bragg geometry is discussed in appendix~\ref{sec:BraggGeometry}.
 The CLE concerns the focusing of monochromatic radiation, and is in general different from the condition of polychromatic focusing. The particular cases where these two different focusing conditions coincide are discussed in section~\ref{sec:polychromatic}. A final summary is given in section~\ref{sec:summary}.   
 
 
 \section{The crystal lens equation revisited}
 \label{sec:CLE}
 
-\inred{The lens equation will be derived in Bragg or Laue geometry, with source $S$ and focus $F$ in real or virtual position (see Fig.~\ref{fig:geometries}).} Consider a monochromatic x-ray or neutron beam \inred{from a real or virtual} point-source $S$. The origin of coordinates $O$ is chosen at the point of the crystal surface in such a way that the wave-vector  ${\vec k_0}$ of the incident ray $\overline{SO}$ is in exact Bragg  position. The \inred{wave-vector of the} diffracted ray \inred{in vacuum is } 
-% $\vec k_h$ given by the Laue equation 
-$\vec k_h = \vec k_0 + \vec h$, where $\vec h$ is the reciprocal lattice vector (see Fig.~\ref{fig:vectors}).
-\inred{in} both transmission geometry (Laue) or reflection geometry (Bragg).
-% \inred{and the vectors $\vec k_h$, $\vec k_0$ and $\vec h$ are in vacuum}. 
+The lens equation will be derived in Bragg or Laue geometry, with source $S$ and focus $F$ in real or virtual position (see Fig.~\ref{fig:geometries}). Consider a monochromatic x-ray or neutron beam from a real or virtual point-source $S$. The origin of coordinates $O$ is chosen at the point of the crystal surface in such a way that the wave-vector  ${\vec k_0}$ of the incident ray $\overline{SO}$ is in exact Bragg  position. The wave-vector of the diffracted ray in vacuum is
+$\vec k_h = \vec k_0 + \vec h$, where $\vec h$ is the reciprocal lattice vector (see Fig.~\ref{fig:vectors}),
+in both transmission geometry (Laue) or reflection geometry (Bragg).
 
 \begin{figure}
 \label{fig:geometries}
-\caption{Schematic representation of the different diffraction setups with real or virtual source in Bragg or Laue \inred{cases}:
-a) real source, real focus (red) in Laue case \inred{or} virtual focus (blue) in Bragg case,
-b) real source, virtual focus (red) in Laue case \inred{or} real focus (blue) in Bragg case,
-c) virtual source, real focus (red) in Laue case \inred{or} virtual focus (blue) in Bragg case,  
-d) virtual source, virtual focus (red) in Laue case \inred{or} real focus (blue) in Bragg case.
-\inred{$L_0=\overline{SO}$ is the distance source to crystal and $L_h=\overline{OF}$ is the distance crystal to focus.}
-}
+\caption{Schematic representation of the different diffraction setups with real or virtual source in Bragg or Laue cases:
+a) real source, real focus (red) in Laue case or virtual focus (blue) in Bragg case,
+b) real source, virtual focus (red) in Laue case or real focus (blue) in Bragg case,
+c) virtual source, real focus (red) in Laue case or virtual focus (blue) in Bragg case,  
+d) virtual source, virtual focus (red) in Laue case or real focus (blue) in Bragg case.
+$L_0=\overline{SO}$ is the distance source to crystal and $L_h=\overline{OF}$ is the distance crystal to focus.}
+
 \includegraphics[width=0.99\textwidth,trim=4cm 9cm 6cm 9cm,clip=true]{fig1.pdf}
 \end{figure}
 
 
-\inred{The inward normal to the crystal surface in $O$ is $\vec n$, and $\varphi_0 = (\vec n, \vec k_0)$ is the oriented angle from the vector $\vec n$ to the vector $\vec k_0$. Similarly,} $\varphi_h = (\vec n, \vec k_h)$. Without loss of generality $\varphi_0$ is positive; $\theta_B$ is the Bragg angle \inred{(always positive)}.
-\inred{In the}  case of symmetric geometry(asymmetry angle $\alpha=0$) \inred{we find} $\varphi_{0,h}=\pm\theta_B$ in Laue or $\varphi_{0,h}=(\pi/2)\mp\theta_B$ in Bragg. Otherwise, the asymmetry angle $\alpha$ is defined as the angle of rotation \inred{of the vector $\vec h$ from its direction in the symmetrical case}. 
-% It follows that $\varphi_0+\varphi_h=2\alpha$ in Laue case and  $\varphi_0+\varphi_h=2\alpha+\pi$ in Bragg case.
+The inward normal to the crystal surface in $O$ is $\vec n$, and $\varphi_0 = (\vec n, \vec k_0)$ is the oriented angle from the vector $\vec n$ to the vector $\vec k_0$. Similarly, $\varphi_h = (\vec n, \vec k_h)$. Without loss of generality $\varphi_0$ is positive; $\theta_B$ is the Bragg angle (always positive).
+In the case of symmetric geometry(asymmetry angle $\alpha=0$) we find $\varphi_{0,h}=\pm\theta_B$ in Laue or $\varphi_{0,h}=(\pi/2)\mp\theta_B$ in Bragg. Otherwise, the asymmetry angle $\alpha$ is defined as the angle of rotation of the vector $\vec h$ from its direction in the symmetrical case. 
 In Laue case $\varphi_{0,h}=\pm\theta_B+\alpha$; in Bragg case $\varphi_{0,h}=(\pi/2)\mp\theta_B+\alpha$, therefore $2\theta_B=|\varphi_0-\varphi_h|$ in both cases, $2\alpha=\varphi_0+\varphi_h$ in Laue case and $2\alpha=\varphi_0+\varphi_h-\pi$ in Bragg case.
 
 
 When moving the point of incidence over an arbitrary small distance $s$ along the curved crystal surface (see Fig.~\ref{fig:vectors}), 
 $\vec k_{0,h}$ are changed
-% in direction (not in modulus), 
 with rotation angles $\epsilon_{0,h} = (\vec k_{0,h},\vec k'_{0,h})$; $\vec h$ and $\vec n$ are changed into $\vec h'$ and $\vec n'$, respectively, due to the crystal bending;
 $\varphi_{0,h}$ are changed into $\varphi'_{0,h}=\varphi_{0,h}+\Delta \varphi_{0,h}$.
-The projections of the vectors $\vec k'_{h}$ and $\vec k'_{0}+\vec h'$ on the crystal surface are equal \inred{(}conservation of the parallel components of wave-vectors\inred{)}.
-% The surface projection of $\vec k'_{0,h}$ are equal to $k \sin\varphi'_{0,h}$.
-Furthermore, in the present case of cylindrical bending \inred{of very thin crystal}, the surface projection of $\vec h'$ is constant (the angle between $\vec h$ and $\vec n$ is constant).
+The projections of the vectors $\vec k'_{h}$ and $\vec k'_{0}+\vec h'$ on the crystal surface are equal (conservation of the parallel components of wave-vectors).
+Furthermore, in the present case of cylindrical bending of very thin crystal, the surface projection of $\vec h'$ is constant (the angle between $\vec h$ and $\vec n$ is constant).
 This implies that $(\sin \varphi_h - \sin \varphi_0)$ is invariant, therefore
 \begin{equation}
 \label{eq:invariant}
@@ -204,14 +195,13 @@ This implies that $(\sin \varphi_h - \sin \varphi_0)$ is invariant, therefore
 \includegraphics[width=0.99\textwidth,trim=4cm 6cm 5cm 10cm,clip=true]{fig2.pdf}
 \end{figure}
 
-The source distance $L_0=\overline{SO}$ is set as positive if the source is on the incidence side of the crystal (real source) or negative if the source is on the other side (virtual source) (see Fig.~\ref{fig:geometries}). The radius of curvature $R_c$ is set as positive if the beam is incident on the concave side of the bent crystal. The focus distance $L_h$ is set as positive if the \inred{(}real or virtual\inred{)} focus \inred{$F$} is situated on the incidence side on the crystal. With these conventions, $(\vec n,\vec n')=s/R_c$, $\epsilon_0 L_0 = s \cos\varphi_0$,  $\epsilon_h L_h = s |\cos\varphi_h|$. Using the relationship
+The source distance $L_0=\overline{SO}$ is set as positive if the source is on the incidence side of the crystal (real source) or negative if the source is on the other side (virtual source) (see Fig.~\ref{fig:geometries}). The radius of curvature $R_c$ is set as positive if the beam is incident on the concave side of the bent crystal. The focus distance $L_h$ is set as positive if the (real or virtual) focus $F$ is situated on the incidence side on the crystal. With these conventions, $(\vec n,\vec n')=s/R_c$, $\epsilon_0 L_0 = s \cos\varphi_0$,  $\epsilon_h L_h = s |\cos\varphi_h|$. Using the relationship
 \begin{equation}
     \varphi'_{0,h} = 
     (n',  \vec k'_{0,h}) = 
     (\vec n', \vec n) + (\vec n,\vec k_{0,h}) + (\vec k_{0,h}, \vec k'_{0,h}) = -\frac{s}{R_c} + \varphi_{0,h} + \epsilon_{0,h},
 \end{equation}
 we obtain
-% \footnote{\inred{Equation~(\ref{eq:angles}) here has a different global sign than the corresponding (wrong) equation (9) in \cite{CK} }}
 \begin{equation}
 \label{eq:angles}
 \Delta \varphi_0 =  - \frac{s}{R_c} + s \frac{\cos\varphi_0}{L_0}
@@ -222,7 +212,7 @@ and
 \Delta \varphi_h = - \frac{s}{R_c} +  s \frac{|\cos\varphi_h|}{L_h}.
 \end{equation}
 
-The crystal lens equation \inred{valid in both Bragg and Laue cases,} is finally obtained by inserting these expressions in equation~(\ref{eq:invariant})
+The crystal lens equation valid in both Bragg and Laue cases, is finally obtained by inserting these expressions in equation~(\ref{eq:invariant})
 
 \begin{equation}
 \label{eq:CLE}
@@ -233,10 +223,10 @@ The crystal lens equation \inred{valid in both Bragg and Laue cases,} is finally
 % Equation~\ref{eq:CLE} is valid in both Bragg and Laue cases.
 In the Laue symmetrical case ($\cos\varphi_h=\cos\varphi_0$) it predicts $L_h=L_0$ (for a real source, the focus is virtual at the same distance as the source) and, in the particular case of $L_0=+\infty$, a plane incident wave is diffracted into a plane wave.
 
-The crystal lens equation~(\ref{eq:CLE}) obtained here is different from the equation given in \cite{CK}\footnote{The CLE \inred{given} in \cite{CK} is 
-\inred{$
-\cos^2\varphi_0/L_0 + \cos^2\varphi_h/L_h = (\cos\varphi_0 + |\cos\varphi_h|)/R_c$}.
-We think this is due to mistakes in their calculations, specially sign errors in their equation (9) as compared \inred{to} our equation~(\ref{eq:angles}). 
+The crystal lens equation~(\ref{eq:CLE}) obtained here is different from the equation given in \cite{CK}\footnote{The CLE given in \cite{CK} is 
+$
+\cos^2\varphi_0/L_0 + \cos^2\varphi_h/L_h = (\cos\varphi_0 + |\cos\varphi_h|)/R_c$.
+We think this is due to mistakes in their calculations, specially sign errors in their equation (9) as compared to our equation~(\ref{eq:angles}). 
 }.
 Both equations are equivalent for the Bragg case ($\cos\varphi_h<0$)\inred{, which is also considered by \citeasnoun{snigirevkohn1995}.} They are not equivalent in the Laue case.
  

@@ -228,24 +228,20 @@ $
 \cos^2\varphi_0/L_0 + \cos^2\varphi_h/L_h = (\cos\varphi_0 + |\cos\varphi_h|)/R_c$.
 We think this is due to mistakes in their calculations, specially sign errors in their equation (9) as compared to our equation~(\ref{eq:angles}). 
 }.
-Both equations are equivalent for the Bragg case ($\cos\varphi_h<0$)\inred{, which is also considered by \citeasnoun{snigirevkohn1995}.} They are not equivalent in the Laue case.
+Both equations are equivalent for the Bragg case ($\cos\varphi_h<0$), which is also considered by \citeasnoun{snigirevkohn1995}. They are not equivalent in the Laue case.
  
 % It is worth mentioning that the lens equation~(\ref{eq:CLE}) discussed here can be applied only for monochromatic radiation. Polychromatic focusing is discussed in section~\ref{sec:polychromatic} in the more general context of dynamical theory of diffraction.
-Note that we used in this section the same notation as \cite{CK}, where $R_c$ is positive for a concave surface, used to focus in Bragg case. For the rest of the paper, we \inred{also use} the notation: $p \leftarrow L_0$, $q \leftarrow -L_h$ $R \leftarrow -R_c$, $\theta_1 \leftarrow \varphi_0$ and $\theta_2 \leftarrow \varphi_h$\inred{, which is more convenient} for Laue crystals, because real focusing is obtained when the beam coming from a real source is incident on the convex side of the bent crystal (with positive $R$).
+Note that we used in this section the same notation as \cite{CK}, where $R_c$ is positive for a concave surface, used to focus in Bragg case. For the rest of the paper, we also use the notation: $p \leftarrow L_0$, $q \leftarrow -L_h$ $R \leftarrow -R_c$, $\theta_1 \leftarrow \varphi_0$ and $\theta_2 \leftarrow \varphi_h$, which is more convenient for Laue crystals, because real focusing is obtained when the beam coming from a real source is incident on the convex side of the bent crystal (with positive $R$).
 
 Equation~(\ref{eq:CLE}) is obtained here using a geometrical ray optics approach. It can also be deduced from a wave-optics approach as shown in Appendix~\ref{appendix:CLE}.
 
 \section{Dynamical focusing in Laue geometry}
 \label{sec:dynamlicalLaue}
 
-The \inred{applicability} of the CLE for the Laue case is \inred{limited to very thin crystals}. The dynamical theory \inred{(see book \cite{authierbook})}
-% of diffraction 
+The applicability of the CLE for the Laue case is limited to very thin crystals. The dynamical theory (see book \cite{authierbook})
 predicts ``new" focal conditions, even for flat Laue crystals.
-% that are relevant in experiments and are not explained by the simple CLE. 
-\inred{This is} analyzed here in the framework of the \inref{Takagi-Taupin equations, hereafter TTE} \inred{\cite{Takagi1962, Takagi, Taupin, Taupin1967}}. 
+This is analyzed here in the framework of the Takagi-Taupin equations, hereafter TTE \cite{Takagi1962, Takagi, Taupin, Taupin1967}. 
 
-
-\inred{
 Section~\ref{sec:influence} deals with the derivation of the ``influence functions" (Green functions) which represent the wavefield generated in the crystal by a point-source on the crystal entrance surface.
 
 In section~\ref{sec:LaueFlat}, the approach to dynamical focusing in the symmetric Laue case
@@ -256,20 +252,17 @@ is extended to asymmetric geometry. The effects of anomalous absorption (Borrman
 In section~\ref{sec:LaueNewCLE}, a lens equation for a bent Laue symmetrical crystal of finite thckness, expressed in terms of $q_{dyn}$ is established. Its predictions are shown to be in agreement with numerical calculations. 
 
 In section~\ref{sec:LaueCompatibilityCLE}, we make the verification that the formulation for the Laue asymmetric case by
-% (Guigay & Ferrero , 2016) 
-\cite{GuigayFerrero2016} is in agreement with the CLE (equation (\ref{eq:CLE})) in the limit of vanishing crystal thickness.}
-% \inblue{Here, after introducing basic results from the Takagi-Taupin equations in section~\ref{sec:influence}, we give a simple description of the \inred{basic} focusing effect in the case of a flat crystal plate of finite thickness (section \ref{sec:LaueFlat}). Then, we deduce in section~\ref{sec:LaueNewCLE} an improved form of the CLE for a Laue bent crystal (presently, only in the case of symmetric reflection). We verified its convergence to the CLE in the limit of vanishing crystal thickness (section~\ref{sec:LaueCompatibilityCLE}). }
+\cite{GuigayFerrero2016} is in agreement with the CLE (equation (\ref{eq:CLE})) in the limit of vanishing crystal thickness.
 
 \subsection{Influence function derived from Takagi-Taupin equations}
 \label{sec:influence}
 
-% We introduce the Takagi-Taupin equations and the influence functions representing the wavefield for a point-source on the crystal entrance surface. 
 The x-ray wavefield inside the crystal is expressed as the sum of two modulated plane waves
 \begin{equation}
     \Psi(\vec x) = D_0(\vec x) e^{i \vec k_0 . \vec x} + D_h(\vec x) e^{i \vec k_h . \vec x},
 \end{equation}
 with slowly varying amplitudes $D_{0,h}(\vec x)$.
-The spatial position $\vec x$ is expressed in oblique coordinates $(s_0,s_h)$ along the directions of the $\vec k_0$ and $\vec k_h=\vec k_0 + \vec h$ vectors\inred{, which are the in-vacuum wave-vectors ok modulus $k=2\pi/\lambda$. $\vec{h}$ is the Bragg diffraction vector of the undeformed crystal. In such conditions,} the differential TTE are
+The spatial position $\vec x$ is expressed in oblique coordinates $(s_0,s_h)$ along the directions of the $\vec k_0$ and $\vec k_h=\vec k_0 + \vec h$ vectors, which are the in-vacuum wave-vectors \inred{of} modulus $k=2\pi/\lambda$. $\vec{h}$ is the Bragg diffraction vector of the undeformed crystal. In such conditions, the differential TTE are
 % \cite{Takagi1962, Takagi, Taupin, Taupin1967}, hereafter referred to as TTE, are
 \begin{subequations}
 \label{eq:TT}
@@ -278,18 +271,16 @@ The spatial position $\vec x$ is expressed in oblique coordinates $(s_0,s_h)$ al
 \frac{\partial D_h}{\partial s_h} =& \frac{ik}{2} \left[ \chi_0 D_h(\vec x)+c \chi_{h} e^{-i \vec h . \vec u (\vec x)} D_0(\vec x) \right],
 \end{align}
 \end{subequations}
-where $\chi_0$, $\chi_h$, and $\chi_{\bar h}$ are the Fourier coefficients of order 0, $\vec h$ and $-\vec h$ of the undeformed crystal polarisability. The polarization factor $c$ ($c=1$ for $\sigma$-polarization and $c=\cos2\theta_B$  for $\pi$-polarization) \inred{is} omitted afterwards. 
+where $\chi_0$, $\chi_h$, and $\chi_{\bar h}$ are the Fourier coefficients of order 0, $\vec h$ and $-\vec h$ of the undeformed crystal polarisability. The polarization factor $c$ ($c=1$ for $\sigma$-polarization and $c=\cos2\theta_B$  for $\pi$-polarization) is omitted afterwards. 
 $\vec u (\vec x)$ is the displacement field of the deformed crystal.
-% The ``influence functions", hereafter called IF, are the solutions of the TT equations corresponding to a point source in the crystal entrance surface.
-In the case of \inred{cylindrical bending we have}
+In the case of cylindrical bending we have
 \begin{equation}
 \label{eq:cylinder}
     \vec h . \vec u = -A s_0 s_h + \phi_1(s_0) - \phi_2(s_h)
 \end{equation}
-where $A$ and the $\phi_{1,2}$ functions are \inred{defined} in Appendix~\ref{appendix:Deformation}.
+where $A$ and the $\phi_{1,2}$ functions are defined in Appendix~\ref{appendix:Deformation}.
 This a 
-% Equation~(\ref{eq:cylinder}) corresponds to the case of a 
-``constant strain gradient" \inred{case} \cite{authierbook} meaning that $\partial^2(\vec h . \vec u)/(\partial s_0 \partial s_h)$ is constant. \inred{In terms of} the functions $G_{0,h}(s_0,s_h)$ defined by
+``constant strain gradient" case \cite{authierbook} meaning that $\partial^2(\vec h . \vec u)/(\partial s_0 \partial s_h)$ is constant. In terms of the functions $G_{0,h}(s_0,s_h)$ defined by
 \begin{subequations}
     \label{eq:functionsG}
     \begin{align}
@@ -307,10 +298,9 @@ the TTE have a simpler form
     \end{align}
 \end{subequations}
 
-An incident monochromatic wave of any form can be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i \vec k_0 . \vec x)$ defining a continuous distribution of coherent elementary point-sources on the crystal surface, according to the general Huyghens principle in optics. The “influence functions” \inred{or Green functions}, hereafter IF, are the TTE solutions \inred{for} these point-sources. 
+An incident monochromatic wave of any form can be expressed as a modulated plane wave $D_{inc}(\vec x)\exp(i \vec k_0 . \vec x)$ defining a continuous distribution of coherent elementary point-sources on the crystal surface, according to the general Huyghens principle in optics. The “influence functions” or Green functions, hereafter IF, are the TTE solutions for these point-sources. 
 The IF for point-sources of oblique coordinates $(\sigma_0,\sigma_h)$
-% , in the case of  a crystal with deformation that fulfills equation~(\ref{eq:cylinder}), 
-are derived in \cite{GuigayFerrero2016} by formulating the TTE  as integral equations in the case of an incident \inred{amplitude} of the form \inred{$D_{inc}=\delta(s_h-\sigma_h)$}. 
+are derived in \cite{GuigayFerrero2016} by formulating the TTE  as integral equations in the case of an incident amplitude of the form $D_{inc}=\delta(s_h-\sigma_h)$. 
 The calculations (see appendix~\ref{appendix:TTEintegral}) result in the diffracted amplitude\footnote{the result for the transmitted amplitude $D_0(s_0,s_h)$ is not necessary for our results and is not presented here, but it is easily obtained using equation~(\ref{eq:kummer}) in (\ref{eq:TTEsimple}).}
 
   
@@ -325,10 +315,8 @@ where the first exponential term stands for the effects of refraction and normal
     ... + \frac{a(a+1)...(a+n-1)}{n! b (b+1)...(b+n-1)}z^n+...
 \end{equation}
 
-This \inred{type of TTE solution} was already obtained by different methods \cite{Petrashen1974,Katagawa1974,Litzmann1974,Chukhovski1977}.
+This type of TTE solution was already obtained by different methods \cite{Petrashen1974,Katagawa1974,Litzmann1974,Chukhovski1977}.
 
-% The exponential term $\exp(i \vec h . \vec u(s_0,\sigma_h))$ in equation~(\ref{eq:kummer}) is the phase shift acquired at the scattering event occurring at the point of oblique coordinates $(s_0,\sigma_h)$along the ray incident in the point $(\sigma_0,\sigma_h)$. It therefore represents the kinematical (single-scattering) approximation of the dynamical theory.
-\inred{
 It is noticeable that the term $\exp[-i\vec h . \vec u (s_0,\sigma_h)]$ in equation~(\ref{eq:kummer}) is the phase shift acquired by scattering at the point of coordinates $(s_0,\sigma_h)$ along the incident ray. We can say that the kinematical (single-scattering) approximation of equation~(\ref{eq:kummer}) is 
 
 \begin{equation}
@@ -336,18 +324,13 @@ It is noticeable that the term $\exp[-i\vec h . \vec u (s_0,\sigma_h)]$ in equat
     D_{h,kin}(s_0,s_h) = \frac{i k }{2} \chi_h e^{(ik/2) \chi_0 (s'_0 + s'_h)} e^{-i \vec h . \vec u (s_0,\sigma_h)} 
 \end{equation}
 and the full multiple scattering is $D_h=D_{h,kin} M$.
-}
-
-% In the case of $A=0$ \inred{(symmetric diffraction)}, the Kummer function in equation~(\ref{eq:kummer}) reduces to the Bessel function $J_0(2\sqrt{\Omega s'_0 s'_h})$. 
           
-\subsection{Dynamical focusing and Borrmann effect in a flat\inred{, asymmetric, Laue} crystal}
+\subsection{Dynamical focusing and Borrmann effect in a flat, asymmetric, Laue crystal}
 \label{sec:LaueFlat}
 
 
-
-Dynamical focusing \inred{by} flat Laue crystals (without bending) \inred{was predicted by} \citeasnoun{AfanasevKohn1977} and verified experimentally by \cite{Aristov1978,Aristov1980PhysStatSol,Aristov1980}
-in the case of symmetrical geometry. The theory was extended to the asymmetric case by \citeasnoun{Kohn2000}. \inred{The application of dynamical focusing to high-resolution spectrometry was proposed by \citeasnoun{KohnGorobtsov2013}.}
-% The dynamical diffraction focusing by a system of two Laue crystals was recently considered by \cite{KohnSmirnova}. Diffraction focusing by a system of two identical perfect Laue crystals was previously applied to neutron interferometry \cite{Zeilinger}.
+Dynamical focusing by flat Laue crystals (without bending) was predicted by \citeasnoun{AfanasevKohn1977} and verified experimentally by \cite{Aristov1978,Aristov1980PhysStatSol,Aristov1980}
+in the case of symmetrical geometry. The theory was extended to the asymmetric case by \citeasnoun{Kohn2000}. The application of dynamical focusing to high-resolution spectrometry was proposed by \citeasnoun{KohnGorobtsov2013}.
 
 \begin{figure}
 \label{fig:laue}
@@ -356,38 +339,22 @@ in the case of symmetrical geometry. The theory was extended to the asymmetric c
 \includegraphics[width=0.99\textwidth,trim=3cm 10cm 5cm 10cm,clip=true]{fig3.pdf}
 \end{figure}
 
-% The incident wave-amplitude is expressed in a plane perpendicular to the incidence direction at a negligible distance from the entrance surface (axis $\tau$ in Fig.~\ref{fig:laue}).
-% Similarly, we will express the Bragg-diffracted amplitude $D_h$ in a plane perpendicular to the direction of the Bragg diffraction at a negligible distance from the exit surface (axis $\xi$ in Fig.~\ref{fig:laue}). 
-% The dynamical focusing is most easily described by considering a point-source on the crystal entrance surface (in practice, a slit of negligible width placed near the crystal surface).
-
-\inred{The basic case of dynamical focusing is that of a point-source in $O$ ($\sigma_0=\sigma_h=0$)} on the crystal entrance surface \inred{of the crystal of thickness $t$}.
-% (in practice, a slit of negligible width placed near the crystal surface).
-\inred{$O'$ is the middle of the basis of the influence region (Borrmann fan) on the exit surface (see Fig.~\ref{fig:laue}).}
-% A point in the $\xi-$axis perpendicular to the direction of $\vec k_h$ and at negligible distance from the crystal of thickness $t$ (see Fig.~\ref{fig:laue}), corresponds to a point of oblique coordinates 
-\inred{
+The basic case of dynamical focusing is that of a point-source in $O$ ($\sigma_0=\sigma_h=0$) on the crystal entrance surface of the crystal of thickness $t$.
+$O'$ is the middle of the basis of the influence region (Borrmann fan) on the exit surface (see Fig.~\ref{fig:laue}).
 The amplitude of the diffracted wave along the axis $O'\xi \perp \vec k_h$ is the value of the IF at the point of coordinates 
-
 \begin{equation}
     \label{eq:s0andsh}
     s_0 = \frac{a+\xi}{\sin2\theta_B }  ; \:\: 
     s_h = \gamma\frac{a-\xi}{\sin2\theta_B},
 \end{equation}
-}
 with $a=t \sin2\theta_B/(2\cos\theta_1)$ and $\gamma=\cos\theta_1/\cos\theta_2$. 
 
-
-
 The amplitude $D_h(\xi)$ is zero outside the interval $-a<\xi<a$,
-% , with $a=t \sin2\theta_B/(2 \cos\theta_1)$, 
-and is proportional to the Bessel function \inred{$J_0(k \sqrt{\chi_h \chi_{\bar h} s_0 s_h})=$} $J_0(Z\sqrt{a^2-\xi^2})$ in this interval \cite{kato1961}, with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$. In the case $|Z a| \gg 1$ the asymptotic approximation
+and is proportional to the Bessel function $J_0(k \sqrt{\chi_h \chi_{\bar h} s_0 s_h})=J_0(Z\sqrt{a^2-\xi^2})$ in this interval \cite{kato1961}, with  $Z=k\sqrt{\gamma\chi_h\chi_{\bar h}}/\sin2\theta_B$. In the case $|Z a| \gg 1$ the asymptotic approximation
 \begin{equation}
     J_0(Z\sqrt{a^2-\xi^2})\approx \left(\frac{2}{\pi Z \sqrt{a^2-\xi^2}}\right)^{1/2} \cos(Z\sqrt{a^2-\xi^2}-\pi/4)
 \end{equation}
-can be used in the central region $|\xi|\ll a$ where \inred{$\sqrt{a^2-\xi^2} \approx a - \frac{\xi^2}{2a}$}.
-% \todo{DELETE THIS EQUATION} 
-% \begin{equation}
-%      \sqrt{a^2-\xi^2} = a (1-\frac{\xi^2}{2a^2}+...)\approx a - \frac{\xi^2}{2a}.
-% \end{equation}
+can be used in the central region $|\xi|\ll a$ where $\sqrt{a^2-\xi^2} \approx a - \frac{\xi^2}{2a}$.
 We thus obtain in this central region the approximation
 \begin{equation}
 \label{eq:approximatedDiffractedField}
@@ -395,33 +362,19 @@ We thus obtain in this central region the approximation
     e^{-i Z a+i Z\frac{\xi^2}{2a}} \right),
 \end{equation}
 where the two exponential terms are related to the two sheets of the dispersion surface. 
-\inred{The} function $\exp(- i Z \xi^2 / (2 a))$ 
+The function $\exp(- i Z \xi^2 / (2 a))$ 
 represents a converging wave if $\operatorname{Re}(Z)>0$ (divergent if  ($\operatorname{Re} Z <0$). A double, real and virtual, focusing effect is thus expected at opposite distances $\pm q_0$ from the crystal, with
 \begin{equation}
 \label{eq:q0}
     q_0 = \frac{k a}{|\operatorname{Re}(Z)|}= \frac{a \sin2\theta_B}{|\operatorname{Re}(\sqrt{\gamma\chi_h\chi_{\bar h}})|}
 \end{equation}
 
-\inred{This equation is present in \cite{Kohn2000, KohnGorobtsov2013} in a different form and from a different point of view. These authors consider a point-source at a finite distance and their equation determines the value of the crystal thickness needed to focus the diffracted wave on the back crystal surface. A noticeable difference is that our equation is expressed in terms of $\chi_h \chi_{\bar h}$ without approximations  concerning the real and imaginary parts of the crystal polarizability. In the works cited above $\operatorname{Re}} (\sqrt{\chi_h \chi_{\bar h}})$ is approximated by $|\chi_{hr}|$ or $|\chi_h|$.
-}
+This equation is present in \cite{Kohn2000, KohnGorobtsov2013} in a different form and from a different point of view. These authors consider a point-source at a finite distance and their equation determines the value of the crystal thickness needed to focus the diffracted wave on the back crystal surface. A noticeable difference is that our equation is expressed in terms of $\chi_h \chi_{\bar h}$ without approximations  concerning the real and imaginary parts of the crystal polarizability. In the works cited above $\operatorname{Re} (\sqrt{\chi_h \chi_{\bar h}})$ is approximated by $|\chi_{hr}|$ or $|\chi_h|$.
 
-\inred{The moduli of the two terms in equation~(\ref{eq:approximatedDiffractedField}) are proportional to $\exp(\mp a \text{Im}~(Z))$, respectively. This is the expression of anomalous absorption (Borrmann effect). Two focal positions will be observed for small absorption, but only one for strong absorption, as shown in Fig.~\ref{fig:flatLaue}.
-}
+The moduli of the two terms in equation~(\ref{eq:approximatedDiffractedField}) are proportional to $\exp(\mp a \text{Im}~(Z))$, respectively. This is the expression of anomalous absorption (Borrmann effect). Two focal positions will be observed for small absorption, but only one for strong absorption, as shown in Fig.~\ref{fig:flatLaue}.
 
-% The parameter $q_0$, which may be referred to as the ``dynamical approximated focal length", depends on the asymmetry angle through the half-width a of the Bragg-diffracted beam $a$. It gives the position of the beam waist only approximately, as several approximations have been used.
 
 The reflected amplitude at any distance $q$ from the crystal can be calculated numerically, without the approximations used above, by the Fresnel diffraction integral
-% propagating the wavefield at the crystal exit
-% \begin{equation}
-%     D_h(\xi,0)=i \frac{k}{2}\chi_h J_0(Z\sqrt{a^2-\xi^2})
-% \end{equation}
-% via convolution with the Fresnel propagator:
-% \begin{equation}
-% \label{eq:Fresnel}
-%     D_h(\xi; q) = (\lambda q)^{-1/2} \int_{-a}^a d\xi'  \, e^{i k 
-%     \frac{(\xi-\xi')^2}{2 q}} 
-%     D_h(\xi',0).
-% \end{equation}
 \begin{equation}
 \label{eq:Fresnel}
     D_h(\xi; q) = (\lambda q)^{-1/2} \int_{-a}^a d\xi'  \, e^{i k 
@@ -429,33 +382,19 @@ The reflected amplitude at any distance $q$ from the crystal can be calculated n
     J_0(Z\sqrt{a^2-\xi'^2}).
 \end{equation}
 
-The ``axial intensity profile" $|D_h(0,q)|^2$ shows in general two strong maxima at distances $q_{1,2}=\pm q_{dyn} < q_0$ \inred{(Fig.~\ref{fig:flatLaue})}. This difference is a cylindrical aberration effect related to the approximations used to obtain equation (\ref{eq:q0}). The parameter $q_{dyn}$\inred{, which depends on the crystal thickness,} is the ``dynamical focal length" obtained numerically, thus non-approximated (contrary to $q_0$).
-% Note that $q_0$ is exactly proportional to the crystal thickness but this is not true for $q_{dyn}$.
+The ``axial intensity profile" $|D_h(0,q)|^2$ shows in general two strong maxima at distances $q_{1,2}=\pm q_{dyn} < q_0$ (Fig.~\ref{fig:flatLaue}). This difference is a cylindrical aberration effect related to the approximations used to obtain equation (\ref{eq:q0}). The parameter $q_{dyn}$, which depends on the crystal thickness, is the ``dynamical focal length" obtained numerically, thus non-approximated (contrary to $q_0$).
 As an example, some numerical values are given in Table~\ref{table:example}. 
-% It can be appreciated a difference in the absolute value of $q_{dyn}$ for the negative and positive values. This is due to absorption. Without absorption, $D_h$ in equation~(\ref{eq:Fresnel}) would be real, giving the same absolute value. Because $D_h$ is complex, the $q_{dyn}$ values are slightly different for the positive and negative directions, as shown in Fig.~\ref{fig:flatLaue}.
-
-% \begin{table}
-% \caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}. Note that $\chi_{\bar h}=-i\chi_h$. \todo{DELETE THIS TABLE AFTER CHECKING NEW TABLE}}
-% \begin{tabular}{llccccc}
-%  \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_0$ & $\chi_h$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
-% \hline
-%  8.3  &  13.78 & \makecell{-1.42 10$^{-5}$+ 3.17 10$^{-7}$i} & \makecell{-5.55 10$^{-6}$- 5.23 10$^{-6}$i}  & 59  & 3615  & -2617,2862   \\
-%  17   &  6.68 & \makecell{-3.36 10$^{-6}$+ 1.82 10$^{-8}$i} & \makecell{-1.27  10$^{-6}$- 1.26 10$^{-6}$i}  & 29  & 3753  & -2521,2559 
-% \end{tabular}
-% \label{table:exampleOLD}
-% \end{table}
 
 \begin{table}
 \caption{Parameters for symmetrical Laue silicon crystal in 111 reflection and thickness $t$~= \SI{250}{\micro\meter}.}
 \begin{tabular}{llccccc}
  \makecell{Photon \\ energy \\ (keV)}& \makecell{$\theta_B$ \\ (deg)}   & $\chi_0$ & $\chi_h\chi_{\bar h}$ & \makecell{$a$ \\ (\SI{}{\micro\meter})}& \makecell{$q_0$ \\ (mm)} & \makecell{$q_{dyn}$ \\ (mm)} \\
 \hline
- 8.3  &  13.78 & \makecell{(-14.24 + 0.317 i) 10$^{-6}$} & \makecell{(58.06 - 3.416 i) 10^{-12}}  & 59  & 3615  & 2860   \\
+ 8.3  &  13.78 & \makecell{(-14.24 + 0.317 i) 10$^{-6}$} & \makecell{(58.06 - 3.416 i) 10$^{-12}$}  & 59  & 3615  & 2860   \\
  17   &  6.68 & \makecell{(-3.36 + 0.018 i) 10$^{-6}$} & \makecell{(3.20 - 0.046 i) 10$^{-12}$}  & 29  & 3753  & 2535 
 \end{tabular}
 \label{table:example}
 \end{table}
-
 
 \begin{figure}
 \label{fig:flatLaue}
@@ -463,24 +402,10 @@ As an example, some numerical values are given in Table~\ref{table:example}.
 a) Simulation for a photon energy of 8.3 keV.
 b) Simulation for a photon energy of 17 keV.
 Numerical values of these simulations are in Table~\ref{table:example}.
-%\todo{add numerical constant in ordinates -- MAY BE LATER}
 }
-%\includegraphics[width=0.95\textwidth]{flat8keV.eps}
-%\includegraphics[width=0.95\textwidth]{flat17keV.eps}
 \includegraphics[width=1\textwidth]{fig4.pdf}
 \end{figure}
 
-% The moduli of the two terms in equation~(\ref{eq:approximatedDiffractedField}) are in general different: they are proportional to $\exp(\mp a \operatorname{Im}(Z))$. This is the expression of anomalous absorption (Borrmann effect). Two focusing positions are to be observed in the case of small absorption; but only one focusing position is to be observed in the case of strong absorption (see Fig.~\ref{fig:flatLaue}). It turns out that this property is also valid if the crystal plate is not flat, but cylindrically bent around an axis normal to the diffraction plane. 
-
-% For the flat crystal under discussion, the focusing condition for a source at a finite distance $p$ from the crystal, is 
-% \begin{equation}
-%     \label{eq:sumpandq}
-%     p+q=\pm q_{dyn}.
-% \end{equation}
-% This result is simply obtained by looking at the operators i) the free-space propagation from the source to the diffracting crystal, ii) effect of the crystal diffraction, and iii) the propagation downstream from the crystal to the image position. These operations  are space-invariant. They are expressed as convolutions in direct space, or simply multiplications in reciprocal space. Therefore, they can be commuted. This allows to merge the operations i) and iii) and consequently obtain equation~(\ref{eq:sumpandq}).
-% Propagation through a flat crystal is space-invariant, whereas propagation through a bent crystal is not space-invariant. The reason for this difference is that, in a bent crystal case, the IF is not only dependent on the variables $(s'_0,s'_h)$, but also on the variables $(\sigma_0,\sigma_h)$, as seen in equations~(\ref{eq:TTEsimple},\ref{eq:kummer}).
-
-\inred{
 The focusing condition for a source at a finite distance $p$ from the crystal can be obtained by considering that propagation in free-space and propagation in the flat crystal are space-invariant, therefore expressed as convolutions in direct space or simple multiplications in reciprocal space. Therefore, they can be commuted. This allows to merge the free-space propagation before and after the crystal. The focusing condition is therefore
 \begin{equation}
     p + q = q_{dyn}.
@@ -488,54 +413,31 @@ The focusing condition for a source at a finite distance $p$ from the crystal ca
 On the contrary, propagation through a bent crystal is not space-invariant because the IF is not only dependent on the variables $(s'_0, s'_h)$, but also on the variables $(\sigma_0, \sigma_h)$ because of the factor  
 $\exp[-i \vec h . \vec u (s_0, \sigma_h)]$ in 
 equation~(\ref{eq:kummer}). 
-}
 
 
-\subsection{\inred{A new} lens equation for a bent crystal of finite thickness in symmetrical Laue geometry}
+\subsection{A new lens equation for a bent crystal of finite thickness in symmetrical Laue geometry}
 \label{sec:LaueNewCLE}
 
-% The equations of dynamical focusing by a bent Laue crystal in symmetrical geometry used by \cite{GuigayFerrero2016} are briefly recalled in this section.
-
-\inred{In} symmetrical Laue geometry, the factor $\exp(i \chi_0 (s'_0+s'_h))$ in equation~(\ref{eq:kummer}) is constant \inred{ on the crystal exit surface and will be omitted. Equation~(\ref{eq:kummer}) is (see Appendix~\ref{appendix:TTEintegral})}
-% The equation~(\ref{eq:kummer}) can be written as
+In symmetrical Laue geometry, the factor $\exp(i \chi_0 (s'_0+s'_h))$ in equation~(\ref{eq:kummer}) is constant on the crystal exit surface and will be omitted. Equation~(\ref{eq:kummer}) is (see Appendix~\ref{appendix:TTEintegral})
 \begin{equation}
 \label{eq:DhSymmetricalLaue}
     D_h(s_0,s_h) = \frac{i k}{2} \chi_h e^{-i \vec h . \vec u(s_0,\sigma_h)}
     J_0(2\sqrt{\Omega s'_0 s'_h}).
 \end{equation}
 
-% with 
-% \begin{equation}
-% \vec h . \vec u (s_0,\sigma_h) = \phi(\sigma_h)-\phi(s_0) =
-% k \frac{\tau(\tau+a)-\xi(\xi+a)}{2 R \cos\theta_B}, 
-% \end{equation}
-% $s_0=(\xi+  a)/\sin2\theta_B$,
-% $\sigma_h=-\tau/\sin2\theta_B$, and
-% \begin{equation}
-% \phi(s_0)=\frac{k \sin\theta_B}{R}(s_0^2 \sin2\theta_B - a s_0)=k \frac{\xi(a+\xi)}{2R\cos\theta_B}. 
-% \end{equation}
-Let us consider the incident amplitude $D_{inc}(\tau)=\exp(i k \tau^2/(2p))$, where $\tau$ is a coordinate along the axis $O\tau$ normal to $\vec k_0$ (see Fig.~\ref{fig:laue}). \inred{On the exit surface, using $s_0=(\xi+a)/\sin2\theta_B$ and $\sigma_h=-\tau/\sin2\theta_B$, and the notation $R'=R\cos\theta_B$ we obtain \inred{from equations in appendix \ref{appendix:Deformation}, in the case $\alpha=0$}
+Let us consider the incident amplitude $D_{inc}(\tau)=\exp(i k \tau^2/(2p))$, where $\tau$ is a coordinate along the axis $O\tau$ normal to $\vec k_0$ (see Fig.~\ref{fig:laue}). On the exit surface, using $s_0=(\xi+a)/\sin2\theta_B$ and $\sigma_h=-\tau/\sin2\theta_B$, and the notation $R'=R\cos\theta_B$ we obtain from equations in appendix \ref{appendix:Deformation}, in the case $\alpha=0$
 
 \begin{equation}
     \vec h . \vec u(s_0,\sigma_h) = k \frac{\tau(\tau+a)-\xi(\xi+a)}{ 2R'}.
 \end{equation}
 Using the integration variable $\eta=\xi-\tau$, the amplitude along the $\xi$-axis is, with omission of $i(k/2)\chi_h$,
-}
 
-% The diffracted wave on the axis $O\xi$
-% ($q=0$) is
-% \begin{equation}
-%     D_h(\xi,0)=\int_{\xi-a}^{\xi+a}\frac{d\tau}{\sqrt{\lambda p}}
-%     e^{ik\left[\frac{\tau^2}{2p}+\frac{\tau(\tau+a)-\xi(\xi+a)}{2R \cos\theta_B}\right]}
-%     J_0(Z\sqrt{a^2-(\xi-\tau)^2}),
-% \end{equation}
-% or making the change of variables $\eta=\xi-\tau$,
 \begin{equation}\label{eq:blabla}
     D_h(\xi,0)=\int_{-a}^{+a}\frac{d\eta}{\sqrt{\lambda p}}
     e^{\frac{ik}{2}\left[\frac{(\xi-\eta)^2}{p}+\frac{\eta^2-2\eta\xi-a\eta}{R'}\right]}
     J_0(Z\sqrt{a^2-\eta^2}).
 \end{equation}
-The wave amplitude at a distance $q$ downstream from the crystal is obtained using \inred{a Fresnel diffraction integral similar to} equation~(\ref{eq:Fresnel}). We thus have a double integral over $\eta$ and $\xi'$. The $\xi'$ integration \inred{is} performed analytically \cite{GuigayFerrero2013} and it turns out that
+The wave amplitude at a distance $q$ downstream from the crystal is obtained using a Fresnel diffraction integral similar to equation~(\ref{eq:Fresnel}). We thus have a double integral over $\eta$ and $\xi'$. The $\xi'$ integration is performed analytically \cite{GuigayFerrero2013} and it turns out that
 \begin{equation}
 \label{eq:Dhpropagated}
     D_h(\xi,q)=
@@ -564,28 +466,11 @@ Translating equation~(\ref{eq:preLaueCLE}) in the notation of section~\ref{sec:C
 \end{equation}
 If $q_{dyn}$ is set to zero, we obtain $L_h=L_0$, the same result as the lens equation~(\ref{eq:CLE}).
 Equation~(\ref{eq:newCLE}) can be considered as a ``modified lens equation" which takes dynamical diffraction effects into account in symmetric Laue geometry.
-We \inred{do not know an equation} like equation~(\ref{eq:newCLE}) for the general case of asymmetrical Laue diffraction. However, numerical simulations can be done to obtain the focal positions \cite{Nesterets,GuigayFerrero2016}.
+We do not know an equation like equation~(\ref{eq:newCLE}) for the general case of asymmetrical Laue diffraction. However, numerical simulations can be done to obtain the focal positions \cite{Nesterets,GuigayFerrero2016}.
 
-Examples of numerical calculations \inred{using equation~(\ref{eq:Dhpropagated})} are shown in Fig.~\ref{fig:8keV}, for the case of the 111 reflection of a \SI{250}{\micro\meter} thick cylindrically bent symmetric Laue silicon crystal, with a curvature radius of $R$~= \SI{1}{\meter}, at a source distance $p$~= \SI{30}{\meter} and for x-ray photon energies of 8.3~keV and 17~keV. 
+Examples of numerical calculations using equation~(\ref{eq:Dhpropagated}) are shown in Fig.~\ref{fig:8keV}, for the case of the 111 reflection of a \SI{250}{\micro\meter} thick cylindrically bent symmetric Laue silicon crystal, with a curvature radius of $R$~= \SI{1}{\meter}, at a source distance $p$~= \SI{30}{\meter} and for x-ray photon energies of 8.3~keV and 17~keV. 
 
-\inred{Alternatively, provided that the parameter $q_{dyn}$ has been previously determined numerically by a plot similar to Fig.~\ref{fig:flatLaue}, the focal positions can be given directly by equation~(\ref{eq:newCLE}). The results are in very good agreement with the focal positions obtained obtained numerically in Fig.~\ref{fig:8keV}. An important advantage in using the new CLE is that the same value of $q_{dyn}$ can be used for any value of the radius of curvature and for any value of source distance. 
-}
-%For both photon energy values, the effective value of $q_{dyn}$ is determined by plotting the axial intensity profile as function of $q$ for the unbent crystal of the same thickness and $p=0$ (Fig.~\ref{fig:flatLaue}). This allows to calculate $q_1$ and $q_2$ as
-% \begin{subequations}
-% \label{eq:q1andq2}
-% \begin{align}
-%     q_1 &= R' \frac{p(q_{dyn}-R')+q_{dyn}R'}{p q_{dyn}+(q_{dyn}+R')R'} \\
-%     q_2 &= R' \frac{p(q_{dyn}+R')+q_{dyn}R'}{p q_{dyn}+(q_{dyn}-R')R'}.
-% \end{align}
-% \end{subequations}
-% It can be verified that the results are in perfect agreement with the values shown by the numerical plot of the axial intensity profile. Applying the equations (\ref{eq:q1andq2})  to the cases analyzed in Fig.~\ref{fig:8keV} we get (with $q_{dyn}$=~\SI{2862}{\milli\meter} from Table~\ref{fig:flatLaue})
-% $q_1$=~\SI{644}{\milli\meter},
-% $q_2$=~\SI{1303}{\milli\meter}. Relative errors are -1.2\% and -2.1\%, respectively with respect to numerical values in Fig.~\ref{fig:8keV}a. For 17 keV (Fig.~\ref{fig:8keV}b)
-% $q_1$=~\SI{611}{\milli\meter},
-% $q_2$=~\SI{1382}{\milli\meter}, therefore the relative errors are -2.24\% and 0.7\%, respectively.
-% In these cases,
-% $\operatorname{Im}(Za)$ is negative. It means that the focus position with lowest absorption (therefore with largest intensity) is $q_1$. This is in agreement with the numerical plots. 
-% The highest peak is for $q_1<q_2$ at the x-ray energy of 17 keV. At the energy of 8 keV, only the  peak $q_1$ is present and the $q_2$ peak is damped out because the anomalous absorption effect.
+Alternatively, provided that the parameter $q_{dyn}$ has been previously determined numerically by a plot similar to Fig.~\ref{fig:flatLaue}, the focal positions can be given directly by equation~(\ref{eq:newCLE}). The results are in very good agreement with the focal positions obtained obtained numerically in Fig.~\ref{fig:8keV}. An important advantage in using the new CLE is that the same value of $q_{dyn}$ can be used for any value of the radius of curvature and for any value of source distance. 
 
 We are often interested in real focusing ($q>0$) of an incident beam from a very distant real source, for instance in dispersive EXAFS beamlines. 
 % $q_1$ and $q_2$ are both decreasing functions of $p$. 
@@ -595,7 +480,7 @@ $q_1=R' q_{dyn}(q_{dyn}-R')$.
 Simultaneously, $q_2$ decreases from $q_2=R'q_{dyn}/(q_{dyn}-R')$ to 
 % $q_2=R'(1+R'/q_{dyn})$.
 $q_2=R'q_{dyn}(q_{dyn}+R')$.
-For very large $p$-values, we have the simple relation $q_1+q_2\approx 2R'$ \inred{in good agreement with the numerical results in Fig.~\ref{fig:8keV}.}
+For very large $p$-values, we have the simple relation $q_1+q_2\approx 2R'$ in good agreement with the numerical results in Fig.~\ref{fig:8keV}.
 
 \begin{figure}
 \label{fig:8keV}

@@ -109,7 +109,7 @@
 \maketitle                        % DO NOT DELETE THIS LINE
 
 \begin{synopsis}
-A crystal lens equation is deduced to address the location of the focus when monochromatic x-ray radiation encounters a bent crystal. It is extended using dynamical theory of diffraction for Laue symmetrical diffraction. Combination of polychromatic and \inred{monochromatic} focusing is also discussed. 
+A crystal lens equation is deduced to address the location of the focus when monochromatic x-ray radiation encounters a bent crystal. It is extended using dynamical theory of diffraction for Laue symmetrical diffraction. Combination of polychromatic and monochromatic focusing is also discussed. 
 \end{synopsis}
 
 %\today
@@ -154,12 +154,7 @@ The CLE concerns the focusing of monochromatic radiation, and is in general diff
 \section{The crystal lens equation revisited}
 \label{sec:CLE}
 
-The lens equation will be derived in Bragg or Laue geometry, with source $S$ and focus $F$ in real or virtual position\inred{s} (see Fig.~\ref{fig:geometries}). Consider a monochromatic x-ray or neutron beam from a real or virtual point-source $S$. The origin of coordinates $O$ is chosen at the point of the crystal surface \inred{such} that the 
-%wave-vector  ${\vec k_0}$ of the incident 
-ray $\overline{SO}$\inred{, of wavevector  ${\vec k_0}$,} is in exact Bragg  \inred{incidence}. \inred{Therefore, this ray $\overline{SO}$ gives rise to a diffracted ray of wavevector} 
-%The wave-vector of the diffracted ray in vacuum is
-$\vec k_h = \vec k_0 + \vec h$, where $\vec h$ is the reciprocal lattice vector \inred{in $O$} (see Fig.~\ref{fig:vectors})\inred{. This is valid}
-in both transmission geometry (Laue) or reflection geometry (Bragg) \inred{for both plane and curved crystals.}
+The lens equation will be derived in Bragg or Laue geometry, with source $S$ and focus $F$ in real or virtual positions (see Fig.~\ref{fig:geometries}). Consider a monochromatic x-ray or neutron beam from a real or virtual point-source $S$. The origin of coordinates $O$ is chosen at the point of the crystal surface such that the ray $\overline{SO}$, of wavevector  $\vec k_0$, is in \inblue{geometrical} Bragg incidence. \inblue{It gives rise outside the crystal} to a diffracted ray of wavevector $\vec k_h = \vec k_0 + \vec h$, where $\vec h$ is the reciprocal lattice vector in $O$, and \inblue{$|\vec k_h|=|\vec k_0|$} (see Fig.~\ref{fig:vectors}). This is valid in both transmission geometry (Laue) or reflection geometry (Bragg) for both plane and curved crystals\footnote{\inblue{Because of refraction effects, this choice implies that $\overline{SO}$ is, in general, not exactly in the direction of the diffraction profile peak, except for the symmetric Laue case}.}. 
 
 \begin{figure}
 \label{fig:geometries}
@@ -176,13 +171,12 @@ $L_0=\overline{SO}$ is the distance source to crystal and $L_h=\overline{OF}$ is
 
 The inward normal to the crystal surface in $O$ is $\vec n$, and $\varphi_0 = (\vec n, \vec k_0)$ is the oriented angle from the vector $\vec n$ to the vector $\vec k_0$. Similarly, $\varphi_h = (\vec n, \vec k_h)$. Without loss of generality $\varphi_0$ is positive; $\theta_B$ is the Bragg angle (always positive).
 In the case of symmetric geometry(asymmetry angle $\alpha=0$) we find $\varphi_{0,h}=\pm\theta_B$ in Laue or $\varphi_{0,h}=(\pi/2)\mp\theta_B$ in Bragg. Otherwise, the asymmetry angle $\alpha$ is defined as the angle of rotation of the vector $\vec h$ from its direction in the symmetrical case. 
-In Laue case $\varphi_{0,h}=\inred{\alpha \pm\theta_B}$; in Bragg case $\varphi_{0,h}=\inred{\alpha\mp\theta_B+\pi/2}$, therefore $2\theta_B=|\varphi_0-\varphi_h|$ in both cases, $2\alpha=\varphi_0+\varphi_h$ in Laue case and $2\alpha=\varphi_0+\varphi_h-\pi$ in Bragg case.
+In Laue case $\varphi_{0,h}=\alpha \pm\theta_B$; in Bragg case $\varphi_{0,h}=\alpha\mp\theta_B+\pi/2$, therefore $2\theta_B=|\varphi_0-\varphi_h|$ in both cases, $2\alpha=\varphi_0+\varphi_h$ in Laue case and $2\alpha=\varphi_0+\varphi_h-\pi$ in Bragg case.
 
 
-When moving the point of incidence \inred{$O$ to $P$} over an arbitrary small distance $s$ along the curved crystal surface (see Fig.~\ref{fig:vectors}), 
-\inred{$\vec h$ and $\vec n$ are changed into $\vec h'$
-and $\vec n'$, respectively. The incident wavevector $\vec k'_{0}$ has the direction of $\overline{SP}$. It is  diffracted into $\vec k'_{h}$.  
-}
+When moving the point of incidence $O$ to $P$ over an arbitrary small distance $s$ along the curved crystal surface (see Fig.~\ref{fig:vectors}), 
+$\vec h$ and $\vec n$ are changed into $\vec h'$
+and $\vec n'$, respectively. The incident wavevector $\vec k'_{0}$ has the direction of $\overline{SP}$. It is  diffracted into $\vec k'_{h}$. 
 The projections of the vectors $\vec k'_{h}$ and $\vec k'_{0}+\vec h'$ on the crystal surface are equal (conservation of the parallel components of wave-vectors).
 % \inred{Therefore,} $\vec k_{0,h}$ are changed \inred{into $\vec k'_{0,h}$}
 % with rotation angles $\epsilon_{0,h} = (\vec k_{0,h},\vec k'_{0,h})$;  , due to the crystal bending;
@@ -202,7 +196,7 @@ This implies that $(\sin \varphi_h - \sin \varphi_0)$ is invariant, therefore
 \end{figure}
 
 The source distance $L_0=\overline{SO}$ is set as positive if the source is on the incidence side of the crystal (real source) or negative if the source is on the other side (virtual source) (see Fig.~\ref{fig:geometries}). The radius of curvature $R_c$ is set as positive if the beam is incident on the concave side of the bent crystal. The focus distance $L_h$ is set as positive if the (real or virtual) focus $F$ is situated on the incidence side on the crystal. With these conventions, $(\vec n,\vec n')=s/R_c$, $\epsilon_0 L_0 = s \cos\varphi_0$,  $\epsilon_h L_h = s |\cos\varphi_h|$,
-\inred{where $\epsilon_{0,h}$ are the angles between $\vec k_{0,h}$ and $\vec k'_{0,h}$.}
+where $\epsilon_{0,h}$ are the angles between $\vec k_{0,h}$ and $\vec k'_{0,h}$.
 Using the relationship
 \begin{equation}
     \varphi'_{0,h} = 
@@ -266,7 +260,7 @@ The x-ray wavefield inside the crystal is expressed as the sum of two modulated 
     \Psi(\vec x) = D_0(\vec x) e^{i \vec k_0 . \vec x} + D_h(\vec x) e^{i \vec k_h . \vec x},
 \end{equation}
 with slowly varying amplitudes $D_{0,h}(\vec x)$.
-The spatial position $\vec x$ is expressed in oblique coordinates $(s_0,s_h)$ along the directions of the $\vec k_0$ and $\vec k_h=\vec k_0 + \vec h$ vectors, which are the in-vacuum wave-vectors \inred{of} modulus $k=2\pi/\lambda$\inred{, where $\lambda$ is x-ray wavelength}. $\vec{h}$ is the Bragg diffraction vector of the undeformed crystal. In such conditions, the differential TTE are
+The spatial position $\vec x$ is expressed in oblique coordinates $(s_0,s_h)$ along the directions of the $\vec k_0$ and $\vec k_h=\vec k_0 + \vec h$ vectors, which are the in-vacuum wave-vectors of modulus $k=2\pi/\lambda$, where $\lambda$ is x-ray wavelength. $\vec{h}$ is the Bragg diffraction vector of the undeformed crystal. In such conditions, the differential TTE are
 \begin{subequations}
 \label{eq:TT}
 \begin{align}
@@ -274,7 +268,7 @@ The spatial position $\vec x$ is expressed in oblique coordinates $(s_0,s_h)$ al
 \frac{\partial D_h}{\partial s_h} =& \frac{ik}{2} \left[ \chi_0 D_h(\vec x)+c \chi_{h} e^{-i \vec h . \vec u (\vec x)} D_0(\vec x) \right],
 \end{align}
 \end{subequations}
-where $\chi_0$, $\chi_h$, and $\chi_{\bar h}$ are the Fourier coefficients of order 0, $\vec h$ and $-\vec h$ of the undeformed crystal polarisability. The polarization factor $c$ ($c=1$ for $\sigma$-polarization and $c=\cos2\theta_B$ for $\pi$-polarization) is omitted \inred{from now on}. 
+where $\chi_0$, $\chi_h$, and $\chi_{\bar h}$ are the Fourier coefficients of order 0, $\vec h$ and $-\vec h$ of the undeformed crystal polarisability. The polarization factor $c$ ($c=1$ for $\sigma$-polarization and $c=\cos2\theta_B$ for $\pi$-polarization) is omitted from now on. 
 $\vec u (\vec x)$ is the displacement field of the deformed crystal.
 In the case of cylindrical bending we have
 \begin{equation}
@@ -503,7 +497,7 @@ It can be seen from equation~(\ref{eq:Dhpropagated}) that the intensity function
 \subsection{Semianalytical approach in asymmetric Laue geometry and its CLE limit}
 \label{sec:LaueCompatibilityCLE}
 
-The \inred{generalization} of equation (\ref{eq:blabla}) to asymmetric Laue geometry is \cite{GuigayFerrero2016}
+The generalization of equation (\ref{eq:blabla}) to asymmetric Laue geometry is \cite{GuigayFerrero2016}
 \begin{equation}
 \label{eq:unpropagatedkummer}
     D_h(\xi,0) = 
@@ -513,7 +507,7 @@ The \inred{generalization} of equation (\ref{eq:blabla}) to asymmetric Laue geom
     }
      M(\frac{i\Omega}{A},1,i g k \frac{a^2-\eta^2}{R}).
 \end{equation}
-\inred{Here, $\phi(\xi,\eta)$ is calculated from the term $\exp(-i\vec h . \vec u(s_0,\sigma_h))$ in equation~(\ref{eq:kummer}) with $s_0=(a+\xi)/\sin2\theta_B$ and $\sigma_h=\gamma(\xi-\eta)/\sin2\theta_B$, giving}
+Here, $\phi(\xi,\eta)$ is calculated from the term $\exp(-i\vec h . \vec u(s_0,\sigma_h))$ in equation~(\ref{eq:kummer}) with $s_0=(a+\xi)/\sin2\theta_B$ and $\sigma_h=\gamma(\xi-\eta)/\sin2\theta_B$, giving
 \begin{multline}
     \phi(\xi,\eta) =\frac{k}{2R}[-\mu_2\gamma^2(\xi-\eta)^2
     +a_2\gamma(\eta-\xi) \\
@@ -521,8 +515,8 @@ The \inred{generalization} of equation (\ref{eq:blabla}) to asymmetric Laue geom
     +a_1(a+\xi)
     -2g(a+\xi)(\xi-\eta)],
 \end{multline}
-\inred{with} parameters $\mu_{1,2}$, $a_{1,2}$ and $g$ given in Appendix~\ref{appendix:Deformation}.
-The reflected amplitude $D_h(\xi,q)$ at distance $q$ downstream from the crystal is again obtained as in equation~(\ref{eq:Fresnel}), therefore by double integration over $\eta$ and $\xi'$. The $\xi'$-integration can be again performed analytically. The remaining $\eta$-integration involving the Kummer function is carried out numerically \cite{GuigayFerrero2016}. We consider this approach as semi-analytical, \inred{in contrast to the approach based on a numerical solution of the TTE \cite{Nesterets}}.
+with parameters $\mu_{1,2}$, $a_{1,2}$ and $g$ given in Appendix~\ref{appendix:Deformation}.
+The reflected amplitude $D_h(\xi,q)$ at distance $q$ downstream from the crystal is again obtained as in equation~(\ref{eq:Fresnel}), therefore by double integration over $\eta$ and $\xi'$. The $\xi'$-integration can be again performed analytically. The remaining $\eta$-integration involving the Kummer function is carried out numerically \cite{GuigayFerrero2016}. We consider this approach as semi-analytical, in contrast to the approach based on a numerical solution of the TTE \cite{Nesterets}.
 
 It is interesting to study analytically the limit of this semi-analytical formulation in the case of
 vanishing crystal thickness ($a\rightarrow0{}$) because the comparison with lens equation~(\ref{eq:CLE}) represents a validity test of the semi-analytical formulation. 
@@ -587,7 +581,7 @@ which is the CLE (equation~(\ref{eq:CLE})) for the Laue case, with the correspon
 % Peng Qi
 % PostDoc - Department of Anatomy, Physiology, and Pharmacology 
 
-As pointed out by \cite{CK}, the monochromatic focusing condition must not be confused with the polychromatic focusing condition \inred{ \cite{handbook,Caciuffo1987,Schulze1998,Martinson,martinson2017}}, obtained by varying the wavelength of the reflected rays in order to satisfy the exact Bragg condition on the whole crystal surface.
+As pointed out by \cite{CK}, the monochromatic focusing condition must not be confused with the polychromatic focusing condition  \cite{handbook,Caciuffo1987,Schulze1998,Martinson,martinson2017}, obtained by varying the wavelength of the reflected rays in order to satisfy the exact Bragg condition on the whole crystal surface.
 The equation $\varphi_0+\varphi_h=2\alpha$ in Laue, or $\varphi_0+\varphi_h=2\alpha+\pi$ in Bragg case, implies $\Delta\varphi_0+\Delta\varphi_h=0$. Using equations~(\ref{eq:angles}) and  (\ref{eq:angles2}) we obtain
 \begin{equation}
 \label{eq:polychromaticfocusing}
@@ -615,7 +609,7 @@ which means real focusing at the distance $|L_h|=q_{dyn}/4$ with beam incidence 
 If $|L_h|$ is fixed, the required conditions are $|R_c| = 2 |L_h| / \cos\theta_B$ and $q_{dyn}=4|L_h|$. The last condition should be fulfilled by choosing the crystal thickness, as in  \cite{Mocella2004,Mocella2008}.
 
 Another polychromatic condition for Laue geometry has been introduced more recently \cite{Martinson, PengQi, PengQi2021}.
-The energy components of a polychromatic ray traversing a bent Laue crystal with finite thickness meet the Bragg condition at different positions along the ray path. They are diffracted with different Bragg angles, therefore they exit in different directions, giving raise to a polychromatic focus from a single ray. The ``magic con\inred{d}ition", under which single ray focusing and geometric focusing (equation (\ref{eq:polychromaticfocusing})) would coincide, is achieved by the adequate choice of the asymmetry. The magic condition is independent of the crystal thickness \cite{PengQi2021}. We observe that the magic condition (equation (19) in \cite{PengQi2021}) and the modified lens equation (\ref{eq:newCLE}) are both satisfied in the particular case of symmetric Laue geometry in Rowland configuration.   
+The energy components of a polychromatic ray traversing a bent Laue crystal with finite thickness meet the Bragg condition at different positions along the ray path. They are diffracted with different Bragg angles, therefore they exit in different directions, giving raise to a polychromatic focus from a single ray. The ``magic condition", under which single ray focusing and geometric focusing (equation (\ref{eq:polychromaticfocusing})) would coincide, is achieved by the adequate choice of the asymmetry. The magic condition is independent of the crystal thickness \cite{PengQi2021}. We observe that the magic condition (equation (19) in \cite{PengQi2021}) and the modified lens equation (\ref{eq:newCLE}) are both satisfied in the particular case of symmetric Laue geometry in Rowland configuration.   
 
 \section{Conclusions and future perspectives}
 \label{sec:summary}
@@ -737,15 +731,15 @@ where $\Omega=k^2\chi_h\chi_{\bar h}/4$ is used. By iteration starting from $F_h
 \end{align}
 
 According to the definition of the Kummer function (equation (\ref{eq:kummerSeries})), the series in brackets is equal to $M(\frac{\Omega}{iA}+1, 1, -iA s'_0 s'_h)$. Using the known relation
-$M(a,b,z)=e^z M(b-a,b,\inred{-}z)$, together with equations (\ref{eq:appE}) and (\ref{eq:TTEappendix2}) we obtain
+$M(a,b,z)=e^z M(b-a,b,-z)$, together with equations (\ref{eq:appE}) and (\ref{eq:TTEappendix2}) we obtain
 
 \begin{equation}
-    G_h = i\frac{k}{2}\chi_h \exp\left[-i \frac{k}{2} \chi_0 (\sigma_0+\sigma_h)+ i \phi_2(\sigma_h)-i A \sigma_0 s'_h - i A s'_0 s'_h\right] M(\inred{i}\frac{\Omega}{A},1,i A s'_0 s'_h)
+    G_h = i\frac{k}{2}\chi_h \exp\left[-i \frac{k}{2} \chi_0 (\sigma_0+\sigma_h)+ i \phi_2(\sigma_h)-i A \sigma_0 s'_h - i A s'_0 s'_h\right] M(i\frac{\Omega}{A},1,i A s'_0 s'_h)
 \end{equation}
 
 Using equation (9b) and $s_0s_h-\sigma_0 s'_h - s'_0 s'_h=s_0 s_h - s_0 s'_h = s_0 \sigma_h$, we get
 \begin{equation}
-    D_h = i \frac{k}{2} \chi_h \exp\left[  i \frac{k}{2} \chi_0 (s'_0+s'_h) - i\phi_1(s_0) + i \phi_2(\sigma_h) - iA s_0 \sigma_h \right] M(\inred{i}\frac{\Omega}{A},1,i A s'_0 s'_h), 
+    D_h = i \frac{k}{2} \chi_h \exp\left[  i \frac{k}{2} \chi_0 (s'_0+s'_h) - i\phi_1(s_0) + i \phi_2(\sigma_h) - iA s_0 \sigma_h \right] M(i\frac{\Omega}{A},1,i A s'_0 s'_h), 
 \end{equation}
 which, including equation (\ref{eq:cylinder}), is equation (\ref{eq:kummer}).
 
